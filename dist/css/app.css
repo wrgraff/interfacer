@@ -78,8 +78,8 @@ body {
 .page-layout {
   display: grid;
   grid-template-areas: 'nav header modal' 'nav main modal';
-  grid-template-columns: 15.625rem auto 0;
-  grid-template-rows: minmax(50px, max-content) auto;
+  grid-template-columns: minmax(0, max-content) auto 0;
+  grid-template-rows: minmax(0, max-content) auto;
   height: 100%;
   background-color: #f5f5f5;
   overflow: hidden; }
@@ -327,6 +327,7 @@ body {
     border-color: #BDBDBD; }
 
 .global-nav {
+  width: 15.625rem;
   background-color: #fff;
   border-right: 1px solid #f5f5f5; }
 
