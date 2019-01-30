@@ -7,5 +7,27 @@
     transition: transform 250ms;
 }
 .page-modal_active {
-    transform: translateX(-100%);    
+    transform: translateX(-100%);
+}
+
+.page-modal__header {
+    padding: ($bit * 2) ($bit * 4) 0;
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+.page-modal__body {
+    padding: ($bit * 4);
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+.page-modal__footer {
+    padding: 0 ($bit * 4) ($bit * 2);
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
 }

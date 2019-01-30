@@ -120,6 +120,21 @@ body {
 .page-modal_active {
   transform: translateX(-100%); }
 
+.page-modal__header {
+  padding: 1rem 2rem 0; }
+  .page-modal__header > *:last-child {
+    margin-bottom: 0; }
+
+.page-modal__body {
+  padding: 2rem; }
+  .page-modal__body > *:last-child {
+    margin-bottom: 0; }
+
+.page-modal__footer {
+  padding: 0 2rem 1rem; }
+  .page-modal__footer > *:last-child {
+    margin-bottom: 0; }
+
 .page-main {
   padding: 3rem;
   background-color: #f5f5f5;
@@ -146,13 +161,13 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: background-color 250ms, opacity 250ms, visibility 1ms linear 250ms; }
-  .page-mask:hover {
-    background-color: rgba(0, 0, 0, 0.4); }
 
 .page-mask_active {
   opacity: 1;
   visibility: visible;
   transition: background-color 250ms, opacity 250ms; }
+  .page-mask_active:hover {
+    background-color: rgba(0, 0, 0, 0.4); }
 
 .section__header {
   padding: 2rem;
