@@ -16,9 +16,17 @@
     }
 }
 .section__footer {
+    display: flex;
+    justify-content: space-between;
     padding: ($bit * 2) ($bit * 4) ($bit * 4);
 
     > *:last-child {
         margin-bottom: 0;
     }
+}
+.section__footer_justify-start {
+    justify-content: flex-start;
+}
+.section__footer_justify-end {
+    justify-content: flex-end;
 }
