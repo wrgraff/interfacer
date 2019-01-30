@@ -1,0 +1,11 @@
+.page-modal {
+    position: relative;
+    width: rem-calc(600);
+    background-color: color(white);
+    box-shadow: shadow(3-lvl);
+    z-index: 6;
+    transition: transform 250ms;
+}
+.page-modal_active {
+    transform: translateX(-100%);    
+}

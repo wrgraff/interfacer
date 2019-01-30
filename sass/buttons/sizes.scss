@@ -1,0 +1,29 @@
+$buttons-sizes: (
+    default: (
+        font-size: rem-calc(16),
+        padding: ($bit * 2) ($bit * 3),
+    ),
+    // small: (
+    //     font-size: rem-calc(12),
+    //     padding: ($bit * 1) ($bit * 1.5),
+    // ),
+    large: (
+        font-size: rem-calc(24),
+        padding: ($bit * 2.5) ($bit * 3.5),
+    ),
+);
+
+.button {
+    font-size: map-get(map-get($buttons-sizes, default), font-size);
+    padding: map-get(map-get($buttons-sizes, default), padding);
+}
+.button_size {
+    @each $name, $sizes-props in $buttons-sizes {
+        @if ($name != default) {
+            &_#{$name} {
+                font-size: map-get($sizes-props, font-size);
+                padding: map-get($sizes-props, padding);
+            }
+        }
+    }
+}

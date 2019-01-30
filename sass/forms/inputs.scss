@@ -1,0 +1,59 @@
+.input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $bit * 2;
+}
+.input__text {
+    order: 1;
+    display: block;
+    margin-left: $bit;
+    padding: $bit;
+    color: color(dark-gray);
+    background-color: color(white);
+    line-height: 1;
+    transform-origin: left top;
+    transition: transform 250ms, color 250ms;
+    cursor: text;
+
+    .input__field:focus + & {
+        color: color(primary);
+    }
+
+    .input_floating & {
+        position: absolute;
+        top: $bit * 1.5;
+        left: $bit;
+        margin-left: 0;
+    }
+    .input_floating .input__field:focus + & {
+        transform: translateY($bit * -3) scale(.8);
+    }
+    .input_floating .input__field_filled + & {
+        transform: translateY($bit * -3) scale(.8);
+    }
+}
+.input__field {
+    order: 2;
+    padding: ($bit * 2) - rem-calc(2);
+    border: 2px solid color(medium-gray);
+    border-radius: $radius;
+    font-size: font-size(medium);
+    transition: border-color 250ms, box-shadow 250ms;
+
+    &:hover {
+        border-color: color(primary);
+    }
+    &:focus {
+        border-color: color(primary);
+        box-shadow: shadow(1-lvl);
+    }
+}
+.input__helper {
+    order: 3;
+    display: inline-block;
+    padding: $bit $bit $bit ($bit * 2);
+    color: color(medium-gray);
+    font-size: font-size(small);
+    line-height: 1;
+}

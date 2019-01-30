@@ -1,0 +1,37 @@
+$button-focus-shift: $bit / 2;
+
+.button {
+    position: relative;
+    display: inline-block;
+    border: none;
+    border-radius: $radius;
+    font-weight: font-weight(medium);
+    line-height: 1;
+    text-transform: uppercase;
+    transition: background-color 200ms, box-shadow 200ms;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: $button-focus-shift * -2;
+        right: $button-focus-shift * -2;
+        top: $button-focus-shift * -2;
+        bottom: $button-focus-shift * -2;
+        border: 2px solid color(medium-gray);
+        border-radius: $radius;
+        opacity: 0;
+        transition: left 200ms, right 200ms, top 200ms, bottom 200ms, opacity 200ms;
+    }
+
+    &:focus {
+        outline: none;
+
+        &::before {
+            left: $button-focus-shift * -1;
+            right: $button-focus-shift * -1;
+            top: $button-focus-shift * -1;
+            bottom: $button-focus-shift * -1;
+            opacity: .3;
+        }
+    }
+}

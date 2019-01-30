@@ -1,0 +1,13 @@
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $bit * 2;
+    background-color: color(white);
+    border-bottom: 1px solid color(light-gray);
+    z-index: 5;
+}
+
+.page-header__item {
+    padding: 0 ($bit * 2);
+}

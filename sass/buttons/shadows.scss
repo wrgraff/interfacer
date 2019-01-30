@@ -1,0 +1,71 @@
+$buttons-shadow-default: (
+    active: 1-lvl,
+    focus: 1-lvl,
+);
+$buttons-shadow-modificator: (
+    static: 1-lvl,
+    hover: 1-lvl,
+    active: 2-lvl,
+    focus: 2-lvl,
+);
+$buttons-shadow-colors: $buttons-colors;
+
+@mixin shadow-colors($status, $shadow) {
+    @each $name, $color in $buttons-shadow-colors {
+        @if ($name != default) and ($status != static) {
+            &.button_color_#{$name} {
+                &:#{$status} {
+                    box-shadow: shadow($shadow, $color);
+                }
+            }
+        } @else if ($name != default) {
+            &.button_color_#{$name} {
+                box-shadow: shadow($shadow, $color);
+            }
+        }
+    }
+}
+
+@if ($buttons-shadow-default) {
+    .button {
+        @each $status, $shadow in $buttons-shadow-default {
+            @if ($status != static) {
+                @if (map-get($buttons-shadow-default, static) != $shadow) {
+                    @if ($buttons-shadow-colors) {
+                        @include shadow-colors($status, $shadow);
+                    }
+                    &:#{$status} {
+                        box-shadow: shadow($shadow);
+                    }
+                }
+            } @else {
+                @if ($buttons-shadow-colors) {
+                    @include shadow-colors(static, map-get($buttons-shadow-default, static));
+                }
+                box-shadow: shadow(map-get($buttons-shadow-default, static));
+            }
+        }
+    }
+}
+
+@if ($buttons-shadow-modificator) {
+    .button_shadowed {
+        @each $status, $shadow in $buttons-shadow-modificator {
+            @if ($status != static) {
+                @if (map-get($buttons-shadow-modificator, static) != $shadow) {
+                    @if ($buttons-shadow-colors) {
+                        @include shadow-colors($status, $shadow);
+                    }
+                    &:#{$status} {
+                        box-shadow: shadow($shadow);
+                    }
+                }
+            } @else {
+                @if ($buttons-shadow-colors) {
+                    @include shadow-colors(static, map-get($buttons-shadow-modificator, static));
+                }
+                box-shadow: shadow(map-get($buttons-shadow-modificator, static));
+            }
+        }
+    }
+}

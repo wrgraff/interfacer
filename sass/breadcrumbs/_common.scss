@@ -1,0 +1,28 @@
+.breadcrumbs {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: font-size(large);
+    line-height: rem-calc(32);
+}
+
+.breadcrumbs__item {
+    position: relative;
+    margin-right: $bit * 3;
+
+    &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        left: calc(100% + #{$bit});
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        display: block;
+        width: $bit / 2;
+        height: $bit / 2;
+        margin-top: $bit / 8;
+        border-style: solid;
+        border-width: 2px 2px 0 0;
+        border-color: color(medium-gray);
+    }
+}

@@ -1,0 +1,25 @@
+.page-layout {
+    display: grid;
+    grid-template-areas: 'nav header modal'
+                         'nav main modal';
+    grid-template-columns: rem-calc(250) auto 0;
+    grid-template-rows: minmax(50px, max-content) auto;
+
+    height: 100%;
+    background-color: color(light-gray);
+    overflow: hidden;
+}
+
+.page-layout__nav {
+    grid-area: nav;
+}
+.page-layout__modal {
+    grid-area: modal;
+}
+.page-layout__header {
+    grid-area: header;
+}
+.page-layout__main {
+    grid-area: main;
+    overflow-y: scroll;
+}

@@ -1,0 +1,31 @@
+$buttons-colors: (
+    default: color(light-gray),
+    white: color(white),
+    primary: color(primary),
+);
+
+.button {
+    color: color-pick-contrast(map-get($buttons-colors, default));
+    background-color: map-get($buttons-colors, default);
+
+    &:hover {
+        background-color: smart-scale(map-get($buttons-colors, default));
+    }
+}
+.button_color {
+    @each $name, $color in $buttons-colors {
+        @if ($name != default) {
+            &_#{$name} {
+                color: color-pick-contrast($color, (color(white), color(black)), 10);
+                background-color: $color;
+
+                &:active {
+                    background-color: smart-scale($color);
+                }
+                &:hover {
+                    background-color: smart-scale($color);
+                }
+            }
+        }
+    }
+}

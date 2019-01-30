@@ -1,0 +1,7 @@
+.global-nav {
+    background-color: color(white);
+    border-right: 1px solid color(light-gray);
+}
+.global-nav__menu {
+    padding: ($bit * 2) 0;
+}

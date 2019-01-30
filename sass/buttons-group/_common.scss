@@ -1,0 +1,10 @@
+.buttons-group {
+    display: flex;
+
+    > *:not(:last-child) {
+        margin-right: $bit * 2;
+    }
+}
+.buttons-group_align_right {
+    justify-content: flex-end;
+}

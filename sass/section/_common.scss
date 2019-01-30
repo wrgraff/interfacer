@@ -1,0 +1,24 @@
+.section {
+}
+.section__header {
+    padding: $bit * 4;
+    padding-bottom: 0;
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+.section__body {
+    padding: $bit * 4;
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+.section__footer {
+    padding: ($bit * 2) ($bit * 4) ($bit * 4);
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
