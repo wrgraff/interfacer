@@ -1,4 +1,7 @@
 .section {
+    background-color: color(white);
+    border-radius: $radius;
+    box-shadow: shadow(1-lvl);
 }
 .section__header {
     padding: $bit * 4;
