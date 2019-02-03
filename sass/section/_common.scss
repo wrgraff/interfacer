@@ -1,10 +1,18 @@
 .section {
+    padding: $bit * 4;
     background-color: color(white);
     border-radius: $radius;
     box-shadow: shadow(1-lvl);
+
+    .section__header,
+    .section__body,
+    .section__footer {
+        &:not(:last-child) {
+            margin-bottom: $bit * 4;
+        }
+    }
 }
 .section__header {
-    padding: $bit * 4;
     padding-bottom: 0;
 
     > *:last-child {
@@ -12,7 +20,6 @@
     }
 }
 .section__body {
-    padding: $bit * 4;
 
     > *:last-child {
         margin-bottom: 0;
@@ -20,16 +27,17 @@
 }
 .section__footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: ($bit * 2) ($bit * 4) ($bit * 4);
+    margin-bottom: $bit * -2;
 
-    > *:last-child {
-        margin-bottom: 0;
+    > * {
+        margin-bottom: $bit * 2;
     }
 }
-.section__footer_justify-start {
+.section__footer_justify_start {
     justify-content: flex-start;
 }
-.section__footer_justify-end {
+.section__footer_justify_end {
     justify-content: flex-end;
 }
