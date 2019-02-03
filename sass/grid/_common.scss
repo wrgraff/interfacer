@@ -1,0 +1,9 @@
+.grid {
+    display: grid;
+    grid-gap: $bit * 5;
+    grid-template-columns: repeat(auto-fit, minmax(($bit * 40), 1fr))
+}
+
+.grid__item {
+
+}

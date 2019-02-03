@@ -166,6 +166,11 @@ body {
   .page-mask_active:hover {
     background-color: rgba(0, 0, 0, 0.4); }
 
+.grid {
+  display: grid;
+  grid-gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+
 .section {
   background-color: #fff;
   border-radius: 2px;
