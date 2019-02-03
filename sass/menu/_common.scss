@@ -1,17 +1,29 @@
+$menu-ico-size: rem-calc(32);
+
 .menu {
     margin: 0;
     padding: 0;
     list-style: none;
+
+    .menu__item & {
+        margin-left: $bit * 2;
+    }
 }
+
+.menu_dropdown {
+    .menu {
+        display: none;
+    }
+}
+
 .menu__link {
     display: block;
     padding: ($bit * 1.5) ($bit * 2);
     color: color(black);
     transition: background-color 250ms, color 250ms;
 
-    &:hover {
-        color: color(primary);
-        background-color: color(light-gray);
+    .menu_dropdown & {
+        padding-left: $menu-ico-size + $bit * 2;
     }
     .menu__item_active & {
         color: color(white);
@@ -20,5 +32,41 @@
         &:hover {
             color: color(secondary);
         }
+    }
+    .menu__item_has_menu & {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: $bit;
+            top: 50%;
+            transform: translateY(-50%);
+            width: $menu-ico-size;
+            height: $menu-ico-size;
+            border-radius: 50%;
+            transition: background-color 250ms;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            left: $bit + $menu-ico-size / 2 - $menu-ico-size / 10;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            width: $menu-ico-size / 5;
+            height: $menu-ico-size / 5;
+            border-style: solid;
+            border-width: rem-calc(0 2 2 0);
+            border-color: color(black);
+        }
+
+        &:hover::before {
+            background-color: color(medium-gray);
+        }
+    }
+
+    &:hover {
+        color: color(primary);
+        background-color: color(light-gray);
     }
 }

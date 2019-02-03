@@ -119,10 +119,17 @@
                     <h3>Menu</h3>
                 </header>
                 <div class="section__body">
-                    <ul class="menu">
+                    <ul class="menu menu_dropdown">
                         <li class="menu__item"><a href="#" class="menu__link">Menu link 1</a></li>
                         <li class="menu__item menu__item_active"><a href="#" class="menu__link">Menu link 2</a></li>
                         <li class="menu__item"><a href="#" class="menu__link">Menu link 3</a></li>
+                        <li class="menu__item menu__item_has_menu">
+                            <a href="#" class="menu__link">Menu link 4</a>
+                            <ul class="menu">
+                                <li class="menu__item"><a href="#" class="menu__link">Menu link 5</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link">Menu link 6</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </section>
