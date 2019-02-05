@@ -5,7 +5,7 @@ labeledInputs.forEach((item) => {
     if (item.value) {
         item.classList.add('input__field_filled');
     };
-    item.addEventListener("blur", function( event ) {
+    item.addEventListener("change", function( event ) {
         if (this.value == '') {
             this.classList.remove('input__field_filled');
         } else {
