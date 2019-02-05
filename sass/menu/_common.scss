@@ -51,7 +51,7 @@ $menu-ico-size: rem-calc(32);
             content: '';
             position: absolute;
             left: $bit + $menu-ico-size / 2 - $menu-ico-size / 10;
-            top: 50%;
+            top: calc(50% - #{$menu-ico-size / 20});
             transform: translateY(-50%) rotate(45deg);
             width: $menu-ico-size / 5;
             height: $menu-ico-size / 5;

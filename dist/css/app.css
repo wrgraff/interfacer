@@ -345,7 +345,7 @@ body {
       content: '';
       position: absolute;
       left: 1.3rem;
-      top: 50%;
+      top: calc(50% - 0.1rem);
       transform: translateY(-50%) rotate(45deg);
       width: 0.4rem;
       height: 0.4rem;
