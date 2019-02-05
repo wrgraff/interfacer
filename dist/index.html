@@ -4,28 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GodeMode</title>
+    <title>Interfacer</title>
 
-    <link rel="stylesheet" href="/dist/css/app.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
     <div class="page-layout">
         <nav class="page-layout__nav global-nav">
             <ul class="global-nav__menu menu">
-                <li class="menu__item"><a href="/pages/" class="menu__link">Pages</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Forms</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Settings</a></li>
+                <li class="menu__item"><a href="/form-validation/" class="menu__link">Form validation</a></li>
             </ul>
         </nav>
 
         <aside class="page-layout__modal page-modal">
+            <form action="#">
+                <header class="page-modal__header">
+                    <h2>Some form</h2>
+                </header>
+
+                <div class="page-modal__body">
+                    <label class="input">
+                        <input type="text" name="" value="" required class="input__field" />
+                        <span class="input__text">Текстовое поле</span>
+                        <span class="input__helper">Обязательное поле</span>
+                    </label>
+
+                    <label class="input">
+                        <input type="text" name="" value="" required class="input__field" />
+                        <span class="input__text">Другое текстовое поле</span>
+                        <span class="input__helper">Обязательное поле</span>
+                    </label>
+                </div>
+
+                <footer class="page-modal__footer">
+                    <div class="buttons-group buttons-group_align_right">
+                        <button type="button" class="button" data-modal>Cancel</button>
+                        <button type="submit" class="button button_color_primary">Submit</button>
+                    </div>
+                </footer>
+            </form>
         </aside>
 
         <header class="page-layout__header page-header">
             <nav class="page-header__item">
                 <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">GodMode</a></li>
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
                     <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Kitchen sink</a></li>
                 </ul>
             </nav>
@@ -40,7 +63,7 @@
                     <h3>Buttons</h3>
                 </header>
                 <div class="section__body">
-                    <button type="button" class="button">Simple button</button>
+                    <button type="button" class="button" data-modal>Simple button</button>
                     <br />
                     <br />
                     <button type="button" class="button button_color_primary">Primary color button</button>
@@ -94,10 +117,17 @@
                     <h3>Menu</h3>
                 </header>
                 <div class="section__body">
-                    <ul class="menu">
+                    <ul class="menu menu_dropdown">
                         <li class="menu__item"><a href="#" class="menu__link">Menu link 1</a></li>
                         <li class="menu__item menu__item_active"><a href="#" class="menu__link">Menu link 2</a></li>
                         <li class="menu__item"><a href="#" class="menu__link">Menu link 3</a></li>
+                        <li class="menu__item menu__item_has_menu">
+                            <a href="#" class="menu__link">Menu link 4</a>
+                            <ul class="menu">
+                                <li class="menu__item"><a href="#" class="menu__link">Menu link 5</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link">Menu link 6</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -108,7 +138,7 @@
                 </header>
                 <div class="section__body">
                     <ul class="breadcrumbs">
-                        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">GodMode</a></li>
+                        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
                         <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Kitchen sink</a></li>
                     </ul>
                 </div>
@@ -122,6 +152,7 @@
                     <p>Section — it's me</p>
                 </div>
                 <footer class="section__footer">
+                    <button type="button" class="button">Button</button>
                     <div class="buttons-group buttons-group_align_right">
                         <button type="button" class="button">Cancel</button>
                         <button type="button" class="button button_color_primary">Submit</button>
@@ -147,7 +178,7 @@
                             <span class="input__helper">Обязательное поле</span>
                         </label>
                     </div>
-                    <footer class="section__footer">
+                    <footer class="section__footer section__footer_justify_end">
                         <div class="buttons-group buttons-group_align_right">
                             <button type="reset" class="button">Reset</button>
                             <button type="submit" class="button button_color_primary">Submit</button>
@@ -155,9 +186,43 @@
                     </footer>
                 </form>
             </section>
+
+            <div class="page-main__content grid">
+                <section class="section grid__item">
+                    <header class="section__header">
+                        <h3>Sections</h3>
+                    </header>
+                    <div class="section__body">
+                        <p>Section — it's me</p>
+                    </div>
+                    <footer class="section__footer">
+                        <button type="button" class="button">Button</button>
+                        <div class="buttons-group buttons-group_align_right">
+                            <button type="button" class="button">Cancel</button>
+                            <button type="button" class="button button_color_primary">Submit</button>
+                        </div>
+                    </footer>
+                </section>
+
+                <section class="section grid__item">
+                    <header class="section__header">
+                        <h3>Sections</h3>
+                    </header>
+                    <div class="section__body">
+                        <p>Section — it's me</p>
+                    </div>
+                    <footer class="section__footer">
+                        <button type="button" class="button">Button</button>
+                        <div class="buttons-group buttons-group_align_right">
+                            <button type="button" class="button">Cancel</button>
+                            <button type="button" class="button button_color_primary">Submit</button>
+                        </div>
+                    </footer>
+                </section>
+            </div>
         </main>
     </div>
 
-    <script src="/dist/js/app.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>

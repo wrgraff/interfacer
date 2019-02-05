@@ -13,7 +13,7 @@ gulp.task('sass', function () {
         .pipe(livereload());
 });
 gulp.task('html', function () {
-    return gulp.src('*.html').pipe(livereload());
+    return gulp.src('**/*.html').pipe(livereload());
 });
 gulp.task('js', function() {
     return gulp.src('js/app.js')
