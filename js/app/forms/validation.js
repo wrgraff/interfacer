@@ -4,7 +4,9 @@ var validationForms = document.querySelectorAll('[data-validate]');
 
 // Validation RegExp patterns
 var validationPatterns = {
-    'penis': /^[\w]*$/
+    email: /.+@.+\..+/i,
+    phone: /^[0-9-+() ]*$/,
+    text: /^[A-Za-zА-Яа-я0-9_-]*$/
 };
 
 // Adding error message
@@ -138,6 +140,9 @@ validationForms.forEach((form) => {
             validateInput(input, false);
         });
         input.addEventListener('change', function() {
+            validateInput(input, true);
+        });
+        input.addEventListener('blur', function() {
             validateInput(input, true);
         });
     });

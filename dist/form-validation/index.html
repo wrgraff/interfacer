@@ -72,9 +72,9 @@
                         </label>
 
                         <label class="input">
-                            <input type="email" name="" value="" class="input__field" />
+                            <input type="email" name="" value="" class="input__field" data-validate-pattern="email" />
                             <span class="input__text">E-mail</span>
-                            <span class="input__helper"></span>
+                            <span class="input__helper">Введите электронный адрес в формате name@domain.com</span>
                             <span class="input__error"></span>
                         </label>
 
@@ -86,9 +86,16 @@
                         </label>
 
                         <label class="input">
-                            <input type="tel" name="" value="" required class="input__field" data-validate-pattern="penis" />
-                            <span class="input__text">Some field</span>
-                            <span class="input__helper">Required field in penis pattern</span>
+                            <input type="tel" name="" value="" class="input__field" data-validate-pattern="phone" />
+                            <span class="input__text">Phone</span>
+                            <span class="input__helper">Enter phone in format 8 999 000-00-00</span>
+                            <span class="input__error"></span>
+                        </label>
+
+                        <label class="input">
+                            <input type="text" name="" value="" class="input__field" data-validate-pattern="text" />
+                            <span class="input__text">Some text</span>
+                            <span class="input__helper">Enter text without strange symbols</span>
                             <span class="input__error"></span>
                         </label>
                     </div>
