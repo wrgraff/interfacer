@@ -9,6 +9,7 @@ $buttons-colors: (
     background-color: map-get($buttons-colors, default);
 
     &:hover {
+        color: color-pick-contrast(map-get($buttons-colors, default));
         background-color: smart-scale(map-get($buttons-colors, default));
     }
 }
@@ -23,6 +24,7 @@ $buttons-colors: (
                     background-color: smart-scale($color);
                 }
                 &:hover {
+                    color: color-pick-contrast($color, (color(white), color(black)), 10);
                     background-color: smart-scale($color);
                 }
             }
