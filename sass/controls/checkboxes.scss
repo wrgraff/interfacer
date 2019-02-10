@@ -71,6 +71,12 @@ $checkbox-size: rem-calc(20);
             border-color: color(white);
         }
     }
+    .checkbox__input:checked:hover + & {
+        &::before {
+            background-color: darken(color(primary), 20%);
+            border-color: darken(color(primary), 20%);
+        }
+    }
     .checkbox__input:checked:focus + & {
         &::before {
             box-shadow: 0 0 0 ($bit * 1) rgba(color(primary), .1);
