@@ -367,8 +367,8 @@ body {
   .checkbox__input:checked + .checkbox__text::after {
     border-color: #fff; }
   .checkbox__input:checked:hover + .checkbox__text::before {
-    background-color: #062270;
-    border-color: #062270; }
+    background-color: #1851f3;
+    border-color: #1851f3; }
   .checkbox__input:checked:focus + .checkbox__text::before {
     box-shadow: 0 0 0 0.5rem rgba(11, 63, 209, 0.1); }
 
