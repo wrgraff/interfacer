@@ -3,8 +3,6 @@ $buttons-colors: (
     white: color(white),
     primary: color(primary),
 );
-$button-color-scale: 16%;
-$button-color-threshold: 80%;
 
 .button {
     color: color-pick-contrast(map-get($buttons-colors, default));
@@ -12,7 +10,7 @@ $button-color-threshold: 80%;
 
     &:hover {
         color: color-pick-contrast(map-get($buttons-colors, default));
-        background-color: smart-scale(map-get($buttons-colors, default), $button-color-scale, $button-color-threshold);
+        background-color: smart-scale(map-get($buttons-colors, default));
     }
 }
 .button_color {
@@ -23,11 +21,11 @@ $button-color-threshold: 80%;
                 background-color: $color;
 
                 &:active {
-                    background-color: smart-scale($color, $button-color-scale, $button-color-threshold);
+                    background-color: smart-scale($color);
                 }
                 &:hover {
                     color: color-pick-contrast($color, (color(white), color(black)), 10);
-                    background-color: smart-scale($color, $button-color-scale, $button-color-threshold);
+                    background-color: smart-scale($color);
                 }
             }
         }
