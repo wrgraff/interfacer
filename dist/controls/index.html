@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interfacer</title>
+
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <div class="page-layout">
+        <nav class="page-layout__nav global-nav">
+            <ul class="global-nav__menu menu">
+                <li class="menu__item"><a href="/form-validation/" class="menu__link">Form validation</a></li>
+                <li class="menu__item menu__item_active"><a href="/controls/" class="menu__link">Controls</a></li>
+            </ul>
+        </nav>
+
+        <aside class="page-layout__modal page-modal">
+            <form action="#">
+                <header class="page-modal__header">
+                    <h2>Some form</h2>
+                </header>
+
+                <div class="page-modal__body">
+                    <label class="input">
+                        <input type="text" name="" value="" required class="input__field" />
+                        <span class="input__text">Текстовое поле</span>
+                        <span class="input__helper">Обязательное поле</span>
+                    </label>
+
+                    <label class="input">
+                        <input type="text" name="" value="" required class="input__field" />
+                        <span class="input__text">Другое текстовое поле</span>
+                        <span class="input__helper">Обязательное поле</span>
+                    </label>
+                </div>
+
+                <footer class="page-modal__footer">
+                    <div class="buttons-group buttons-group_align_right">
+                        <button type="button" class="button" data-modal>Cancel</button>
+                        <button type="submit" class="button button_color_primary">Submit</button>
+                    </div>
+                </footer>
+            </form>
+        </aside>
+
+        <header class="page-layout__header page-header">
+            <nav class="page-header__item">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
+                    <li class="breadcrumbs__item"><a href="/controls/" class="breadcrumbs__link">Controls</a></li>
+                </ul>
+            </nav>
+            <div class="page-header__item">
+                <button type="button" class="button button_color_primary" data-modal>Add</button>
+            </div>
+        </header>
+
+        <main class="page-layout__main page-main">
+            <section class="page-main__content section">
+                <form action="/" data-validate>
+                    <header class="section__header">
+                        <h3>Controls</h3>
+                    </header>
+                    <div class="section__body">
+                        <label class="checkbox">
+                            <input type="checkbox" name="" class="checkbox__input" data-validate-length="5" />
+                            <span class="checkbox__text">Some checkbox</span>
+                            <span class="checkbox__helper">Description of some fancy checkbox</span>
+                            <span class="checkbox__error"></span>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" name="" class="checkbox__input" data-validate-length="5" />
+                            <span class="checkbox__text">Some checkbox with very very very very very very very very very very so fucking very long name</span>
+                            <span class="checkbox__helper">Description of some fancy checkbox</span>
+                            <span class="checkbox__error"></span>
+                        </label>
+                    </div>
+                    <footer class="section__footer section__footer_justify_end">
+                        <div class="buttons-group buttons-group_align_right">
+                            <button type="reset" class="button">Reset</button>
+                            <button type="submit" class="button button_color_primary">Submit</button>
+                        </div>
+                    </footer>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
