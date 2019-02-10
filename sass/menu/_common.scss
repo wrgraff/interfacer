@@ -30,7 +30,8 @@ $menu-ico-size: rem-calc(32);
         background-color: color(primary);
 
         &:hover {
-            color: color(secondary);
+            color: color(white);
+            background-color: smart-scale(color(primary));
         }
     }
     .menu__item_has_menu & {

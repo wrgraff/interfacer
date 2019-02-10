@@ -406,7 +406,8 @@ body {
     color: #fff;
     background-color: #0B3FD1; }
     .menu__item_active .menu__link:hover {
-      color: #ff5555; }
+      color: #fff;
+      background-color: #1851f3; }
   .menu__item_has_menu .menu__link {
     position: relative; }
     .menu__item_has_menu .menu__link::before {
