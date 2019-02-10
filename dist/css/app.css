@@ -217,10 +217,10 @@ body {
   .button::before {
     content: '';
     position: absolute;
-    left: -0.5rem;
-    right: -0.5rem;
-    top: -0.5rem;
-    bottom: -0.5rem;
+    left: -1rem;
+    right: -1rem;
+    top: -1rem;
+    bottom: -1rem;
     border: 2px solid #BDBDBD;
     border-radius: 2px;
     opacity: 0;
@@ -228,10 +228,10 @@ body {
   .button:focus {
     outline: none; }
     .button:focus::before {
-      left: -0.25rem;
-      right: -0.25rem;
-      top: -0.25rem;
-      bottom: -0.25rem;
+      left: -0.5rem;
+      right: -0.5rem;
+      top: -0.5rem;
+      bottom: -0.5rem;
       opacity: .3; }
 
 .button {
