@@ -1,0 +1,21 @@
+$ico-button-sizes: (
+    default: rem-calc(40),
+    small: rem-calc(32),
+    large: rem-calc(56),
+);
+
+.ico-button {
+    width: map-get($ico-button-sizes, default);
+    height: map-get($ico-button-sizes, default);
+}
+
+.ico-button_size {
+    @each $name, $size in $ico-button-sizes {
+        @if ($name != default) {
+            &_#{$name} {
+                width: $size;
+                height: $size;
+            }
+        }
+    }
+}
