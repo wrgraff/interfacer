@@ -398,6 +398,43 @@ body {
     color: #fff;
     background-color: #1851f3; }
 
+.ico-button.ico-button_color_white:active {
+  box-shadow: 0 0.375rem 0.625rem -0.375rem #fff; }
+
+.ico-button.ico-button_color_primary:active {
+  box-shadow: 0 0.375rem 0.625rem -0.375rem #0B3FD1; }
+
+.ico-button:active {
+  box-shadow: 0 0.375rem 0.625rem -0.375rem rgba(0, 0, 0, 0.5); }
+
+.ico-button.ico-button_color_white:focus {
+  box-shadow: 0 0.375rem 0.625rem -0.375rem #fff; }
+
+.ico-button.ico-button_color_primary:focus {
+  box-shadow: 0 0.375rem 0.625rem -0.375rem #0B3FD1; }
+
+.ico-button:focus {
+  box-shadow: 0 0.375rem 0.625rem -0.375rem rgba(0, 0, 0, 0.5); }
+
+.ico-button_shadowed {
+  box-shadow: 0 0.375rem 0.625rem -0.375rem rgba(0, 0, 0, 0.5); }
+  .ico-button_shadowed.ico-button_color_white {
+    box-shadow: 0 0.375rem 0.625rem -0.375rem #fff; }
+  .ico-button_shadowed.ico-button_color_primary {
+    box-shadow: 0 0.375rem 0.625rem -0.375rem #0B3FD1; }
+  .ico-button_shadowed.ico-button_color_white:active {
+    box-shadow: 0 0.75rem 1.25rem -0.75rem #fff; }
+  .ico-button_shadowed.ico-button_color_primary:active {
+    box-shadow: 0 0.75rem 1.25rem -0.75rem #0B3FD1; }
+  .ico-button_shadowed:active {
+    box-shadow: 0 0.75rem 1.25rem -0.75rem rgba(0, 0, 0, 0.5); }
+  .ico-button_shadowed.ico-button_color_white:focus {
+    box-shadow: 0 0.75rem 1.25rem -0.75rem #fff; }
+  .ico-button_shadowed.ico-button_color_primary:focus {
+    box-shadow: 0 0.75rem 1.25rem -0.75rem #0B3FD1; }
+  .ico-button_shadowed:focus {
+    box-shadow: 0 0.75rem 1.25rem -0.75rem rgba(0, 0, 0, 0.5); }
+
 .checkbox {
   display: block;
   margin-bottom: 1rem;

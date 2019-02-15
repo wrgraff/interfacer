@@ -1,0 +1,71 @@
+$ico-buttons-shadow-default: (
+    active: 1-lvl,
+    focus: 1-lvl,
+);
+$ico-buttons-shadow-modificator: (
+    static: 1-lvl,
+    hover: 1-lvl,
+    active: 2-lvl,
+    focus: 2-lvl,
+);
+$ico-buttons-shadow-colors: $ico-buttons-colors;
+
+@mixin shadow-colors($status, $shadow) {
+    @each $name, $color in $ico-buttons-shadow-colors {
+        @if ($name != default) and ($status != static) {
+            &.ico-button_color_#{$name} {
+                &:#{$status} {
+                    box-shadow: shadow($shadow, $color);
+                }
+            }
+        } @else if ($name != default) {
+            &.ico-button_color_#{$name} {
+                box-shadow: shadow($shadow, $color);
+            }
+        }
+    }
+}
+
+@if ($ico-buttons-shadow-default) {
+    .ico-button {
+        @each $status, $shadow in $ico-buttons-shadow-default {
+            @if ($status != static) {
+                @if (map-get($ico-buttons-shadow-default, static) != $shadow) {
+                    @if ($ico-buttons-shadow-colors) {
+                        @include shadow-colors($status, $shadow);
+                    }
+                    &:#{$status} {
+                        box-shadow: shadow($shadow);
+                    }
+                }
+            } @else {
+                @if ($ico-buttons-shadow-colors) {
+                    @include shadow-colors(static, map-get($ico-buttons-shadow-default, static));
+                }
+                box-shadow: shadow(map-get($ico-buttons-shadow-default, static));
+            }
+        }
+    }
+}
+
+@if ($ico-buttons-shadow-modificator) {
+    .ico-button_shadowed {
+        @each $status, $shadow in $ico-buttons-shadow-modificator {
+            @if ($status != static) {
+                @if (map-get($ico-buttons-shadow-modificator, static) != $shadow) {
+                    @if ($ico-buttons-shadow-colors) {
+                        @include shadow-colors($status, $shadow);
+                    }
+                    &:#{$status} {
+                        box-shadow: shadow($shadow);
+                    }
+                }
+            } @else {
+                @if ($ico-buttons-shadow-colors) {
+                    @include shadow-colors(static, map-get($ico-buttons-shadow-modificator, static));
+                }
+                box-shadow: shadow(map-get($ico-buttons-shadow-modificator, static));
+            }
+        }
+    }
+}
