@@ -4,4 +4,5 @@
 // Site apps
 //=require app/forms/filled.js
 //=require app/forms/validation.js
+//=require app/controls/switches.js
 //=require app/modal/call.js

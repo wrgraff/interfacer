@@ -4,3 +4,6 @@
     box-sizing: border-box;
     line-height: 1.5;
 }
+::-moz-focus-inner {
+  border: 0;
+}

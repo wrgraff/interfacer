@@ -62,7 +62,7 @@
             <section class="page-main__content section">
                 <form action="/" data-validate>
                     <header class="section__header">
-                        <h3>Controls</h3>
+                        <h3>Checkboxes</h3>
                     </header>
                     <div class="section__body">
                         <label class="checkbox">
@@ -78,7 +78,17 @@
                             <span class="checkbox__helper">Description of some fancy checkbox</span>
                             <span class="checkbox__error"></span>
                         </label>
+                    </div>
+                </form>
+            </section>
 
+
+            <section class="page-main__content section">
+                <form action="/" data-validate>
+                    <header class="section__header">
+                        <h3>Radios</h3>
+                    </header>
+                    <div class="section__body">
                         <div class="radios">
                             <label class="radio">
                                 <input type="radio" name="radio" class="radio__input" />
@@ -94,12 +104,28 @@
                             <span class="radios__error"></span>
                         </div>
                     </div>
-                    <footer class="section__footer section__footer_justify_end">
-                        <div class="buttons-group buttons-group_align_right">
-                            <button type="reset" class="button">Reset</button>
-                            <button type="submit" class="button button_color_primary">Submit</button>
-                        </div>
-                    </footer>
+                </form>
+            </section>
+
+            <section class="page-main__content section">
+                <form action="/" data-validate>
+                    <header class="section__header">
+                        <h3>Switches</h3>
+                    </header>
+                    <div class="section__body">
+                        <p>
+                            Active switch<br />
+                            <button type="button" role="switch" aria-checked="true" class="switch"></button>
+                        </p>
+                        <p>
+                            Not active switch<br />
+                            <button type="button" role="switch" aria-checked="false" class="switch"></button>
+                        </p>
+                        <p>
+                            Undefined switch<br />
+                            <button type="button" role="switch" class="switch"></button>
+                        </p>
+                    </div>
                 </form>
             </section>
         </main>
