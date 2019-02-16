@@ -15,6 +15,8 @@
                 <li class="menu__item"><a href="/form-validation/" class="menu__link">Form validation</a></li>
                 <li class="menu__item"><a href="/controls/" class="menu__link">Controls</a></li>
                 <li class="menu__item menu__item_active"><a href="/lists/" class="menu__link">Lists</a></li>
+                <li class="menu__item"><a href="/ico-buttons/" class="menu__link">Ico buttons</a></li>
+                <li class="menu__item"><a href="/ico/" class="menu__link">Icons</a></li>
             </ul>
         </nav>
 
@@ -66,23 +68,58 @@
                 </header>
                 <div class="section__body">
 
-                    <div class="list">
-                        <div class="list__item">
-                            <div class="list__cell list__label">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="" class="checkbox__input" />
-                                    <span class="checkbox__text"></span>
-                                </label>
-                            </div>
+                    <table class="list">
+                        <thead>
+                            <tr class="list__header">
+                                <td></td>
+                                <td class="list__cell">List item name</td>
+                                <td class="list__cell">Comment</td>
+                                <td class="list__cell"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="list__item">
+                                <td class="list__cell list__label">
+                                    <label class="checkbox list__checkbox">
+                                        <input type="checkbox" name="" class="checkbox__input" />
+                                        <span class="checkbox__text"></span>
+                                    </label>
+                                </td>
 
-                            <a href="#" class="list__cell list__title">Title of the item</a>
+                                <td class="list__cell">
+                                    <a href="#" class="list__title">Title of the item</a>
+                                </td>
 
-                            <div class="list__cell">Какой-то параметр</div>
+                                <td class="list__cell">Some parameters</td>
 
-                            <div class="list__cell list__actions">
-                                
-                            </div>
-                        </div>
+                                <td class="list__cell list__actions">
+                                    <button type="button" class="ico-button">
+                                        <span class="ico"><img src="/img/ico/baseline-delete-24px.svg" alt="" /></span>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr class="list__item">
+                                <td class="list__cell list__label">
+                                    <label class="checkbox list__checkbox">
+                                        <input type="checkbox" name="" class="checkbox__input" />
+                                        <span class="checkbox__text"></span>
+                                    </label>
+                                </td>
+
+                                <td class="list__cell">
+                                    <a href="#" class="list__title">Title of the another item</a>
+                                </td>
+
+                                <td class="list__cell">Another parameters</td>
+
+                                <td class="list__cell list__actions">
+                                    <button type="button" class="ico-button">
+                                        <span class="ico"><img src="/img/ico/baseline-delete-24px.svg" alt="" /></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
                     </div>
 
                 </div>

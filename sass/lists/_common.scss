@@ -1,0 +1,56 @@
+.list {
+    width: 100%;
+    border-collapse: collapse;
+}
+.list__item {
+    position: relative;
+    color: color(dark-gray);
+    z-index: 1;
+    transition: background-color 250ms;
+
+    button, a:not(.list__title) {
+        position: relative;
+        z-index: 2;
+    }
+
+    &:hover {
+        background-color: color(light-gray);
+    }
+}
+.list__header {
+    color: color(medium-gray);
+}
+.list__cell {
+    padding: $bit;
+
+    .list__header & {
+        padding-bottom: $bit * 2;
+    }
+
+    .list__item:not(:last-child) &:not(.list__label) {
+        border-bottom: 1px solid color(light-gray);
+    }
+    .list__header &:not(.list__label) {
+        border-bottom: 1px solid color(medium-gray);
+    }
+}
+.list__label {
+    width: 0;
+    padding-left: $bit * 2;
+}
+.list__actions {
+    width: 0;
+}
+.list__checkbox {
+    position: relative;
+    height: rem-calc(24);
+    margin-bottom: 0;
+    z-index: 2;
+}
+.list__title {
+    &::after {
+        content: '';
+        @include add-zero-position;
+        z-index: 1;
+    }
+}
