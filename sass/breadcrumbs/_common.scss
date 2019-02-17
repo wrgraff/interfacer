@@ -1,5 +1,6 @@
 .breadcrumbs {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -10,6 +11,7 @@
 .breadcrumbs__item {
     position: relative;
     margin-right: $bit * 3;
+    white-space: nowrap;
 
     &:not(:last-child)::after {
         content: '';

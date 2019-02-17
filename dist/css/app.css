@@ -649,6 +649,7 @@ body {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -657,7 +658,8 @@ body {
 
 .breadcrumbs__item {
   position: relative;
-  margin-right: 1.5rem; }
+  margin-right: 1.5rem;
+  white-space: nowrap; }
   .breadcrumbs__item:not(:last-child)::after {
     content: '';
     position: absolute;
