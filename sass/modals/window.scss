@@ -1,0 +1,28 @@
+.modal-window {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, calc(-50% + #{$bit * 10})) scale(.85);
+    min-width: rem-calc(500);
+    padding: $bit * 4;
+    background-color: color(white);
+    border-radius: $radius;
+    box-shadow: shadow(3-lvl);
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 250ms, transform 250ms, visibility 1ms linear 250ms;
+}
+
+.modal-window_active {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 250ms, transform 250ms;
+}
+
+.modal-window__close {
+    position: absolute;
+    left: calc(100% + #{$bit * 2});
+    top: 0;
+}

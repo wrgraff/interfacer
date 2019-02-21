@@ -152,25 +152,6 @@ body {
   margin: auto;
   margin-bottom: 2.5rem; }
 
-.page-mask {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 5;
-  opacity: 0;
-  visibility: hidden;
-  transition: background-color 250ms, opacity 250ms, visibility 1ms linear 250ms; }
-
-.page-mask_active {
-  opacity: 1;
-  visibility: visible;
-  transition: background-color 250ms, opacity 250ms; }
-  .page-mask_active:hover {
-    background-color: rgba(0, 0, 0, 0.4); }
-
 .grid {
   display: grid;
   grid-gap: 2.5rem;
@@ -821,3 +802,51 @@ body {
   top: 0;
   bottom: 0;
   z-index: 1; }
+
+.modal-contents {
+  display: none; }
+
+.modal-window {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, calc(-50% + 5rem)) scale(0.85);
+  min-width: 31.25rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1.5rem 2.5rem -1.5rem rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 250ms, transform 250ms, visibility 1ms linear 250ms; }
+
+.modal-window_active {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity 250ms, transform 250ms; }
+
+.modal-window__close {
+  position: absolute;
+  left: calc(100% + 1rem);
+  top: 0; }
+
+.modal-mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transition: background-color 250ms, opacity 250ms, visibility 1ms linear 250ms; }
+
+.modal-mask_active {
+  opacity: 1;
+  visibility: visible;
+  transition: background-color 250ms, opacity 250ms; }
+  .modal-mask_active:hover {
+    background-color: rgba(0, 0, 0, 0.4); }
