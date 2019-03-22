@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interfacer</title>
+
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <form action="/" class="modal-iframe__form" data-modal-iframe>
+        <header class="">
+            <h2>Some form</h2>
+        </header>
+
+        <div class="">
+            <label class="input">
+                <input type="text" name="" value="" required class="input__field" />
+                <span class="input__text">Текстовое поле</span>
+                <span class="input__helper">Обязательное поле</span>
+            </label>
+
+            <label class="input">
+                <input type="text" name="" value="" required class="input__field" />
+                <span class="input__text">Другое текстовое поле</span>
+                <span class="input__helper">Обязательное поле</span>
+            </label>
+        </div>
+
+        <footer class="">
+            <div class="buttons-group buttons-group_align_right">
+                <button type="button" class="button" data-modal-close>Cancel</button>
+                <button type="submit" class="button button_color_primary">Submit</button>
+            </div>
+        </footer>
+    </form>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

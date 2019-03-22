@@ -1,69 +1,114 @@
-// Get elements
-var modalButtons = document.querySelectorAll('[data-modal]'),
-    modalCloseButtons = document.querySelectorAll('[data-modal-close]'),
-    modalWindow = document.querySelector('[data-modal-window]'),
-    modalAside = document.querySelector('[data-modal-aside]'),
-    modalContents = document.querySelector('[data-modal-contents]'),
-    modalMask = document.querySelector('[data-modal-mask]');
+var modals = function() {
+    // Get elements
+    var modalButtons = document.querySelectorAll('[data-modal]');
+    console.log(modalButtons);
 
-// Show modal
-var toggleActive = function(element) {
-    element.classList.toggle(element.classList.item(0) + '_active');
-};
-var toggleModal = function(container) {
-    console.log('toggle modal ' + container);
-    toggleActive(container);
-    toggleActive(modalMask);
-};
+    createModalWindow();
 
-// Load content
-var closeModal = function(container, closeButton) {
-    setTimeout(function() {
-        container.querySelector('[data-modal-container]').innerHTML = '';
-    }, 250);
-    toggleModal(container);
-};
-var loadContent = function(button, element, source, container) {
-    // Get element id
-    if (element === 'A') {
-        var content = document.querySelector(button.getAttribute('href'));
-    } else {
-        var content = document.querySelector('#' + button.dataset.modal);
-    };
-    console.log('content id: ' + content);
+    var element, source, container;
+    modalButtons.forEach((button) => {
+        button.addEventListener('click', function() {
+            element = button.tagName,
+            source = button.dataset.modalSource || 'inline',
+            container = document.querySelector('[data-modal-' + (button.dataset.modalContainer || 'window') + ']');
 
-    // Load content to container
-    var contentHtml = content.innerHTML;
-    container.querySelector('[data-modal-container]').innerHTML = contentHtml;
-};
+            console.log('element: ' + element + ', source: ' + source + ', container: ' + container);
 
-// Listen to events
-var element, source, container;
-modalButtons.forEach((button) => {
-    button.addEventListener('click', function() {
-        element = button.tagName,
-        source = button.dataset.modalSource || 'inline',
-        container = document.querySelector('[data-modal-' + (button.dataset.modalContainer || 'window') + ']');
+            toggleModal(container);
+            loadContent(button, element, source, container);
 
-        console.log('element: ' + element + ', source: ' + source + ', container: ' + container);
+            var innerCloseButtons = container.querySelector('[data-modal-container]').querySelectorAll('[data-modal-close]');
+            innerCloseButtons.forEach((innerCloseButton) => {
+                innerCloseButton.addEventListener('click', () => {
+                    toggleModal(container);
+                }, false);
+            });
 
-        toggleModal(container);
-        loadContent(button, element, source, container);
-
-        var innerCloseButtons = container.querySelector('[data-modal-container]').querySelectorAll('[data-modal-close]');
-        innerCloseButtons.forEach((innerCloseButton) => {
-            innerCloseButton.addEventListener('click', () => {
-                toggleModal(container);
-            }, false);
         });
-
     });
-});
-modalCloseButtons.forEach((closeButton) => {
-    closeButton.addEventListener('click', () => {
-        toggleModal(container);
-    }, false);
-});
-modalMask.addEventListener('click', function() {
-    toggleModal(container);
-}, false);
+};
+var createModalWindow = function() {
+    var modalWindow = addElement('div', 'modal-window'),
+        modalMask = addElement('div', 'modal-mask');
+
+    modalWindow.append(addElement('div', 'modal-window__container'));
+
+    var modalClose = addElement('div', 'modal-modal-window__close');
+    modalClose.innerHTML = '<button type="button" class="ico-button"><span class="ico"><img src="/img/ico/baseline-close-24px.svg" alt="Иконка закрытия" /></span></button>';
+    modalWindow.append(modalClose);
+
+    document.body.append(modalWindow);
+    document.body.append(modalMask);
+};
+
+var callModal = function() {
+
+};
+
+    // modalCloseButtons = document.querySelectorAll('[data-modal-close]'),
+    // modalAside = document.querySelector('[data-modal-aside]'),
+    // modalContents = document.querySelector('[data-modal-contents]');
+
+
+//
+// // Show modal
+// var toggleActive = function(element) {
+//     element.classList.toggle(element.classList.item(0) + '_active');
+// };
+// var toggleModal = function(container) {
+//     console.log('toggle modal ' + container);
+//     toggleActive(container);
+//     toggleActive(modalMask);
+// };
+//
+// // Load content
+// var closeModal = function(container, closeButton) {
+//     setTimeout(function() {
+//         container.querySelector('[data-modal-container]').innerHTML = '';
+//     }, 250);
+//     toggleModal(container);
+// };
+// var loadContent = function(button, element, source, container) {
+//     // Get element id
+//     if (element === 'A') {
+//         var contentAddress = button.getAttribute('href');
+//     } else {
+//         var contentAddress = button.dataset.modal;
+//     };
+//     contentAddress = contentAddress.indexOf('#') == 0 ? contentAddress.substring(1) : contentAddress;
+//     console.log('content address: ' + contentAddress);
+//
+//     if (source === 'inline') {
+//         var content = document.querySelector('#' + contentAddress);
+//
+//         // Load content to container
+//         var contentHtml = content.innerHTML;
+//         container.querySelector('[data-modal-container]').innerHTML = contentHtml;
+//     } else if (source === 'iframe') {
+//         var containerInner = container.querySelector('[data-modal-container]');
+//         containerInner.classList.add('modal-window__container_iframe');
+//         var modalFrame = document.createElement('iframe');
+//         modalFrame.onload = function() {
+//             containerInner.style.width = modalFrame.contentWindow.document.body.clientWidth + 'px';
+//             containerInner.style.height = modalFrame.contentWindow.document.body.clientHeight + 'px';
+//         };
+//         modalFrame.src = contentAddress;
+//         modalFrame.classList.add('modal-iframe');
+//
+//         containerInner.innerHTML = '';
+//         containerInner.append(modalFrame);
+//     };
+// };
+//
+// // Listen to events
+
+// modalCloseButtons.forEach((closeButton) => {
+//     closeButton.addEventListener('click', () => {
+//         toggleModal(container);
+//     }, false);
+// });
+// modalMask.addEventListener('click', function() {
+//     toggleModal(container);
+// }, false);
+
+modals();

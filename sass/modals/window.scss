@@ -3,8 +3,6 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, calc(-50% + #{$bit * 10})) scale(.85);
-    min-width: rem-calc(500);
-    padding: $bit * 4;
     background-color: color(white);
     border-radius: $radius;
     box-shadow: shadow(3-lvl);
@@ -13,7 +11,6 @@
     opacity: 0;
     transition: opacity 250ms, transform 250ms, visibility 1ms linear 250ms;
 }
-
 .modal-window_active {
     visibility: visible;
     opacity: 1;
@@ -21,6 +18,14 @@
     transition: opacity 250ms, transform 250ms;
 }
 
+.modal-window__container {
+    position: relative;
+    padding: $bit * 4;
+    box-sizing: content-box;
+}
+.modal-window__container_iframe {
+    padding: 0;
+}
 .modal-window__close {
     position: absolute;
     left: calc(100% + #{$bit * 2});

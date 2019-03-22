@@ -1,0 +1,9 @@
+.modal-iframe {
+    width: 100%;
+    min-width: rem-calc(500);
+    height: 100%;
+    border: none;
+}
+.modal-iframe__form {
+    padding: $bit * 4;
+}
