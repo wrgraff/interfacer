@@ -44,6 +44,14 @@ var createModalWindow = function() {
 var callModal = function() {
 
 };
+var toggleActive = function(element) {
+    element.classList.toggle(element.classList.item(0) + '_active');
+};
+var toggleModal = function(container) {
+    console.log('toggle modal ' + container);
+    toggleActive(container);
+    toggleActive(modalMask);
+};
 
     // modalCloseButtons = document.querySelectorAll('[data-modal-close]'),
     // modalAside = document.querySelector('[data-modal-aside]'),
@@ -52,14 +60,7 @@ var callModal = function() {
 
 //
 // // Show modal
-// var toggleActive = function(element) {
-//     element.classList.toggle(element.classList.item(0) + '_active');
-// };
-// var toggleModal = function(container) {
-//     console.log('toggle modal ' + container);
-//     toggleActive(container);
-//     toggleActive(modalMask);
-// };
+
 //
 // // Load content
 // var closeModal = function(container, closeButton) {
