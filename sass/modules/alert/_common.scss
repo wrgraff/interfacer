@@ -2,11 +2,37 @@
     position: fixed;
     top: $bit * 4;
     left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translate(-50%, $bit * 10) scale(.85);
+    min-width: rem-calc(400);
     padding: $bit * 4;
     color: color(white);
-    background-color: color(secondary);
+    background-color: rgba(color(black), .85);
     border-radius: $radius;
     box-shadow: shadow(3-lvl);
     z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 250ms, transform 250ms, visibility 1ms linear 250ms;
+
+    .button {
+        margin-bottom: 0;
+    }
+}
+.alert_faded {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+    transition: opacity 250ms, transform 250ms;
+}
+
+.alert__text {
+    &:not(:last-child) {
+        margin-right: $bit * 4;
+    }
+    >*:last-child {
+        margin-bottom: 0;
+    }
 }
