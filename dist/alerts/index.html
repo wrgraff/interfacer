@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interfacer</title>
+
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <div class="page-layout">
+        <nav class="page-layout__nav global-nav">
+            <ul class="global-nav__menu menu">
+                <li class="menu__item"><a href="/form-validation/" class="menu__link">Form validation</a></li>
+                <li class="menu__item"><a href="/controls/" class="menu__link">Controls</a></li>
+                <li class="menu__item"><a href="/lists/" class="menu__link">Lists</a></li>
+                <li class="menu__item"><a href="/ico-buttons/" class="menu__link">Ico buttons</a></li>
+                <li class="menu__item"><a href="/ico/" class="menu__link">Icons</a></li>
+                <li class="menu__item"><a href="/modals/" class="menu__link">Modals</a></li>
+                <li class="menu__item menu__item_active"><a href="/alerts/" class="menu__link">Alerts</a></li>
+            </ul>
+        </nav>
+
+        <aside class="page-modal page-layout__modal" data-modal-aside>
+            <div class="page-modal__close">
+                <button type="button" class="ico-button" data-modal-close>
+                    <span class="ico"><img src="/img/ico/baseline-close-24px.svg" alt="" /></span>
+                </button>
+            </div>
+
+            <div class="page-modal__container" data-modal-container>
+            </div>
+        </aside>
+
+        <header class="page-layout__header page-header">
+            <nav class="page-header__item">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
+                    <li class="breadcrumbs__item"><a href="/alerts/" class="breadcrumbs__link">Alerts</a></li>
+                </ul>
+            </nav>
+            <div class="page-header__item">
+                <button type="button" class="button button_color_primary" data-modal="textContent" data-modal-container="aside">Add</button>
+            </div>
+        </header>
+
+        <main class="page-layout__main page-main">
+            <section class="page-main__content section">
+                <header class="section__header">
+                    <h3>Alerts for scripts</h3>
+                </header>
+                <div class="section__body">
+                    <button type="button" class="button">Show me error, baby! =)</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/js/app.js"></script>
+
+    <div class="alert">
+        <div class="alert__text">
+            <p>This item already has the label "penis". You can add a new label.</p>
+        </div>
+        <div class="alert__actions">
+            <button type="button" class="button">Close</button>
+        </div>
+    </div>
+</body>
+</html>

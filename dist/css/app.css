@@ -865,3 +865,15 @@ body {
   transition: background-color 250ms, opacity 250ms; }
   .modal-mask_active:hover {
     background-color: rgba(0, 0, 0, 0.4); }
+
+.alert {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem;
+  color: #fff;
+  background-color: #ff5555;
+  border-radius: 2px;
+  box-shadow: 0 1.5rem 2.5rem -1.5rem rgba(0, 0, 0, 0.5);
+  z-index: 100; }
