@@ -126,8 +126,8 @@ var validateInput = function(input, isHardCheck) {
     return true;
 };
 
-// Validate every form
-validationForms.forEach((form) => {
+// Validate form
+var validateForm = function(form) {
     var inputs = form.querySelectorAll('.input__field');
     // console.log(inputs);
 
@@ -157,4 +157,7 @@ validationForms.forEach((form) => {
         });
         return isFormValid;
     };
+};
+validationForms.forEach((form) => {
+    validateForm(form);
 });
