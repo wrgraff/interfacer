@@ -28,6 +28,7 @@ var createModalWindow = function(windowContent) {
 
     modalWindow.classList.add('modal-window_opened');
     modalMask.classList.add('modal-mask_opened');
+    validateForm(modalWindow);
 
     modalClose.addEventListener('click', function() {
         closeWindow(modalWindow, modalMask);
