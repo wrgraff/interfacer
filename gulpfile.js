@@ -18,7 +18,7 @@ gulp.task('html', function () {
 gulp.task('js', function() {
     return gulp.src('js/app.js')
         .pipe(include())
-        .pipe(uglify())
+        // .pipe(uglify())
         .on('error', console.log)
         .pipe(gulp.dest('dist/js'))
         .pipe(livereload());
