@@ -30,6 +30,11 @@ var createModalWindow = function(windowContent) {
     modalMask.classList.add('modal-mask_opened');
     validateForm(modalWindow);
 
+    var modalLabeledInputs = modalWindow.querySelectorAll('.input__field');
+    modalLabeledInputs.forEach((input) => {
+        listenLabeledInput(input);
+    });
+
     modalClose.addEventListener('click', function() {
         closeWindow(modalWindow, modalMask);
     });
