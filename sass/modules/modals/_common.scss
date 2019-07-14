@@ -1,4 +1,17 @@
-@import "contents";
-@import "window";
-@import "iframe";
-@import "mask";
+.modal {
+    display: none;
+
+    &.is-open {
+        display: block;
+    }
+}
+
+.modal__overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(color(black), .5);
+    z-index: 5;
+}

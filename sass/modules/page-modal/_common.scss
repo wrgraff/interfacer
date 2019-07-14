@@ -6,7 +6,7 @@
     z-index: 6;
     transition: transform 250ms;
 }
-.page-modal_active {
+.page-modal.is-open {
     transform: translateX(-100%);
 }
 

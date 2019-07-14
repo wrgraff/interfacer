@@ -122,7 +122,7 @@ body {
   z-index: 6;
   transition: transform 250ms; }
 
-.page-modal_active {
+.page-modal.is-open {
   transform: translateX(-100%); }
 
 .page-modal__header {
@@ -791,88 +791,19 @@ body {
   bottom: 0;
   z-index: 1; }
 
-.modal-contents {
+.modal {
   display: none; }
+  .modal.is-open {
+    display: block; }
 
-.modal-window {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 1.5rem 2.5rem -1.5rem rgba(0, 0, 0, 0.5);
-  z-index: 10;
-  transform: translate(-50%, calc(-50% + 5rem)) scale(0.85);
-  opacity: 0;
-  animation-duration: 250ms;
-  animation-fill-mode: forwards; }
-
-.modal-window_opened {
-  animation-name: modalWindowFadeIn; }
-
-.modal-window_closed {
-  animation-name: modalWindowFadeOut; }
-
-.modal-window__close {
-  position: absolute;
-  left: calc(100% + 1rem);
-  top: 0; }
-
-@keyframes modalWindowFadeIn {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, calc(-50% + 5rem)) scale(0.85); }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1); } }
-
-@keyframes modalWindowFadeOut {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1); }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, calc(-50% + 5rem)) scale(0.85); } }
-
-.modal-iframe {
-  width: 100%;
-  min-width: 31.25rem;
-  height: 100%;
-  border: none; }
-
-.modal-iframe__form {
-  padding: 2rem; }
-
-.modal-mask {
+.modal__overlay {
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 5;
-  opacity: 0;
-  animation-duration: 250ms;
-  animation-fill-mode: forwards; }
-
-.modal-mask_opened {
-  animation-name: modalMaskFadeIn; }
-
-.modal-mask_closed {
-  animation-name: modalMaskFadeOut; }
-
-@keyframes modalMaskFadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes modalMaskFadeOut {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
+  z-index: 5; }
 
 .alert {
   position: fixed;

@@ -6,3 +6,5 @@
 //=require app/forms/filled.js
 //=require app/forms/validation.js
 //=require app/controls/switches.js
+
+//=require vendor/micromodal/common.js
