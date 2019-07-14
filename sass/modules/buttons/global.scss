@@ -8,30 +8,14 @@ $button-focus-shift: $bit;
     font-weight: font-weight(medium);
     line-height: 1;
     text-transform: uppercase;
+    outline-style: solid;
+    outline-color: rgba(color(medium-gray), 0);
+    outline-width: 2px;
+    outline-offset: $button-focus-shift * 2;
     transition: background-color 200ms, box-shadow 200ms;
 
-    &::before {
-        content: '';
-        position: absolute;
-        left: $button-focus-shift * -2;
-        right: $button-focus-shift * -2;
-        top: $button-focus-shift * -2;
-        bottom: $button-focus-shift * -2;
-        border: 2px solid color(medium-gray);
-        border-radius: $radius;
-        opacity: 0;
-        transition: left 200ms, right 200ms, top 200ms, bottom 200ms, opacity 200ms;
-    }
-
     &:focus {
-        outline: none;
-
-        &::before {
-            left: $button-focus-shift * -1;
-            right: $button-focus-shift * -1;
-            top: $button-focus-shift * -1;
-            bottom: $button-focus-shift * -1;
-            opacity: .3;
-        }
+        outline-color: rgba(color(medium-gray), .4);
+        outline-offset: $button-focus-shift;
     }
 }

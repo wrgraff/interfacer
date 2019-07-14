@@ -216,26 +216,14 @@ body {
   font-weight: 500;
   line-height: 1;
   text-transform: uppercase;
+  outline-style: solid;
+  outline-color: rgba(189, 189, 189, 0);
+  outline-width: 2px;
+  outline-offset: 1rem;
   transition: background-color 200ms, box-shadow 200ms; }
-  .button::before {
-    content: '';
-    position: absolute;
-    left: -1rem;
-    right: -1rem;
-    top: -1rem;
-    bottom: -1rem;
-    border: 2px solid #BDBDBD;
-    border-radius: 2px;
-    opacity: 0;
-    transition: left 200ms, right 200ms, top 200ms, bottom 200ms, opacity 200ms; }
   .button:focus {
-    outline: none; }
-    .button:focus::before {
-      left: -0.5rem;
-      right: -0.5rem;
-      top: -0.5rem;
-      bottom: -0.5rem;
-      opacity: .3; }
+    outline-color: rgba(189, 189, 189, 0.4);
+    outline-offset: 0.5rem; }
 
 .button {
   font-size: 1rem;
