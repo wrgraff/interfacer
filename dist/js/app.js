@@ -220,11 +220,15 @@ validationForms.forEach((form) => {
 
 const switches = document.querySelectorAll('.switch');
 
-switches.forEach((switchButton) => {
+var listenSwitch = function(switchButton) {
     switchButton.addEventListener('click', (e) => {
       let pressed = e.target.getAttribute('aria-checked') === 'true';
       e.target.setAttribute('aria-checked', String(!pressed));
     });
+};
+
+switches.forEach((switchButton) => {
+    listenSwitch(switchButton);
 });
 
 var modalCloseButton = '<button type="button" class="ico-button"><span class="ico"><img src="/img/ico/baseline-close-24px.svg" alt="Иконка закрытия" /></span></button>';

@@ -1,8 +1,12 @@
 const switches = document.querySelectorAll('.switch');
 
-switches.forEach((switchButton) => {
+var listenSwitch = function(switchButton) {
     switchButton.addEventListener('click', (e) => {
       let pressed = e.target.getAttribute('aria-checked') === 'true';
       e.target.setAttribute('aria-checked', String(!pressed));
     });
+};
+
+switches.forEach((switchButton) => {
+    listenSwitch(switchButton);
 });
