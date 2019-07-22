@@ -11,13 +11,8 @@
 <body>
     <div class="page-layout">
         <nav class="page-layout__nav global-nav">
-            <ul class="global-nav__menu menu">
-                <li class="menu__item"><a href="/form-validation/" class="menu__link">Form validation</a></li>
-                <li class="menu__item"><a href="/controls/" class="menu__link">Controls</a></li>
-                <li class="menu__item"><a href="/lists/" class="menu__link">Lists</a></li>
-                <li class="menu__item"><a href="/ico-buttons/" class="menu__link">Ico buttons</a></li>
-                <li class="menu__item"><a href="/ico/" class="menu__link">Icons</a></li>
-                <li class="menu__item menu__item_active"><a href="/modals/" class="menu__link">Modals</a></li>
+            <ul class="global-nav__menu menu" id="menu">
+                <script src="/js/menu.js" defer></script>
             </ul>
         </nav>
 
@@ -60,33 +55,31 @@
     <div class="modal-contents">
         <div class="modal" id="testContent" aria-hidden="true">
             <div class="modal__overlay" tabindex="-1" data-modal-close>
-                <section class="modal__container" role="dialog" aria-modal="true" aria-labelledby="testContentTitle">
-                    <form action="#">
-                        <header class="modal__header">
-                            <h2 class="modal__title" id="testContentTitle">Заголовок модального окна</h2>
-                        </header>
+                <form action="#" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="testContentTitle">
+                    <header class="modal__header">
+                        <h2 class="modal__title" id="testContentTitle">Заголовок модального окна</h2>
+                    </header>
 
-                        <div class="modal__body">
-                            <label class="input">
-                                <input type="text" name="" value="" class="input__field" data-validate-pattern="email" />
-                                <span class="input__text">Текстовое поле</span>
-                                <span class="input__helper">Валидация на электропочту для прикола</span>
-                            </label>
+                    <div class="modal__body">
+                        <label class="input">
+                            <input type="text" name="" value="" class="input__field" data-validate-pattern="email" />
+                            <span class="input__text">Текстовое поле</span>
+                            <span class="input__helper">Валидация на электропочту для прикола</span>
+                        </label>
 
-                            <label class="input">
-                                <input type="text" name="" value="" required class="input__field" />
-                                <span class="input__text">Другое текстовое поле</span>
-                                <span class="input__helper">Обязательное поле</span>
-                            </label>
+                        <label class="input">
+                            <input type="text" name="" value="" required class="input__field" />
+                            <span class="input__text">Другое текстовое поле</span>
+                            <span class="input__helper">Обязательное поле</span>
+                        </label>
+                    </div>
+
+                    <footer class="modal__footer">
+                        <div class="buttons-group buttons-group_align_right">
+                            <button type="button" class="button" data-modal-close>Cancel</button>
+                            <button type="submit" class="button button_color_primary">Submit</button>
                         </div>
-
-                        <footer class="modal__footer">
-                            <div class="buttons-group buttons-group_align_right">
-                                <button type="button" class="button" data-modal-close>Cancel</button>
-                                <button type="submit" class="button button_color_primary">Submit</button>
-                            </div>
-                        </footer>
-                    </form>
+                    </footer>
                 </section>
             </div>
         </div>
