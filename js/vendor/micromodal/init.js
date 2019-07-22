@@ -5,12 +5,12 @@ microModalLinks.forEach((link) => {
 });
 
 MicroModal.init({
-    onShow: modal => console.info(`${modal.id} is shown`),
-    onClose: modal => console.info(`${modal.id} is hidden`),
+    // onShow: modal => console.info(`${modal.id} is shown`),
+    // onClose: modal => console.info(`${modal.id} is hidden`),
     openTrigger: 'data-modal',
-    closeTrigger: 'data-modal-close',
-    disableScroll: true,
-    disableFocus: false,
-    awaitCloseAnimation: false,
-    debugMode: true
+    closeTrigger: 'data-modal-close'
+    // disableScroll: true,
+    // disableFocus: false,
+    // awaitCloseAnimation: false,
+    // debugMode: true
 });
