@@ -20,7 +20,7 @@
     max-height: 100vh;
     padding: $bit * 5;
     background-color: rgba(color(black), 0);
-    z-index: 5;
+    z-index: 6;
     transition: background-color 250ms;
 
     .is-open & {

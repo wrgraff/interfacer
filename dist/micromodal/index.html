@@ -16,15 +16,35 @@
             </ul>
         </nav>
 
-        <aside class="page-modal page-layout__modal" id="testAsideContent">
-            <div class="page-modal__close">
-                <button type="button" class="ico-button" data-modal-close>
-                    <span class="ico"><img src="/img/ico/baseline-close-24px.svg" alt="" /></span>
-                </button>
-            </div>
+        <aside class="page-modal page-layout__modal" id="testAsideContent" aria-hidden="true">
+            <section class="page-modal__overlay" tabindex="-1" data-modal-close>
+                <form action="#" class="page-modal__container" role="dialog" aria-modal="true" aria-labelledby="testContentTitle">
+                    <header class="page-modal__header">
+                        <h2 class="page-modal__title" id="testContentTitle">Заголовок модального окна</h2>
+                    </header>
 
-            <div class="page-modal__container" data-modal-container>
-            </div>
+                    <div class="page-modal__body">
+                        <label class="input">
+                            <input type="text" name="" value="" class="input__field" data-validate-pattern="email" />
+                            <span class="input__text">Текстовое поле</span>
+                            <span class="input__helper">Валидация на электропочту для прикола</span>
+                        </label>
+
+                        <label class="input">
+                            <input type="text" name="" value="" required class="input__field" />
+                            <span class="input__text">Другое текстовое поле</span>
+                            <span class="input__helper">Обязательное поле</span>
+                        </label>
+                    </div>
+
+                    <footer class="page-modal__footer">
+                        <div class="buttons-group buttons-group_align_right">
+                            <button type="button" class="button" data-modal-close>Cancel</button>
+                            <button type="submit" class="button button_color_primary">Submit</button>
+                        </div>
+                    </footer>
+                </form>
+            </section>
         </aside>
 
         <header class="page-layout__header page-header">
@@ -46,14 +66,27 @@
                 </header>
                 <div class="section__body">
                     <p>
-                        <button type="button" class="button" data-modal="testContent">Load inline content via button</button>
+                        <button type="button" class="button" data-modal="testContent">Show inline content via button</button>
                     </p>
                     <p>
-                        <a href="#testContent" data-modal>Load inline content via link</a>
+                        <a href="#testContent" data-modal>Show inline content via link</a>
                     </p>
                 </div>
             </section>
 
+            <section class="page-main__content section">
+                <header class="section__header">
+                    <h3>Inline to aside</h3>
+                </header>
+                <div class="section__body">
+                    <p>
+                        <button type="button" class="button" data-modal="testAsideContent">Show inline content via button to aside</button>
+                    </p>
+                    <p>
+                        <a href="#testAsideContent" data-modal>Show inline content via link to aside</a>
+                    </p>
+                </div>
+            </section>
         </main>
     </div>
 

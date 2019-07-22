@@ -1,7 +1,7 @@
 .page-layout {
     display: grid;
-    grid-template-areas: 'nav header modal'
-                         'nav main modal';
+    grid-template-areas: 'nav header'
+                         'nav main';
     grid-template-columns: minmax(0, max-content) auto 0;
     grid-template-rows: minmax(0, max-content) auto;
 
@@ -12,9 +12,6 @@
 
 .page-layout__nav {
     grid-area: nav;
-}
-.page-layout__modal {
-    grid-area: modal;
 }
 .page-layout__header {
     grid-area: header;
