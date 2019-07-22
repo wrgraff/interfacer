@@ -3,7 +3,7 @@
     grid-template-areas: 'nav header modal'
                          'nav main modal';
     grid-template-columns: minmax(0, max-content) auto 0;
-    // grid-template-rows: minmax(0, max-content) auto;
+    grid-template-rows: minmax(0, max-content) auto;
 
     height: 100%;
     background-color: color(light-gray);
