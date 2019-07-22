@@ -34,6 +34,12 @@ body {
 ::-moz-focus-inner {
   border: 0; }
 
+*:focus {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: rgba(11, 63, 209, 0.2);
+  outline-offset: 0.5rem; }
+
 a {
   color: #0B3FD1;
   text-decoration: none;
@@ -216,14 +222,7 @@ body {
   font-weight: 500;
   line-height: 1;
   text-transform: uppercase;
-  outline-style: solid;
-  outline-color: rgba(189, 189, 189, 0);
-  outline-width: 2px;
-  outline-offset: 1rem;
   transition: background-color 200ms, box-shadow 200ms; }
-  .button:focus {
-    outline-color: rgba(189, 189, 189, 0.4);
-    outline-offset: 0.5rem; }
 
 .button {
   font-size: 1rem;
@@ -846,6 +845,15 @@ body {
 
 .modal__title {
   margin-bottom: 0; }
+
+.modal__close {
+  position: absolute;
+  right: -3rem;
+  top: 0; }
+  @media screen and (max-width: 57em) {
+    .modal__close {
+      right: 0.5rem;
+      top: 0.5rem; } }
 
 .alert {
   position: fixed;

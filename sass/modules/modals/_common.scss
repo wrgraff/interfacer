@@ -64,3 +64,14 @@
 .modal__title {
     margin-bottom: 0;
 }
+
+.modal__close {
+    position: absolute;
+    right: $bit * -6;
+    top: 0;
+
+    @include breakpoint((rem-calc(800) + ($bit * 14)) down) {
+        right: $bit;
+        top: $bit;
+    }
+}

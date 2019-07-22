@@ -59,7 +59,7 @@
 
     <div class="modal-contents">
         <div class="modal" id="testContent" aria-hidden="true">
-            <div class="modal__overlay" tabindex="-1" data-modal-close>
+            <section class="modal__overlay" tabindex="-1" data-modal-close>
                 <form action="#" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="testContentTitle">
                     <header class="modal__header">
                         <h2 class="modal__title" id="testContentTitle">Заголовок модального окна</h2>
@@ -85,8 +85,14 @@
                             <button type="submit" class="button button_color_primary">Submit</button>
                         </div>
                     </footer>
-                </section>
-            </div>
+
+                    <div class="modal__close">
+                        <button type="button" class="ico-button" data-modal-close>
+                            <span class="ico"><img src="/img/ico/baseline-close-24px.svg" alt="" /></span>
+                        </button>
+                    </div>
+                </form>
+            </section>
         </div>
     </div>
 

@@ -8,14 +8,5 @@ $button-focus-shift: $bit;
     font-weight: font-weight(medium);
     line-height: 1;
     text-transform: uppercase;
-    outline-style: solid;
-    outline-color: rgba(color(medium-gray), 0);
-    outline-width: 2px;
-    outline-offset: $button-focus-shift * 2;
     transition: background-color 200ms, box-shadow 200ms;
-
-    &:focus {
-        outline-color: rgba(color(medium-gray), .4);
-        outline-offset: $button-focus-shift;
-    }
 }
