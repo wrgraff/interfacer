@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Interfacer</title>
 
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wrgraff/interfacer@0.1.4/dist/css/app.css">
 </head>
 <body>
     <div class="page-layout">
@@ -62,14 +62,51 @@
         <main class="page-layout__main page-main">
             <section class="page-main__content section">
                 <header class="section__header">
+                    <h2>Modals: 2 types</h2>
+                </header>
+                <div class="section__body">
+                    <p>I decided use fancy plugin <a href="https://micromodal.now.sh/" target="_blank">Micromodal</a> for modal windows. It's small, simple and a11y.</p>
+                </div>
+            </section>
+
+            <section class="page-main__content section">
+                <header class="section__header">
                     <h3>Modal</h3>
                 </header>
                 <div class="section__body">
+                    <p>Classic modal window fades on all page. Very simple for use: add to button <code>data-modal="elementId"</code> and create this markup for window:</p>
+                    <pre>
+                        <code>
+                            &lt;div class="modal" id="elementId" aria-hidden="true">
+                                &lt;section class="modal__overlay" tabindex="-1" data-modal-close>
+                                    &lt;div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="elementIdTitle">
+                                        &lt;header class="modal__header">
+                                            &lt;h2 class="modal__title" id="elementIdTitle">Заголовок модального окна&lt;/h2>
+                                        &lt;/header>
+
+                                        &lt;div class="modal__body">
+                                            &lt;!-- Body content -->
+                                        &lt;/div>
+
+                                        &lt;footer class="modal__footer">
+                                            &lt;!-- Footer content -->
+                                        &lt;/footer>
+
+                                        &lt;div class="modal__close">
+                                            &lt;button type="button" class="ico-button" data-modal-close>
+                                                &lt;span class="ico">&lt;img src="/img/ico/baseline-close-24px.svg" alt="" />&lt;/span>
+                                            &lt;/button>
+                                        &lt;/div>
+                                    &lt;/form>
+                                &lt;/section>
+                            &lt;/div>
+                        </code>
+                    </pre>
                     <p>
                         <button type="button" class="button" data-modal="testContent">Show inline content via button</button>
                     </p>
                     <p>
-                        <a href="#testContent" data-modal>Show inline content via link</a>
+                        Also you can create modal window by link. Data-attribute must be empty, script will get id from the href attribute:<br /><a href="#testContent" data-modal>Show inline content via link</a>
                     </p>
                 </div>
             </section>
@@ -79,6 +116,29 @@
                     <h3>Aside</h3>
                 </header>
                 <div class="section__body">
+                    <p>Interfacer has aside panel: it works like modal window with other styles. Links and buttons creates the same way.</p>
+                    <p>Markup for aside modal:</p>
+                    <pre>
+                        <code>
+                            &lt;aside class="page-modal page-layout__modal" id="testAsideContent" aria-hidden="true">
+                                &lt;section class="page-modal__overlay" tabindex="-1" data-modal-close>
+                                    &lt;form action="#" class="page-modal__container" role="dialog" aria-modal="true" aria-labelledby="testContentTitle">
+                                        &lt;header class="page-modal__header">
+                                            &lt;h2 class="page-modal__title" id="testContentTitle">Заголовок модального окна&lt;/h2>
+                                        &lt;/header>
+
+                                        &lt;div class="page-modal__body">
+                                            &lt;!-- Body content -->
+                                        &lt;/div>
+
+                                        &lt;footer class="page-modal__footer">
+                                            &lt;!-- Footer content -->
+                                        &lt;/footer>
+                                    &lt;/form>
+                                &lt;/section>
+                            &lt;/aside>
+                        </code>
+                    </pre>
                     <p>
                         <button type="button" class="button" data-modal="testAsideContent">Show inline content via button to aside</button>
                     </p>
@@ -127,6 +187,6 @@
         </section>
     </div>
 
-    <script src="/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wrgraff/interfacer@0.1.4/dist/js/app.js"></script>
 </body>
 </html>
