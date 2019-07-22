@@ -1,8 +1,10 @@
 .modal {
-    display: none;
+    visibility: hidden;
+    transition: visibility 1ms linear 250ms;
 
     &.is-open {
-        display: block;
+        visibility: visible;
+        transition: visibility 1ms linear 1ms;
     }
 }
 
@@ -17,8 +19,13 @@
     justify-content: center;
     max-height: 100vh;
     padding: $bit * 5;
-    background-color: rgba(color(black), .5);
+    background-color: rgba(color(black), 0);
     z-index: 5;
+    transition: background-color 250ms;
+
+    .is-open & {
+        background-color: rgba(color(black), .5);
+    }
 }
 
 .modal__container {
@@ -30,6 +37,15 @@
     background-color: color(white);
     border-radius: $radius;
     box-shadow: shadow(3-lvl);
+    opacity: 0;
+    transform-origin: 50% 0;
+    transform: scale(.8) translateY($bit * 50);
+    transition: opacity 250ms, transform 250ms;
+
+    .is-open & {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 
 .modal__header {
@@ -37,7 +53,7 @@
     border-bottom: 1px solid color(light-gray);
 }
 .modal__body {
-    padding: $bit * 4;
+    padding: ($bit * 5) ($bit * 4) ($bit * 4);
     overflow-y: auto;
 }
 .modal__footer {
