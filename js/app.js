@@ -3,6 +3,7 @@
 
 // Site apps
 //=require app/alerts/show.js
+//=require app/menu/dropdown.js
 //=require app/forms/filled.js
 //=require app/forms/validation.js
 //=require app/controls/switches.js

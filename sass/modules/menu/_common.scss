@@ -1,73 +1,99 @@
-$menu-ico-size: rem-calc(32);
-
 .menu {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
+}
+.menu_vertical {
+    flex-direction: column;
+}
+.menu_dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: rem-calc(200);
+    padding: $bit 0;
+    background-color: color(white);
+    border: 1px solid color(light-gray);
+    border-radius: $radius;
+    box-shadow: shadow(1-lvl);
+    visibility: hidden;
+    z-index: 2;
 
-    .menu__item & {
-        margin-left: $bit * 2;
+    .menu__item:hover > &,
+    .menu__item:focus-within > & {
+        visibility: visible;
+    }
+    .menu_vertical & {
+        left: 100%;
+        top: -$bit - rem-calc(1);
     }
 }
 
-.menu_dropdown {
-    .menu {
-        display: none;
+.menu__item {
+    position: relative;
+    transition: background-color 250ms;
+
+    &:hover {
+        background-color: color(light-gray);
     }
+}
+.menu__item_active {
 }
 
 .menu__link {
     display: block;
     padding: ($bit * 1.5) ($bit * 2);
     color: color(black);
+    border-radius: $radius;
     transition: background-color 250ms, color 250ms;
+    outline-offset: -2px;
 
-    .menu_dropdown & {
-        padding-left: $menu-ico-size + $bit * 2;
+    .menu_vertical & {
+        border-radius: 0;
     }
+
     .menu__item_active & {
         color: color(white);
         background-color: color(primary);
+        outline-color: rgba(color(white), .5);
 
         &:hover {
             color: color(white);
             background-color: smart-scale(color(primary));
         }
     }
-    .menu__item_has_menu & {
+    .menu__item_has_dropdown > & {
         position: relative;
+        padding-right: $bit * 4;
 
-        &::before {
-            content: '';
-            position: absolute;
-            left: $bit;
-            top: 50%;
-            transform: translateY(-50%);
-            width: $menu-ico-size;
-            height: $menu-ico-size;
-            border-radius: 50%;
-            transition: background-color 250ms;
-        }
         &::after {
             content: '';
             position: absolute;
-            left: $bit + $menu-ico-size / 2 - $menu-ico-size / 10;
-            top: calc(50% - #{$menu-ico-size / 20});
+            right: $bit * 2;
+            top: calc(50% - #{$bit / 4});
             transform: translateY(-50%) rotate(45deg);
-            width: $menu-ico-size / 5;
-            height: $menu-ico-size / 5;
+            width: $bit * .75;
+            height: $bit * .75;
             border-style: solid;
             border-width: rem-calc(0 2 2 0);
             border-color: color(black);
-        }
+            opacity: .5;
+            transition: border-color 250ms;
 
-        &:hover::before {
-            background-color: color(medium-gray);
+            .menu_vertical & {
+                top: 50%;
+                transform: translateY(-50%) rotate(-45deg);
+
+            }
+        }
+        &:hover::after {
+            border-color: color(primary);
         }
     }
 
     &:hover {
         color: color(primary);
-        background-color: color(light-gray);
     }
 }
