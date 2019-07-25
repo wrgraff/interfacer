@@ -53,8 +53,11 @@
     .menu_vertical & {
         border-radius: 0;
     }
+    &:hover {
+        color: color(primary);
+    }
 
-    .menu__item_active & {
+    .menu__item_active > & {
         color: color(white);
         background-color: color(primary);
         outline-color: rgba(color(white), .5);
@@ -85,15 +88,15 @@
             .menu_vertical & {
                 top: 50%;
                 transform: translateY(-50%) rotate(-45deg);
-
             }
         }
         &:hover::after {
             border-color: color(primary);
         }
     }
-
-    &:hover {
-        color: color(primary);
+    .menu__item_has_dropdown.menu__item_active > & {
+        &::after {
+            border-color: color(white);
+        }
     }
 }
