@@ -19,11 +19,17 @@
     border-radius: $radius;
     box-shadow: shadow(1-lvl);
     visibility: hidden;
+    opacity: 0;
+    transform: translateY(-$bit);
     z-index: 2;
+    transition: opacity 250ms, transform 1ms linear 250ms, visibility 1ms linear 250ms;
 
     .menu__item:hover > &,
     .menu__item:focus-within > & {
         visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 250ms, transform 250ms;
     }
     .menu_vertical & {
         left: 100%;
