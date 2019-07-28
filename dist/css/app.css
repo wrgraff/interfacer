@@ -451,7 +451,7 @@ body {
     margin-right: 0.5rem;
     border: 2px solid #616161;
     border-radius: 2px;
-    transition: background-color 250ms, border-color 250ms, box-shadow 250ms; }
+    transition: background-color 250ms, border-color 250ms; }
   .checkbox__text::after {
     content: '';
     position: absolute;
@@ -467,7 +467,10 @@ body {
     border-color: #000; }
   .checkbox__input:focus + .checkbox__text::before {
     border-color: #000;
-    box-shadow: 0 0 0 0.5rem rgba(97, 97, 97, 0.1); }
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: rgba(11, 63, 209, 0.2);
+    outline-offset: 0.5rem; }
   .checkbox__input:checked + .checkbox__text::before {
     background-color: #0B3FD1;
     border-color: #0B3FD1; }
@@ -476,8 +479,6 @@ body {
   .checkbox__input:checked:hover + .checkbox__text::before {
     background-color: #1851f3;
     border-color: #1851f3; }
-  .checkbox__input:checked:focus + .checkbox__text::before {
-    box-shadow: 0 0 0 0.5rem rgba(11, 63, 209, 0.1); }
 
 .checkbox__helper,
 .checkbox__error {
@@ -524,7 +525,7 @@ body {
     margin-right: 0.5rem;
     border: 2px solid #616161;
     border-radius: 50%;
-    transition: background-color 250ms, border-color 250ms, box-shadow 250ms; }
+    transition: background-color 250ms, border-color 250ms; }
   .radio__text::after {
     content: '';
     position: absolute;
@@ -539,7 +540,10 @@ body {
     border-color: #000; }
   .radio__input:focus + .radio__text::before {
     border-color: #000;
-    box-shadow: 0 0 0 0.5rem rgba(97, 97, 97, 0.1); }
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: rgba(11, 63, 209, 0.2);
+    outline-offset: 0.5rem; }
   .radio__input:checked + .radio__text::before {
     border-color: #0B3FD1; }
   .radio__input:checked + .radio__text::after {
@@ -548,8 +552,6 @@ body {
     border-color: #1851f3; }
   .radio__input:checked:hover + .radio__text::after {
     background-color: #1851f3; }
-  .radio__input:checked:focus + .radio__text::before {
-    box-shadow: 0 0 0 0.5rem rgba(11, 63, 209, 0.1); }
 
 .radio__helper {
   order: 3;
@@ -570,7 +572,7 @@ body {
   border: 0.125rem solid #616161;
   border-radius: 1.25rem;
   background-color: transparent;
-  transition: border-color 250ms, box-shadow 250ms; }
+  transition: border-color 250ms; }
   .switch::after {
     content: '';
     position: absolute;
@@ -586,9 +588,6 @@ body {
     border-color: #000; }
     .switch:hover::after {
       background-color: #000; }
-  .switch:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.5rem rgba(97, 97, 97, 0.1); }
   .switch[aria-checked='true'] {
     border-color: #0B3FD1; }
     .switch[aria-checked='true']::after {

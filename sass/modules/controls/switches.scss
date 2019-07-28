@@ -16,7 +16,7 @@ $switch-inner-shift: ($switch-width / 2) - ($switch-inner-size / 2) - $switch-bo
     border: $switch-border-size solid color(dark-gray);
     border-radius: $switch-height;
     background-color: transparent;
-    transition: border-color 250ms, box-shadow 250ms;
+    transition: border-color 250ms;
 
     &::after {
         content: '';
@@ -37,10 +37,6 @@ $switch-inner-shift: ($switch-width / 2) - ($switch-inner-size / 2) - $switch-bo
         &::after {
             background-color: color(black);
         }
-    }
-    &:focus {
-        outline: none;
-        box-shadow: 0 0 0 ($bit * 1) rgba(color(dark-gray), .1);
     }
 
     &[aria-checked='true'] {

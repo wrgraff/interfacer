@@ -35,7 +35,7 @@ $checkbox-size: rem-calc(20);
         margin-right: $bit;
         border: 2px solid color(dark-gray);
         border-radius: $radius;
-        transition: background-color 250ms, border-color 250ms, box-shadow 250ms;
+        transition: background-color 250ms, border-color 250ms;
     }
 
     &::after {
@@ -59,7 +59,10 @@ $checkbox-size: rem-calc(20);
     .checkbox__input:focus + & {
         &::before {
             border-color: color(black);
-            box-shadow: 0 0 0 ($bit * 1) rgba(color(dark-gray), .1);
+            outline-width: 2px;
+            outline-style: solid;
+            outline-color: rgba(color(primary), .2);
+            outline-offset: $bit;
         }
     }
     .checkbox__input:checked + & {
@@ -75,11 +78,6 @@ $checkbox-size: rem-calc(20);
         &::before {
             background-color: smart-scale(color(primary));
             border-color: smart-scale(color(primary));
-        }
-    }
-    .checkbox__input:checked:focus + & {
-        &::before {
-            box-shadow: 0 0 0 ($bit * 1) rgba(color(primary), .1);
         }
     }
 }
