@@ -682,8 +682,9 @@ body {
 
 .breadcrumbs__item {
   position: relative;
-  margin-right: 1.5rem;
   white-space: nowrap; }
+  .breadcrumbs__item:not(:last-child) {
+    margin-right: 1.5rem; }
   .breadcrumbs__item:not(:last-child)::after {
     content: '';
     position: absolute;

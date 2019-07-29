@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interfacer</title>
+
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <div class="page-layout">
+        <nav class="page-layout__nav global-nav">
+            <ul class="global-nav__menu menu menu_vertical" id="menu">
+                <script src="/js/menu.js" defer></script>
+            </ul>
+        </nav>
+
+        <header class="page-layout__header page-header">
+            <nav class="page-header__item">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
+                    <li class="breadcrumbs__item">Menu</li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="page-layout__main page-main">
+            <section class="page-main__content section">
+                <header class="section__header">
+                    <h2>Breadcrumbs</h2>
+                </header>
+                <div class="section__body">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
+                        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Kitchen sink</a></li>
+                    </ul>
+
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
+                        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Some link</a></li>
+                        <li class="breadcrumbs__item">Active item without link</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

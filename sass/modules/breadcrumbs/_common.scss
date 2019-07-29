@@ -10,7 +10,9 @@
 
 .breadcrumbs__item {
     position: relative;
-    margin-right: $bit * 3;
+    &:not(:last-child) {
+        margin-right: $bit * 3;
+    }
     white-space: nowrap;
 
     &:not(:last-child)::after {
