@@ -357,14 +357,6 @@ body {
     border-radius: 50%;
     opacity: 0;
     transition: left 200ms, right 200ms, top 200ms, bottom 200ms, opacity 200ms; }
-  .ico-button:focus {
-    outline: none; }
-    .ico-button:focus::before {
-      left: -0.5rem;
-      right: -0.5rem;
-      top: -0.5rem;
-      bottom: -0.5rem;
-      opacity: .3; }
 
 .ico-button {
   width: 2.5rem;

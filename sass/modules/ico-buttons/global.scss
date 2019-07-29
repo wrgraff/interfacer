@@ -23,16 +23,4 @@ $ico-button-focus-shift: $bit;
         opacity: 0;
         transition: left 200ms, right 200ms, top 200ms, bottom 200ms, opacity 200ms;
     }
-
-    &:focus {
-        outline: none;
-
-        &::before {
-            left: $ico-button-focus-shift * -1;
-            right: $ico-button-focus-shift * -1;
-            top: $ico-button-focus-shift * -1;
-            bottom: $ico-button-focus-shift * -1;
-            opacity: .3;
-        }
-    }
 }
