@@ -59,6 +59,13 @@ $input-field-darken: 20%;
     &:invalid {
         outline: none;
         box-shadow: none;
+
+        &:focus {
+            outline-width: 2px;
+            outline-style: solid;
+            outline-color: rgba(color(primary), .2);
+            outline-offset: $bit;
+        }
     }
     &:hover {
         border-color: darken($input-field-color, $input-field-darken);

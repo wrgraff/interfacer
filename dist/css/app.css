@@ -760,6 +760,11 @@ body {
   .input__field:invalid {
     outline: none;
     box-shadow: none; }
+    .input__field:invalid:focus {
+      outline-width: 2px;
+      outline-style: solid;
+      outline-color: rgba(11, 63, 209, 0.2);
+      outline-offset: 0.5rem; }
   .input__field:hover {
     border-color: #2e2e2e; }
   .input__field:focus {
@@ -799,6 +804,32 @@ body {
   opacity: 0; }
   .input__field_status_invalid ~ .input__error {
     opacity: 1; }
+
+[class*="input_type_"]::after {
+  content: '';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: translateY(-50%);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: .2;
+  cursor: text; }
+
+.input_type_email::after {
+  background-image: url(../img/ico/baseline-alternate_email-24px.svg); }
+
+.input_type_tel::after {
+  background-image: url(../img/ico/baseline-local_phone-24px.svg); }
+
+.input_type_url::after {
+  background-image: url(../img/ico/baseline-link-24px.svg); }
+
+.input_type_date::after {
+  background-image: url(../img/ico/baseline-calendar_today-24px.svg); }
 
 .list {
   width: 100%;

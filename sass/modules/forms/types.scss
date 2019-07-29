@@ -1,0 +1,29 @@
+[class*="input_type_"] {
+    &::after {
+        content: '';
+        position: absolute;
+        right: $bit * 2;
+        top: 50%;
+        display: block;
+        width: rem-calc(24);
+        height: rem-calc(24);
+        transform: translateY(-50%);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        opacity: .2;
+        cursor: text;
+    }
+}
+
+.input_type_email::after {
+    background-image: url(../img/ico/baseline-alternate_email-24px.svg);
+}
+.input_type_tel::after {
+    background-image: url(../img/ico/baseline-local_phone-24px.svg);
+}
+.input_type_url::after {
+    background-image: url(../img/ico/baseline-link-24px.svg);
+}
+.input_type_date::after {
+    background-image: url(../img/ico/baseline-calendar_today-24px.svg);
+}
