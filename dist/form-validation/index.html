@@ -16,35 +16,6 @@
             </ul>
         </nav>
 
-        <aside class="page-layout__modal page-modal">
-            <form action="#">
-                <header class="page-modal__header">
-                    <h2>Some form</h2>
-                </header>
-
-                <div class="page-modal__body">
-                    <label class="input">
-                        <input type="text" name="" value="" required class="input__field" />
-                        <span class="input__text">Текстовое поле</span>
-                        <span class="input__helper">Обязательное поле</span>
-                    </label>
-
-                    <label class="input">
-                        <input type="text" name="" value="" required class="input__field" />
-                        <span class="input__text">Другое текстовое поле</span>
-                        <span class="input__helper">Обязательное поле</span>
-                    </label>
-                </div>
-
-                <footer class="page-modal__footer">
-                    <div class="buttons-group buttons-group_align_right">
-                        <button type="button" class="button" data-modal>Cancel</button>
-                        <button type="submit" class="button button_color_primary">Submit</button>
-                    </div>
-                </footer>
-            </form>
-        </aside>
-
         <header class="page-layout__header page-header">
             <nav class="page-header__item">
                 <ul class="breadcrumbs">
@@ -52,9 +23,6 @@
                     <li class="breadcrumbs__item"><a href="/form-validation/" class="breadcrumbs__link">Form validation</a></li>
                 </ul>
             </nav>
-            <div class="page-header__item">
-                <button type="button" class="button button_color_primary" data-modal>Add</button>
-            </div>
         </header>
 
         <main class="page-layout__main page-main">
@@ -68,35 +36,30 @@
                             <input type="text" name="" value="" required class="input__field" data-validate-length="5" />
                             <span class="input__text">Name</span>
                             <span class="input__helper">Required field, min 5 characters</span>
-                            <span class="input__error"></span>
                         </label>
 
                         <label class="input">
                             <input type="email" name="" value="" class="input__field" data-validate-pattern="email" />
                             <span class="input__text">E-mail</span>
                             <span class="input__helper">Введите электронный адрес в формате name@domain.com</span>
-                            <span class="input__error"></span>
                         </label>
 
                         <label class="input">
                             <input type="number" name="" value="" class="input__field" data-validate-range="50-100" />
                             <span class="input__text">Some number</span>
                             <span class="input__helper">Enter number from 50 to 100</span>
-                            <span class="input__error"></span>
                         </label>
 
                         <label class="input">
                             <input type="tel" name="" value="" class="input__field" data-validate-pattern="phone" />
                             <span class="input__text">Phone</span>
                             <span class="input__helper">Enter phone in format 8 999 000-00-00</span>
-                            <span class="input__error"></span>
                         </label>
 
                         <label class="input">
                             <input type="text" name="" value="" class="input__field" data-validate-pattern="text" />
                             <span class="input__text">Some text</span>
                             <span class="input__helper">Enter text without strange symbols</span>
-                            <span class="input__error"></span>
                         </label>
                     </div>
                     <footer class="section__footer section__footer_justify_end">

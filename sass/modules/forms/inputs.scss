@@ -103,18 +103,25 @@ $input-field-darken: 20%;
     color: color(medium-gray);
     font-size: font-size(small);
     line-height: 1;
-
+    transition: opacity 250ms, transform 250ms;
+}
+.input__helper {
     .input__field_status_invalid ~ & {
         opacity: 0;
+        transform: translateY(rem-calc(24));
     }
 }
 .input__error {
     position: absolute;
-    bottom: 0;
+    top: rem-calc(56);
     color: color(secondary);
+    background-color: color(white);
     opacity: 0;
+    transform: translateY(rem-calc(24));
+    z-index: 3;
 
     .input__field_status_invalid ~ & {
         opacity: 1;
+        transform: translateY(0);
     }
 }

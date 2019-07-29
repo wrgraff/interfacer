@@ -73,8 +73,7 @@ var validationPatterns = {
 
 // Adding error message
 var addError = function(input, text) {
-    var inputParent = input.parentElement;
-    var error = inputParent.querySelector('.input__error');
+    var error = input.parentElement.querySelector('.input__error');
     error.innerHTML = text;
 };
 
@@ -195,6 +194,7 @@ var validateForm = function(form) {
 
     inputs.forEach((input) => {
         // console.log(input);
+        input.parentElement.append( addElement('span', 'input__error') );
         input.addEventListener('keyup', function() {
             validateInput(input, false);
         });

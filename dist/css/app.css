@@ -792,18 +792,24 @@ body {
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   color: #BDBDBD;
   font-size: 0.875rem;
-  line-height: 1; }
-  .input__field_status_invalid ~ .input__helper, .input__field_status_invalid ~
-  .input__error {
-    opacity: 0; }
+  line-height: 1;
+  transition: opacity 250ms, transform 250ms; }
+
+.input__field_status_invalid ~ .input__helper {
+  opacity: 0;
+  transform: translateY(1.5rem); }
 
 .input__error {
   position: absolute;
-  bottom: 0;
+  top: 3.5rem;
   color: #ff5555;
-  opacity: 0; }
+  background-color: #fff;
+  opacity: 0;
+  transform: translateY(1.5rem);
+  z-index: 3; }
   .input__field_status_invalid ~ .input__error {
-    opacity: 1; }
+    opacity: 1;
+    transform: translateY(0); }
 
 [class*="input_type_"]::after {
   content: '';
