@@ -14,6 +14,9 @@ const menuItems = [
         name: 'Form validation',
         href: 'form-validation'
     },{
+        name: 'Ajax loader',
+        href: 'ajax-loader'
+    },{
         name: 'Icons',
         href: 'ico'
     },{
