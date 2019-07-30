@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interfacer</title>
+
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <div class="page-layout">
+        <nav class="page-layout__nav global-nav">
+            <ul class="global-nav__menu menu menu_vertical" id="menu">
+                <script src="/js/menu.js" defer></script>
+            </ul>
+        </nav>
+
+        <header class="page-layout__header page-header">
+            <nav class="page-header__item">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
+                    <li class="breadcrumbs__item"><a href="/tooltips/" class="breadcrumbs__link">Tooltips</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="page-layout__main page-main">
+            <section class="page-main__content section">
+                <header class="section__header">
+                    <h2>Tooltips</h2>
+                </header>
+                <div class="section__body">
+                    <p>Tooltips is very simple in this case and works only on css with <code>::after</code> element. You can add <code data-tooltip="This is code element">data-tooltip</code> attribute on any element.</p>
+                    <p>Of course, buttons are the most element for use tooltips:</p>
+                    <p>
+                        <button type="button" class="button" data-tooltip="Описание подсказки">Кнопка</button>
+                    </p>
+                    <p>
+                        <button type="button" class="ico-button" data-tooltip="Удалить">
+                            <span class="ico"><img src="/img/ico/baseline-delete-24px.svg" alt="" /></span>
+                        </button>
+                    </p>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

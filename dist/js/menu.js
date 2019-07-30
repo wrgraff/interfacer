@@ -29,6 +29,9 @@ const menuItems = [
         name: 'Ico buttons',
         href: 'ico-buttons'
     },{
+        name: 'Tooltips',
+        href: 'tooltips'
+    },{
         name: 'Lists',
         href: 'lists'
     },{

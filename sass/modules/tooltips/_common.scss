@@ -1,0 +1,33 @@
+[data-tooltip] {
+    position: relative;
+
+    &::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        margin-top: $bit / 2;
+        padding: ($bit / 2) $bit;
+        color: color(white);
+        background-color: rgba(color(black), .6);
+        border-radius: $radius;
+        font-family: 'Roboto', sans-serif;
+        font-size: font-size(tiny);
+        text-transform: none;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transform-origin: 50% 20%;
+        transform: translateX(-50%) scale(.3);
+        transition: opacity 250ms, transform 1ms linear 250ms, visibility 1ms linear 250ms;
+        z-index: 3;
+    }
+
+    &:hover::after,
+    &:focus::after {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) scale(1);
+        transition: opacity 250ms ease 200ms, transform 250ms ease 200ms;
+    }
+}

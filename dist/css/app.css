@@ -980,3 +980,31 @@ body {
 
 .alert__text > *:last-child {
   margin-bottom: 0; }
+
+[data-tooltip] {
+  position: relative; }
+  [data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin-top: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+    text-transform: none;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: 50% 20%;
+    transform: translateX(-50%) scale(0.3);
+    transition: opacity 250ms, transform 1ms linear 250ms, visibility 1ms linear 250ms;
+    z-index: 3; }
+  [data-tooltip]:hover::after, [data-tooltip]:focus::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+    transition: opacity 250ms ease 200ms, transform 250ms ease 200ms; }
