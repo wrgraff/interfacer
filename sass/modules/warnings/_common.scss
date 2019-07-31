@@ -1,5 +1,6 @@
 .warning {
     display: flex;
+    margin: 0 0 ($bit * 2);
     padding: $bit * 4;
     background-color: rgba(color(warning), .1);
     border: ($bit / 2) solid color(warning);
