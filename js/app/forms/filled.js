@@ -1,19 +1,39 @@
-var labeledInputs = document.querySelectorAll('.input__field');
+findlabeledInputs(document);
 
-var listenLabeledInput = function(input) {
-    input.parentElement.classList.add('input_floating');
-    if (input.value) {
-        input.classList.add('input__field_filled');
-    };
-    input.addEventListener("change", function( event ) {
-        if (this.value == '') {
-            this.classList.remove('input__field_filled');
-        } else {
-            this.classList.add('input__field_filled');
-        }
+function findlabeledInputs(target) {
+    // Find inputs
+    const labeledInputs = target.querySelectorAll('.input__field');
+    // Add classes
+    addLabeledInputsClass(labeledInputs);
+    // Listen to changes
+    listenLabeledInputs(labeledInputs);
+};
+
+function addLabeledInputsClass(inputs) {
+    inputs.forEach((input) => {
+        input.parentElement.classList.add('input_floating');
     });
 };
 
-labeledInputs.forEach((input) => {
-    listenLabeledInput(input);
-});
+function listenLabeledInputs(inputs) {
+    inputs.forEach((input) => {
+        listenLabeledInput(input);
+    });
+};
+
+function listenLabeledInput(input) {
+    // Update loaded inputs classes
+    changeLabeledInput(input);
+    // Update classes if input changes
+    input.addEventListener('change', () => {
+        changeLabeledInput(input);
+    });
+};
+
+function changeLabeledInput(input) {
+    if (input.value == '') {
+        input.classList.remove('input__field_filled');
+    } else {
+        input.classList.add('input__field_filled');
+    };
+};
