@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}} — Interfacer</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wrgraff/interfacer@latest/dist/css/app.css">
+</head>
+<body>
+    <div class="page-layout">
+        <nav class="page-layout__nav global-nav">
+            {% block menu %}
+            {% endblock %}
+        </nav>
+
+        <aside class="page-modal page-layout__modal" id="testAsideContent" aria-hidden="true">
+            <section class="page-modal__overlay" tabindex="-1" data-modal-close>
+                <form action="#" class="page-modal__container" role="dialog" aria-modal="true" aria-labelledby="testContentTitle">
+                    <header class="page-modal__header">
+                        <h2 class="page-modal__title" id="testContentTitle">Заголовок модального окна</h2>
+                    </header>
+
+                    <div class="page-modal__body">
+                        <label class="input">
+                            <input type="text" name="" value="" class="input__field" data-validate-pattern="email" />
+                            <span class="input__text">Текстовое поле</span>
+                            <span class="input__helper">Валидация на электропочту для прикола</span>
+                        </label>
+
+                        <label class="input">
+                            <input type="text" name="" value="" required class="input__field" />
+                            <span class="input__text">Другое текстовое поле</span>
+                            <span class="input__helper">Обязательное поле</span>
+                        </label>
+                    </div>
+
+                    <footer class="page-modal__footer">
+                        <div class="buttons-group buttons-group_align_right">
+                            <button type="button" class="button" data-modal-close>Cancel</button>
+                            <button type="submit" class="button button_color_primary">Submit</button>
+                        </div>
+                    </footer>
+                </form>
+            </section>
+        </aside>
+
+        <header class="page-layout__header page-header">
+            <nav class="page-header__item">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
+                    <li class="breadcrumbs__item"><a href="/modals/" class="breadcrumbs__link">Modals</a></li>
+                </ul>
+            </nav>
+            <div class="page-header__item">
+                <a href="https://github.com/wrgraff/interfacer" class="button button_color_primary">View on GitHub</a>
+            </div>
+        </header>
+
+        <main class="page-layout__main page-main">
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/wrgraff/interfacer@latest/dist/js/app.js"></script>
+</body>
+</html>
