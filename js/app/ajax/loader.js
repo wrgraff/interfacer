@@ -9,14 +9,15 @@ function listenAjaxLinks(links) {
     // console.log(links);
     links.forEach(link => {
         let params = getLinkParams(link);
+        let onloadActions = getLinkOnloadActions(link);
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            addAjaxContent(params.containerId, params.targetAddress, params.targetElement);
+            addAjaxContent(params.containerId, params.targetAddress, params.targetElement, onloadActions);
         });
     });
 };
 
-function addAjaxContent(containerId, targetAddress, targetElement) {
+function addAjaxContent(containerId, targetAddress, targetElement, onloadActions) {
     if (!containerId) {
         showAlert('Container id is empty');
         return;
@@ -45,6 +46,10 @@ function addAjaxContent(containerId, targetAddress, targetElement) {
 
         container.innerHTML = '';
         container.append(target);
+
+        if (onloadActions) {
+            ajaxOnloadActions(container, onloadActions);
+        };
     });
 };
 
@@ -76,4 +81,15 @@ function getDocument(url, callback) {
         };
     };
     xhr.send(null);
+};
+
+function getLinkOnloadActions(link) {
+    if (link.dataset.ajaxOnload) {
+        return link.dataset.ajaxOnload.split(',');
+    };
+};
+function ajaxOnloadActions(target, actions) {
+    if (actions.includes('floatedInputs')) {
+        findlabeledInputs(target);
+    };
 };

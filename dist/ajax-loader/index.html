@@ -47,12 +47,12 @@
 
             <section class="page-main__content section">
                 <header class="section__header">
-                    <h2>Form loader</h2>
+                    <h2>Actions after load</h2>
                 </header>
                 <div class="section__body">
-                    <p>Validation and other scripts must be init in loaded element.</p>
+                    <p>Validation and filled scripts can be init by attributes.</p>
                     <p>
-                        <button type="button" class="button" data-ajax="testForm" data-ajax-link="content/#testContentForm">Load form!</button>
+                        <button type="button" class="button" data-ajax="testForm" data-ajax-link="content/#testContentForm" data-ajax-onload="floatedInputs">Load form!</button>
                     </p>
                     <div id="testForm" style="background: #f5f5f5; padding: 16px;">
                         <p>Here will be form</p>
