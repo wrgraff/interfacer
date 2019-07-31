@@ -52,6 +52,9 @@ const menuItems = [
     },{
         name: 'Grid',
         href: 'grid'
+    },{
+        name: 'Warnings',
+        href: 'warnings'
     }
 ];
 

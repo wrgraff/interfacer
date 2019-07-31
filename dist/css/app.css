@@ -1008,3 +1008,18 @@ body {
     visibility: visible;
     transform: translateX(-50%) scale(1);
     transition: opacity 250ms ease 200ms, transform 250ms ease 200ms; }
+
+.warning {
+  display: flex;
+  padding: 2rem;
+  background-color: rgba(255, 152, 0, 0.1);
+  border: 0.25rem solid #FF9800;
+  border-radius: 2px; }
+
+.warning__ico {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 2rem; }
+
+.warning__text > *:last-child {
+  margin-bottom: 0; }

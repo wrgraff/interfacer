@@ -1,0 +1,18 @@
+.warning {
+    display: flex;
+    padding: $bit * 4;
+    background-color: rgba(color(warning), .1);
+    border: ($bit / 2) solid color(warning);
+    border-radius: $radius;
+}
+
+.warning__ico {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: $bit * 4;
+}
+.warning__text {
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
