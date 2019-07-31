@@ -90,6 +90,6 @@ function getLinkOnloadActions(link) {
 };
 function ajaxOnloadActions(target, actions) {
     if (actions.includes('floatedInputs')) {
-        findlabeledInputs(target);
+        findfloatedInputs(target);
     };
 };

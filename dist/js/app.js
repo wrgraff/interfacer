@@ -40,15 +40,15 @@ dropdownMenus.forEach(menu => {
     menu.parentElement.classList.add('menu__item_has_dropdown');
 });
 
-findlabeledInputs(document);
+findfloatedInputs(document);
 
-function findlabeledInputs(target) {
+function findfloatedInputs(target) {
     // Find inputs
-    const labeledInputs = target.querySelectorAll('.input__field');
+    const floatedInputs = target.querySelectorAll('.input__field');
     // Add classes
-    addLabeledInputsClass(labeledInputs);
+    addLabeledInputsClass(floatedInputs);
     // Listen to changes
-    listenLabeledInputs(labeledInputs);
+    listenLabeledInputs(floatedInputs);
 };
 
 function addLabeledInputsClass(inputs) {
@@ -349,7 +349,7 @@ function getLinkOnloadActions(link) {
 };
 function ajaxOnloadActions(target, actions) {
     if (actions.includes('floatedInputs')) {
-        findlabeledInputs(target);
+        findfloatedInputs(target);
     };
 };
 
