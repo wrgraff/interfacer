@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Documents — Interfacer</title>
+    <title>{{title}} — Interfacer</title>
     <link rel="stylesheet" href="/css/app.css">
 </head>
-
 <body>
     <div class="page-layout">
         <nav class="page-layout__nav global-nav">
@@ -19,8 +17,7 @@
         <header class="page-layout__header page-header">
             <nav class="page-header__item">
                 <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a>
-                    </li>
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
                 </ul>
             </nav>
             <div class="page-header__item">
@@ -29,21 +26,11 @@
         </header>
 
         <main class="page-layout__main page-main">
-
-            <section class="page-main__content section">
-                <header class="section__header">
-                    <h2>What Interfacer is?</h2>
-                </header>
-                <div class="section__body">
-                    <p>My own framefork for interfaces. Current version: 0.1.4</p>
-                    <p>Docs in progress, sorry</p>
-                </div>
-            </section>
-
+            {% block content %}
+            {% endblock %}
         </main>
     </div>
 
     <script src="/js/app.js"></script>
 </body>
-
 </html>

@@ -5,12 +5,14 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify-es').default,
     concat = require('gulp-concat'),
     include = require("gulp-include"),
-    nunjucks = require('gulp-nunjucks');;
+    nunjucks = require('gulp-nunjucks-render'),
+    prettify = require('gulp-html-prettify');
 
-gulp.task('sass', function () {
-    return gulp.src('src/scss/app.scss')
+gulp.task('scss', function () {
+    return gulp.src('src/sсss/app.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('docs/css'))
         .pipe(livereload());
 });
 gulp.task('html', function () {
@@ -22,18 +24,23 @@ gulp.task('js', function() {
         // .pipe(uglify())
         .on('error', console.log)
         .pipe(gulp.dest('dist/js'))
+        .pipe(gulp.dest('docs/js'))
         .pipe(livereload());
 });
 
 gulp.task('docs', () =>
-    gulp.src('src/pages/**.njk')
-        .pipe(nunjucks.compile())
+    gulp.src('src/njk/pages/**/*.njk')
+        .pipe(nunjucks({
+            path: ['src/njk/layouts']
+        }))
+        .pipe(prettify({indent_char: ' ', indent_size: 4}))
         .pipe(gulp.dest('docs'))
 );
 
 gulp.task('default', function () {
     livereload.listen();
-    gulp.watch('src/sass/**/*.scss', gulp.series('sass'));
-    gulp.watch('**/*.html', gulp.series('html'));
+    gulp.watch('src/scss/**/*.scss', gulp.series('scss'));
+    // gulp.watch('**/*.html', gulp.series('html'));
     gulp.watch('src/js/**/*.js', gulp.series('js'));
+    gulp.watch('src/njk/**/*.njk', gulp.series('docs'));
 });
