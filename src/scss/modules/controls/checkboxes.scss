@@ -9,6 +9,13 @@ $checkbox-size: rem-calc(20);
     &:hover {
         color: color(black);
     }
+
+    &:focus {
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: rgba(color(primary), .2);
+        outline-offset: $bit;
+    }
 }
 .checkbox__input {
     width: 0;

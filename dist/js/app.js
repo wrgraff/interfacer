@@ -9,6 +9,8 @@ const addElement = function(elTag, elClass) {
 
 // Site apps
 var showAlert = function(text, closeText) {
+    var activeElement = document.activeElement;
+
     var alertWindow = addElement('div', 'alert');
 
     var alertText = addElement('div', 'alert__text');
@@ -24,12 +26,14 @@ var showAlert = function(text, closeText) {
     document.body.append(alertWindow);
     setTimeout(function() {
         alertWindow.classList.add('alert_faded');
+        alertButton.focus();
     }, 10);
 
     alertButton.addEventListener('click', () => {
         alertWindow.classList.remove('alert_faded');
         setTimeout(function() {
             alertWindow.remove();
+            activeElement.focus();
         }, 250);
     });
 };

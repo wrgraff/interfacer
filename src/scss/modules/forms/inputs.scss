@@ -56,23 +56,17 @@ $input-field-darken: 20%;
     font-size: font-size(medium);
     transition: border-color 250ms, box-shadow 250ms;
 
-    &:invalid {
-        outline: none;
-        box-shadow: none;
-
-        &:focus {
-            outline-width: 2px;
-            outline-style: solid;
-            outline-color: rgba(color(primary), .2);
-            outline-offset: $bit;
-        }
-    }
     &:hover {
         border-color: darken($input-field-color, $input-field-darken);
     }
     &:focus {
         border-color: $input-field-color-focus;
         box-shadow: shadow(1-lvl);
+
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: rgba(color(primary), .2);
+        outline-offset: $bit;
     }
 }
 .input__field_status_valid {

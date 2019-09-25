@@ -30,3 +30,10 @@
         border-color: color(medium-gray);
     }
 }
+
+.breadcrumbs__link:focus {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: rgba(color(primary), .2);
+    outline-offset: $bit;
+}

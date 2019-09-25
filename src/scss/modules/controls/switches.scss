@@ -38,6 +38,12 @@ $switch-inner-shift: ($switch-width / 2) - ($switch-inner-size / 2) - $switch-bo
             background-color: color(black);
         }
     }
+    &:focus {
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: rgba(color(primary), .2);
+        outline-offset: $bit;
+    }
 
     &[aria-checked='true'] {
         border-color: color(primary);

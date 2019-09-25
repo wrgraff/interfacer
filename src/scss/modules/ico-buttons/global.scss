@@ -23,4 +23,11 @@ $ico-button-focus-shift: $bit;
         opacity: 0;
         transition: left 200ms, right 200ms, top 200ms, bottom 200ms, opacity 200ms;
     }
+
+    &:focus {
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: rgba(color(primary), .2);
+        outline-offset: $bit;
+    }
 }

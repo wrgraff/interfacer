@@ -9,4 +9,11 @@ $button-focus-shift: $bit;
     line-height: 1;
     text-transform: uppercase;
     transition: background-color 200ms, box-shadow 200ms;
+
+    &:focus {
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: rgba(color(primary), .2);
+        outline-offset: $bit;
+    }
 }
