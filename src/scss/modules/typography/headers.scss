@@ -2,6 +2,6 @@
     h#{7 - $i} {
         margin: 0 0 ($bit * 2);
         font-weight: font-weight(medium);
-        font-size: rem-calc(8) + rem-calc(8 * $i / 2);
+        font-size: 8px + (8px * $i / 2);
     }
 }

@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     transform: translate(-50%, $bit * 10) scale(.85);
-    min-width: rem-calc(400);
+    min-width: 400px;
     padding: $bit * 4;
     color: color(white);
     background-color: rgba(color(black), .85);

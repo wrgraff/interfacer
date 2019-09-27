@@ -1,7 +1,7 @@
-$switch-width: rem-calc(40);
-$switch-height: rem-calc(20);
-$switch-border-size: rem-calc(2);
-$switch-inner-margin: rem-calc(2);
+$switch-width: 40px;
+$switch-height: 20px;
+$switch-border-size: 2px;
+$switch-inner-margin: 2px;
 
 // Calc other sizes
 $switch-inner-size: $switch-height - ($switch-border-size * 2) - ($switch-inner-margin * 2);

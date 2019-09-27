@@ -1,8 +1,8 @@
 $font-sizes: (
-    tiny: rem-calc(12),
-    small: rem-calc(14),
-    medium: rem-calc(16),
-    large: rem-calc(20),
+    tiny: 12px,
+    small: 14px,
+    medium: 16px,
+    large: 20px,
 );
 
 @function font-size($name) {

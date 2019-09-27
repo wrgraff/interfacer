@@ -1,13 +1,13 @@
 .page-main {
     padding: $bit * 6;
     background-color: color(light-gray);
-    background-size: 100% rem-calc(64);
+    background-size: 100% 64px;
     background-repeat: no-repeat;
     background-position: top right;
 }
 
 .page-main__content {
-    max-width: rem-calc(800);
+    max-width: 800px;
     margin: auto;
     margin-bottom: $bit * 5;
 }
