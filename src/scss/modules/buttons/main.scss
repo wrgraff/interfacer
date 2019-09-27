@@ -1,0 +1,33 @@
+$button-bg: color(light-gray);
+
+.button {
+    display: inline-block;
+    padding: ($bit * 2) ($bit * 3);
+    border: none;
+    border-radius: $radius;
+
+    color: inherit;
+    background-color: $button-bg;
+
+    font-size: inherit;
+    font-weight: font-weight(medium);
+    line-height: 1;
+    text-transform: uppercase;
+
+    transition: background-color 200ms, box-shadow 200ms;
+}
+
+.button:hover {
+    background-color: darken($button-bg, 10%);
+}
+
+.button:active {
+    box-shadow: shadow(1-lvl);
+}
+
+.button:focus {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: rgba(color(primary), .2);
+    outline-offset: $bit;
+}
