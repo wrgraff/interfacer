@@ -38,7 +38,7 @@ gulp.task('docs', () =>
 gulp.task('default', function () {
     livereload.listen();
     gulp.watch('src/scss/**/*', gulp.series('scss'));
-    // gulp.watch('**/*.html', gulp.series('html'));
+    gulp.watch('**/*.html', gulp.series('html'));
     gulp.watch('src/js/**/*.js', gulp.series('js'));
     gulp.watch('src/njk/**/*.njk', gulp.series('docs'));
 });
