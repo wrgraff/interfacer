@@ -1,4 +1,4 @@
-$checkbox-size: rem-calc(20);
+$checkbox-size: 20px;
 
 .checkbox {
     display: block;
@@ -34,7 +34,7 @@ $checkbox-size: rem-calc(20);
         content: '';
         position: absolute;
         left: 0;
-        top: (rem-calc(24) - $checkbox-size) / 2;
+        top: (24px - $checkbox-size) / 2;
         display: block;
         flex-shrink: 0;
         width: $checkbox-size;
@@ -49,7 +49,7 @@ $checkbox-size: rem-calc(20);
         content: '';
         position: absolute;
         left: $checkbox-size / 2;
-        top: (($checkbox-size / 2) + (rem-calc(24) - $checkbox-size) / 2) - (($checkbox-size / 2.3) / 4);
+        top: (($checkbox-size / 2) + (24px - $checkbox-size) / 2) - (($checkbox-size / 2.3) / 4);
         width: $checkbox-size / 3.3 * 2;
         height: $checkbox-size / 3;
         border-style: solid;

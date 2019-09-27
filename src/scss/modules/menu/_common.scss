@@ -12,7 +12,7 @@
     position: absolute;
     left: 0;
     top: 100%;
-    min-width: rem-calc(200);
+    min-width: 200px;
     padding: $bit 0;
     background-color: color(white);
     border: 1px solid color(light-gray);
@@ -33,7 +33,7 @@
     }
     .menu_vertical & {
         left: 100%;
-        top: -$bit - rem-calc(1);
+        top: -$bit - 1px;
     }
 }
 
@@ -91,7 +91,7 @@
             width: $bit * .75;
             height: $bit * .75;
             border-style: solid;
-            border-width: rem-calc(0 2 2 0);
+            border-width: 0 2px 2px 0;
             border-color: color(black);
             opacity: .5;
             transition: border-color 250ms;

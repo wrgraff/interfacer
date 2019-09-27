@@ -1,4 +1,4 @@
-$radio-size: rem-calc(20);
+$radio-size: 20px;
 
 .radio {
     display: block;
@@ -34,7 +34,7 @@ $radio-size: rem-calc(20);
         content: '';
         position: absolute;
         left: 0;
-        top: (rem-calc(24) - $radio-size) / 2;
+        top: (24px - $radio-size) / 2;
         display: block;
         flex-shrink: 0;
         width: $radio-size;
@@ -48,10 +48,10 @@ $radio-size: rem-calc(20);
     &::after {
         content: '';
         position: absolute;
-        left: rem-calc(5);
-        top: ((rem-calc(24) - $radio-size) / 2) + rem-calc(5);
-        width: $radio-size - rem-calc(10);
-        height: $radio-size - rem-calc(10);
+        left: 5px;
+        top: ((24px - $radio-size) / 2) + 5px;
+        width: $radio-size - 10px;
+        height: $radio-size - 10px;
         background-color: color(white);
         border-radius: 50%;
         transition: background-color 250ms;

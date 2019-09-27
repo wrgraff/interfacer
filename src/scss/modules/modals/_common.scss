@@ -32,7 +32,7 @@
     flex-grow: 2;
     display: flex;
     flex-direction: column;
-    max-width: rem-calc(800);
+    max-width: 800px;
     max-height: 100%;
     background-color: color(white);
     border-radius: $radius;
@@ -70,7 +70,7 @@
     right: $bit * -6;
     top: 0;
 
-    @include breakpoint((rem-calc(800) + ($bit * 14)) down) {
+    @include breakpoint((800px + ($bit * 14)) down) {
         right: $bit;
         top: $bit;
     }

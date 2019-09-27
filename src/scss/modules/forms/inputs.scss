@@ -50,7 +50,7 @@ $input-field-darken: 20%;
 .input__field {
     order: 2;
     width: 100%;
-    padding: ($bit * 2) - rem-calc(2);
+    padding: ($bit * 2) - 2px;
     border: 2px solid $input-field-color;
     border-radius: $radius;
     font-size: font-size(medium);
@@ -102,16 +102,16 @@ $input-field-darken: 20%;
 .input__helper {
     .input__field_status_invalid ~ & {
         opacity: 0;
-        transform: translateY(rem-calc(24));
+        transform: translateY(24px);
     }
 }
 .input__error {
     position: absolute;
-    top: rem-calc(56);
+    top: 56px;
     color: color(secondary);
     background-color: color(white);
     opacity: 0;
-    transform: translateY(rem-calc(24));
+    transform: translateY(24px);
     z-index: 3;
 
     .input__field_status_invalid ~ & {
