@@ -23,6 +23,7 @@ $button-bg: color(light-gray);
 
 .button:active {
     box-shadow: shadow(1-lvl);
+    box-shadow: shadow(1-lvl, var(--button-shadow-color));
 }
 
 .button:focus {

@@ -7,17 +7,17 @@ $button-shadow-colors: (
     white: rgba(color(black), .5),
 );
 
+// use css variables for change color in all states.
+// Not support by IE11: in IE shadows always would be in base color
+@each $name, $shadow-color in $button-shadow-colors {
+    .button_color_#{$name} {
+        --button-shadow-color: #{$shadow-color};
+    }
+}
+
 .button_shadowed {
     box-shadow: shadow(1-lvl);
     box-shadow: shadow(1-lvl, var(--button-shadow-color));
-
-    // use css variables for change color in all states.
-    // Not support by IE11: in IE shadows always would be in base color
-    @each $name, $shadow-color in $button-shadow-colors {
-        &.button_color_#{$name} {
-            --button-shadow-color: #{$shadow-color};
-        }
-    }
 }
 
 .button_shadowed:active {

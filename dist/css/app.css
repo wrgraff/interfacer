@@ -511,7 +511,8 @@ body {
   background-color: gainsboro; }
 
 .button:active {
-  box-shadow: 0 6px 10px -6px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 6px 10px -6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 10px -6px var(--button-shadow-color); }
 
 .button:focus {
   outline-width: 2px;
@@ -543,13 +544,15 @@ body {
 :root {
   --button-shadow-color: rgba(0, 0, 0, 0.5); }
 
+.button_color_primary {
+  --button-shadow-color: #0B3FD1; }
+
+.button_color_white {
+  --button-shadow-color: rgba(0, 0, 0, 0.5); }
+
 .button_shadowed {
   box-shadow: 0 6px 10px -6px rgba(0, 0, 0, 0.5);
   box-shadow: 0 6px 10px -6px var(--button-shadow-color); }
-  .button_shadowed.button_color_primary {
-    --button-shadow-color: #0B3FD1; }
-  .button_shadowed.button_color_white {
-    --button-shadow-color: rgba(0, 0, 0, 0.5); }
 
 .button_shadowed:active {
   box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.5);
