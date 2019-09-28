@@ -546,6 +546,7 @@ body {
   color: #fff; }
 
 .button_color_primary:hover {
+  color: #fff;
   background-color: #1c54f3; }
 
 :root {
