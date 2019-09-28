@@ -496,6 +496,7 @@ body {
 
 .button {
   display: inline-block;
+  vertical-align: middle;
   padding: 16px 24px;
   border: none;
   border-radius: 2px;
@@ -508,6 +509,7 @@ body {
   transition: background-color 200ms, box-shadow 200ms; }
 
 .button:hover {
+  color: inherit;
   background-color: gainsboro; }
 
 .button:active {

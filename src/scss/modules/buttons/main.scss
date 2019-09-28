@@ -2,6 +2,7 @@ $button-bg: color(light-gray);
 
 .button {
     display: inline-block;
+    vertical-align: middle;
     padding: ($bit * 2) ($bit * 3);
     border: none;
     border-radius: $radius;
@@ -18,6 +19,7 @@ $button-bg: color(light-gray);
 }
 
 .button:hover {
+    color: inherit;
     background-color: darken($button-bg, 10%);
 }
 
