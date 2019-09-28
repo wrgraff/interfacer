@@ -34,3 +34,9 @@ $button-bg: color(light-gray);
     outline-color: rgba(color(primary), .2);
     outline-offset: $bit;
 }
+
+.button[disabled] {
+    opacity: .3;
+    background-color: $button-bg;
+    box-shadow: none;
+}
