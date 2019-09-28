@@ -1,31 +1,23 @@
-$ico-buttons-colors: (
-    default: color(white),
-    // white: color(white),
-    primary: color(primary),
+$ico-button-colors: (
+    white: (
+        bg: color(white),
+    ),
+    primary: (
+        bg: color(primary),
+        bg-hover: lighten(color(primary), 10%), // if need to change base shift for hovered bg
+    ),
 );
 
-.ico-button {
-    color: color-pick-contrast(map-get($ico-buttons-colors, default));
-    background-color: map-get($ico-buttons-colors, default);
-
-    &:hover {
-        color: color-pick-contrast(map-get($ico-buttons-colors, default));
-        background-color: smart-scale(map-get($ico-buttons-colors, default));
-    }
-}
 .ico-button_color {
-    @each $name, $color in $ico-buttons-colors {
-        @if ($name != default) {
-            &_#{$name} {
-                color: color-pick-contrast($color, (color(white), color(black)), 10);
-                background-color: $color;
+    @each $name, $colors in $ico-button-colors {
+        &_#{$name} {
+            background-color: map-get($colors, bg);
 
-                &:active {
-                    background-color: smart-scale($color);
-                }
-                &:hover {
-                    color: color-pick-contrast($color, (color(white), color(black)), 10);
-                    background-color: smart-scale($color);
+            &:hover {
+                @if (map-has-key($colors, bg-hover)) {
+                    background-color: map-get($colors, bg-hover);
+                } @else {
+                    background-color: darken(map-get($colors, bg), 10%);
                 }
             }
         }

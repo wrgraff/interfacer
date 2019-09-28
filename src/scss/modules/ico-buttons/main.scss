@@ -1,0 +1,32 @@
+$ico-button-bg: color(light-gray);
+
+.ico-button {
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    padding: $bit;
+    border: none;
+    border-radius: 50%;
+
+    color: inherit;
+    background-color: $ico-button-bg;
+
+    transition: background-color 200ms, box-shadow 200ms;
+}
+
+.ico-button:hover {
+    background-color: darken($ico-button-bg, 10%);
+}
+
+.ico-button:active {
+    box-shadow: shadow(1-lvl);
+    box-shadow: shadow(1-lvl, var(--button-shadow-color));
+}
+
+.ico-button:focus {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: rgba(color(primary), .2);
+    outline-offset: $bit;
+}

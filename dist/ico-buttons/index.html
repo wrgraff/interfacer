@@ -4,53 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Interfacer</title>
+    <title>Buttons — Interfacer</title>
 
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-    <div class="page-layout">
-        <nav class="page-layout__nav global-nav">
-            <ul class="global-nav__menu menu menu_vertical" id="menu">
-                <script src="/js/menu.js" defer></script>
-            </ul>
-        </nav>
+    <div class="section">
+        <h1>Ico buttons</h1>
+        <button type="button" class="ico-button" data-tooltip="Base button">
+            <span class="ico">
+                <img src="/img/ico/baseline-delete-24px.svg" alt="Delete" />
+            </span>
+        </button>
 
-        <header class="page-layout__header page-header">
-            <nav class="page-header__item">
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
-                    <li class="breadcrumbs__item"><a href="/lists/" class="breadcrumbs__link">Ico buttons</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main class="page-layout__main page-main">
-            <section class="page-main__content section">
-                <header class="section__header">
-                    <h3>Ico buttons</h3>
-                </header>
-                <div class="section__body">
-                    <button type="button" class="ico-button">
-                        <span class="ico"><img src="/img/ico/baseline-delete-24px.svg" alt="" /></span>
-                    </button>
-                    <br />
-                    <br />
-                    <a href="#" class="ico-button">
-                        <span class="ico"><img src="/img/ico/baseline-person_add-24px.svg" alt="" /></span>
-                    </a>
-                    <br />
-                    <br />
-                    <button type="button" class="ico-button ico-button_color_primary">
-                        <span class="ico">
-                            <svg viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path fill="#fff" d="M19.77 7.23l.01-.01-3.72-3.72L15 4.56l2.11 2.11c-.94.36-1.61 1.26-1.61 2.33 0 1.38 1.12 2.5 2.5 2.5.36 0 .69-.08 1-.21v7.21c0 .55-.45 1-1 1s-1-.45-1-1V14c0-1.1-.9-2-2-2h-1V5c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v16h10v-7.5h1.5v5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5V9c0-.69-.28-1.32-.73-1.77zM12 10H6V5h6v5zm6 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
-                        </span>
-                    </button>
-                </div>
-            </section>
-        </main>
+        <a href="#" class="ico-button" data-tooltip="Link button">
+            <span class="ico">
+                <img src="/img/ico/baseline-delete-24px.svg" alt="Delete" />
+            </span>
+        </a>
     </div>
 
-    <script src="/js/app.js"></script>
+    <div class="section">
+        <h2>Sizes</h2>
+
+        <button type="button" class="ico-button" data-tooltip="Base size">
+            <span class="ico">
+                <img src="/img/ico/baseline-delete-24px.svg" alt="Delete" />
+            </span>
+        </button>
+
+        <button type="button" class="ico-button ico-button_size_large" data-tooltip="Large size">
+            <span class="ico">
+                <img src="/img/ico/baseline-delete-24px.svg" alt="Delete" />
+            </span>
+        </button>
+
+        <button type="button" class="ico-button ico-button_size_small" data-tooltip="Small size">
+            <span class="ico">
+                <img src="/img/ico/baseline-delete-24px.svg" alt="Delete" />
+            </span>
+        </button>
+    </div>
+
+    <div class="section">
+        <h2>Colors</h2>
+
+        <button type="button" class="ico-button" data-tooltip="Base color">
+            <span class="ico">
+                <img src="/img/ico/baseline-delete-24px.svg" alt="Delete" />
+            </span>
+        </button>
+
+        <button type="button" class="ico-button ico-button_color_primary" data-tooltip="Primary color">
+            <span class="ico">
+                <img src="/img/ico/baseline-delete-24px_white.svg" alt="Delete" />
+            </span>
+        </button>
+
+        <button type="button" class="ico-button ico-button_color_white" data-tooltip="White color">
+            <span class="ico">
+                <img src="/img/ico/baseline-delete-24px.svg" alt="Delete" />
+            </span>
+        </button>
+    </div>
+
+    <div class="section">
+        <h2>Shadows</h2>
+
+        <button type="button" class="ico-button ico-button_shadowed" data-tooltip="Base shadowed">
+            <span class="ico">
+                <img src="/img/ico/baseline-delete-24px.svg" alt="Delete" />
+            </span>
+        </button>
+
+        <button type="button" class="ico-button ico-button_color_primary ico-button_shadowed" data-tooltip="Primary shadowed">
+            <span class="ico">
+                <img src="/img/ico/baseline-delete-24px_white.svg" alt="Delete" />
+            </span>
+        </button>
+
+        <button type="button" class="ico-button ico-button_color_white ico-button_shadowed" data-tooltip="White shadowed">
+            <span class="ico">
+                <img src="/img/ico/baseline-delete-24px.svg" alt="Delete" />
+            </span>
+        </button>
+    </div>
+
 </body>
+<script src="/js/app.js"></script>
 </html>
