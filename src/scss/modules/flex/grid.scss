@@ -1,0 +1,24 @@
+$flex-gaps: (
+    small: $bit * 3,
+    large: $bit * 4,
+);
+
+.flex {
+    margin: 0 (-$bit);
+
+    @each $breakpoint, $gap in $flex-gaps {
+        @include breakpoint($breakpoint) {
+            margin: 0 ($gap / -2);
+        }
+    }
+}
+
+.flex__item {
+    margin: 0 $bit;
+
+    @each $breakpoint, $gap in $flex-gaps {
+        @include breakpoint($breakpoint) {
+            margin: 0 ($gap / 2);
+        }
+    }
+}

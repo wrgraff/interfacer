@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buttons — Interfacer</title>
+
+    <link rel="stylesheet" href="/css/app.css">
+
+    <style>
+        .flex {
+            margin-bottom: 32px;
+            background-color: #E1F5FE;
+            border: 2px solid #0288D1;
+        }
+        .flex__item {
+            padding: 8px;
+            background-color: #F1F8E9;
+            border: 2px solid #7CB342;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h1>Flex</h1>
+
+        <div class="flex">
+            <div class="flex__item">
+                <div style="height: 30px;">item 1</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 40px;">item 2</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 3</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">item 4</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h2>Align</h2>
+        <h3>Start</h3>
+        <div class="flex flex_align_start">
+            <div class="flex__item">
+                <div style="height: 30px;">item 1</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 40px;">item 2</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 3</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">item 4</div>
+            </div>
+        </div>
+
+        <h3>Center</h3>
+        <div class="flex flex_align_center">
+            <div class="flex__item">
+                <div style="height: 30px;">item 1</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 40px;">item 2</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 3</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">item 4</div>
+            </div>
+        </div>
+
+        <h3>End</h3>
+        <div class="flex flex_align_end">
+            <div class="flex__item">
+                <div style="height: 30px;">item 1</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 40px;">item 2</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 3</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">item 4</div>
+            </div>
+        </div>
+
+        <h3>Self</h3>
+        <div class="flex flex_align_end">
+            <div class="flex__item">
+                <div style="height: 60px;">item 1</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 2</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 3</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 4</div>
+            </div>
+
+            <div class="flex__item flex__item_align_start">
+                <div style="height: 30px;">item align-start</div>
+            </div>
+            <div class="flex__item flex__item_align_end">
+                <div style="height: 30px;">item align-end</div>
+            </div>
+            <div class="flex__item flex__item_align_center">
+                <div style="height: 30px;">item align-center</div>
+            </div>
+            <div class="flex__item flex__item_align_stretch">
+                <div style="height: 30px;">item align-stretch</div>
+            </div>
+
+            <div class="flex__item">
+                <div style="height: 60px;">item 5</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 6</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Justify</h2>
+        <h3>Center</h3>
+        <div class="flex flex_justify_center">
+            <div class="flex__item">
+                <div style="height: 30px;">item 1</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 40px;">item 2</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 3</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">item 4</div>
+            </div>
+        </div>
+
+        <h3>End</h3>
+        <div class="flex flex_justify_end">
+            <div class="flex__item">
+                <div style="height: 30px;">item 1</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 40px;">item 2</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 3</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">item 4</div>
+            </div>
+        </div>
+
+        <h3>Around</h3>
+        <div class="flex flex_justify_around">
+            <div class="flex__item">
+                <div style="height: 30px;">item 1</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 40px;">item 2</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 3</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">item 4</div>
+            </div>
+        </div>
+
+        <h3>Between</h3>
+        <div class="flex flex_justify_between">
+            <div class="flex__item">
+                <div style="height: 30px;">item 1</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 40px;">item 2</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 3</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">item 4</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="/js/app.js"></script>
+</html>
