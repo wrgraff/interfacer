@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Buttons — Interfacer</title>
+    <title>Flex — Interfacer</title>
 
     <link rel="stylesheet" href="/css/app.css">
 
     <style>
         .flex {
-            margin-bottom: 32px;
+            margin-bottom: 32px !important;
             background-color: #E1F5FE;
             border: 2px solid #0288D1;
         }
@@ -39,7 +39,6 @@
                 <div style="height: 50px;">item 4</div>
             </div>
         </div>
-
     </div>
 
     <div class="section">
@@ -196,6 +195,222 @@
         </div>
     </div>
 
+    <div class="section">
+        <h2>Gaps</h2>
+        <h3>Zero gaps</h3>
+        <div class="flex flex_gap_0">
+            <div class="flex__item">
+                <div style="height: 30px;">item 1</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 40px;">item 2</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 3</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">item 4</div>
+            </div>
+        </div>
+
+        <h3>Half gaps</h3>
+        <div class="flex flex_gap_half">
+            <div class="flex__item">
+                <div style="height: 30px;">item 1</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 40px;">item 2</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 3</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">item 4</div>
+            </div>
+        </div>
+
+        <h3>Self gaps</h3>
+        <div class="flex">
+            <div class="flex__item">
+                <div style="height: 30px;">item 1</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 30px;">item 2</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 30px;">item 3</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 30px;">item 4</div>
+            </div>
+            <div class="flex__item flex__item_gap_half">
+                <div style="height: 40px;">item half gap</div>
+            </div>
+            <div class="flex__item flex__item_gap_half">
+                <div style="height: 40px;">item half gap</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 7</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 8</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 9</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 10</div>
+            </div>
+            <div class="flex__item flex__item_gap_0">
+                <div style="height: 50px;">item 0 gap</div>
+            </div>
+            <div class="flex__item flex__item_gap_0">
+                <div style="height: 50px;">item 0 gap</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Order</h2>
+
+        <h3>Base</h3>
+        <div class="flex">
+            <div class="flex__item flex__item_order_2">
+                <div style="height: 30px;">item 1<br>order 2</div>
+            </div>
+            <div class="flex__item flex__item_order_1">
+                <div style="height: 40px;">item 2<br>order 1</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 3</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">item 4</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">item 5</div>
+            </div>
+            <div class="flex__item flex__item_order_r1">
+                <div style="height: 50px;">item 6<br>order -1</div>
+            </div>
+        </div>
+
+        <h3>Responsive</h3>
+        <div class="flex">
+            <div class="flex__item flex__item_large_order_2">
+                <div style="height: 30px;">item 1<br>large order 2</div>
+            </div>
+            <div class="flex__item flex__item_medium_order_1">
+                <div style="height: 40px;">item 2<br>medium order 1</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">item 3</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">item 4</div>
+            </div>
+            <div class="flex__item flex__item_order_r1 flex__item_small_order_0">
+                <div style="height: 50px;">item 5<br>order -1<br>small order 0</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">item 6</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Columns</h2>
+        <h3>Base (gets base columns count)</h3>
+        <div class="flex flex_columns">
+            <div class="flex__item">
+                <div style="height: 30px;">auto column</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 40px;">auto column</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">auto column</div>
+            </div>
+            <div class="flex__item flex__item_3">
+                <div style="height: 60px;">3 columns</div>
+            </div>
+            <div class="flex__item flex__item_1">
+                <div style="height: 60px;">1 column</div>
+            </div>
+            <div class="flex__item flex__item_1">
+                <div style="height: 60px;">1 column</div>
+            </div>
+        </div>
+
+        <h3>Container with count</h3>
+        <h4>8 columns</h4>
+        <div class="flex flex_columns_8">
+            <div class="flex__item">
+                <div style="height: 40px;">auto column</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">auto column</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">auto column</div>
+            </div>
+            <div class="flex__item flex__item_2">
+                <div style="height: 60px;">2 columns</div>
+            </div>
+        </div>
+
+        <h4>5 columns</h4>
+        <div class="flex flex_columns_5">
+            <div class="flex__item">
+                <div style="height: 40px;">auto column</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">auto column</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 50px;">auto column</div>
+            </div>
+            <div class="flex__item flex__item_2">
+                <div style="height: 60px;">2 columns</div>
+            </div>
+        </div>
+
+        <h3>Responsive</h3>
+        <h3>Responsive container: base 2 columns, medium 6 columns, large 12 columns</h3>
+        <div class="flex flex_columns_2 flex_columns_medium_6 flex_columns_large_12">
+            <div class="flex__item">
+                <div style="height: 30px;">auto column</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 40px;">auto column</div>
+            </div>
+            <div class="flex__item">
+                <div style="height: 60px;">auto column</div>
+            </div>
+            <div class="flex__item flex__item_3">
+                <div style="height: 60px;">3 columns (2-columns grid don't understand 3-column item)</div>
+            </div>
+            <div class="flex__item flex__item_1">
+                <div style="height: 60px;">1 column</div>
+            </div>
+            <div class="flex__item flex__item_1">
+                <div style="height: 60px;">1 column</div>
+            </div>
+        </div>
+
+        <h3>Responsive items</h3>
+        <div class="flex flex_columns">
+            <div class="flex__item flex__item_2 flex__item_large_4">
+                <div style="height: 30px;">base 2, large 4</div>
+            </div>
+            <div class="flex__item flex__item_12 flex__item_small_6 flex__item_medium_6 flex__item_large_4">
+                <div style="height: 30px;">base 12, small 6, medium 6, large 4</div>
+            </div>
+            <div class="flex__item flex__item_12 flex__item_small_6 flex__item_medium_4 flex__item_large_4">
+                <div style="height: 30px;">base 12, small 6, medium 4, large 4</div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="/js/app.js"></script>
 </html>

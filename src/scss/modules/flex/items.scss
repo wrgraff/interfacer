@@ -1,3 +1,6 @@
+$flex-orders: 4;
+$flex-order-breakpoints: $breakpoints;
+
 .flex__item_align_start {
     align-self: flex-start;
 }
@@ -12,4 +15,27 @@
 
 .flex__item_align_stretch {
     align-self: stretch;
+}
+
+// Orders
+@for $i from 0 through $flex-orders {
+    .flex__item_order_#{$i} {
+        order: $i;
+    }
+    .flex__item_order_r#{$i} {
+        order: -$i;
+    }
+}
+
+@each $breakpoint-name, $breakpoint-value in $flex-order-breakpoints {
+    @media screen and (min-width: $breakpoint-value) {
+        @for $i from 0 through $flex-orders {
+            .flex__item_#{$breakpoint-name}_order_#{$i} {
+                order: $i;
+            }
+            .flex__item_#{$breakpoint-name}_order_r#{$i} {
+                order: -$i;
+            }
+        }
+    }
 }
