@@ -2,8 +2,15 @@ a {
     color: color(primary);
     text-decoration: none;
     transition: color 200ms;
+}
 
-    &:hover {
-        color: color(secondary);
-    }
+a:hover {
+    color: color(secondary);
+}
+
+a:focus {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: rgba(color(primary), .2);
+    outline-offset: $bit;
 }
