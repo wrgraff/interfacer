@@ -6021,6 +6021,42 @@ body {
 .menu_vertical {
   flex-direction: column; }
 
+@media screen and (min-width: 0) {
+  .menu_xxsmall_horizontal {
+    flex-direction: row; }
+  .menu_xxsmall_vertical {
+    flex-direction: column; } }
+
+@media screen and (min-width: 400px) {
+  .menu_xsmall_horizontal {
+    flex-direction: row; }
+  .menu_xsmall_vertical {
+    flex-direction: column; } }
+
+@media screen and (min-width: 600px) {
+  .menu_small_horizontal {
+    flex-direction: row; }
+  .menu_small_vertical {
+    flex-direction: column; } }
+
+@media screen and (min-width: 960px) {
+  .menu_medium_horizontal {
+    flex-direction: row; }
+  .menu_medium_vertical {
+    flex-direction: column; } }
+
+@media screen and (min-width: 1200px) {
+  .menu_large_horizontal {
+    flex-direction: row; }
+  .menu_large_vertical {
+    flex-direction: column; } }
+
+@media screen and (min-width: 1920px) {
+  .menu_xlarge_horizontal {
+    flex-direction: row; }
+  .menu_xlarge_vertical {
+    flex-direction: column; } }
+
 .menu_dropdown {
   position: absolute;
   left: 0;
@@ -6064,6 +6100,7 @@ body {
   .menu__link:hover {
     color: #0B3FD1; }
   .menu__link:focus {
+    outline-offset: -2px;
     outline-width: 2px;
     outline-style: solid;
     outline-color: rgba(11, 63, 209, 0.2); }
@@ -6074,10 +6111,10 @@ body {
     .menu__item_active > .menu__link:hover {
       color: #fff;
       background-color: #1851f3; }
-  .menu__item_has_dropdown > .menu__link {
+  .menu__item_dropdown > .menu__link {
     position: relative;
     padding-right: 32px; }
-    .menu__item_has_dropdown > .menu__link::after {
+    .menu__item_dropdown > .menu__link::after {
       content: '';
       position: absolute;
       right: 16px;
@@ -6090,12 +6127,12 @@ body {
       border-color: #000;
       opacity: .5;
       transition: border-color 250ms; }
-      .menu_vertical .menu__item_has_dropdown > .menu__link::after {
+      .menu_vertical .menu__item_dropdown > .menu__link::after {
         top: 50%;
         transform: translateY(-50%) rotate(-45deg); }
-    .menu__item_has_dropdown > .menu__link:hover::after {
+    .menu__item_dropdown > .menu__link:hover::after {
       border-color: #0B3FD1; }
-  .menu__item_has_dropdown.menu__item_active > .menu__link::after {
+  .menu__item_dropdown.menu__item_active > .menu__link::after {
     border-color: #fff; }
 
 .breadcrumbs {

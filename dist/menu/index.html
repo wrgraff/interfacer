@@ -6,234 +6,235 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Interfacer</title>
 
+    <style>
+        .menu {
+            box-shadow: 0 0 0 4px #fff, 0 0 0 8px #eee;
+        }
+    </style>
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-    <div class="page-layout">
-        <nav class="page-layout__nav global-nav">
-            <ul class="global-nav__menu menu menu_vertical" id="menu">
-                <script src="/js/menu.js" defer></script>
-            </ul>
-        </nav>
+    <div class="section">
+        <h1>Menu</h1>
+        <ul class="menu">
+            <li class="menu__item">
+                <a href="#" class="menu__link">Menu link 1</a>
+            </li>
+            <li class="menu__item menu__item_active">
+                <a href="#" class="menu__link">Menu link active</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Menu link 3</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Menu link 4</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Menu link 5</a>
+            </li>
+        </ul>
+    </div>
 
-        <header class="page-layout__header page-header">
-            <nav class="page-header__item">
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
-                    <li class="breadcrumbs__item">Menu</li>
+    <div class="section">
+        <h2>Vertical</h2>
+        <ul class="menu menu_vertical" style="width: 300px;">
+            <li class="menu__item">
+                <a href="#" class="menu__link">Menu link 1</a>
+            </li>
+            <li class="menu__item menu__item_active">
+                <a href="#" class="menu__link">Menu link active</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Menu link 3</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Menu link 4</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Menu link 5</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Adaptive</h2>
+        <ul class="menu menu_vertical menu_large_horizontal" style="margin-bottom: 24px;">
+            <li class="menu__item">
+                <a href="#" class="menu__link">Adaptive</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">menu</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">base vertical</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">large horizontal</a>
+            </li>
+        </ul>
+        <ul class="menu menu_large_vertical">
+            <li class="menu__item">
+                <a href="#" class="menu__link">Adaptive</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">menu</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">base horizontal</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">large vertical</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Dropdown</h2>
+        <h3>Horizontal</h3>
+        <ul class="menu" style="margin-bottom: 32px;">
+            <li class="menu__item">
+                <a href="#" class="menu__link">Menu link 1</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Menu link 2</a>
+            </li>
+            <li class="menu__item menu__item_dropdown menu__item_active">
+                <a href="#" class="menu__link">Menu link 3</a>
+
+                <ul class="menu menu_vertical menu_dropdown">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 1</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 2</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 3</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 4</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 5</a>
+                    </li>
                 </ul>
-            </nav>
-        </header>
+            </li>
+            <li class="menu__item menu__item_dropdown">
+                <a href="#" class="menu__link">Menu link 4</a>
 
-        <main class="page-layout__main page-main">
-            <section class="page-main__content section">
-                <header class="section__header">
-                    <h3>Menu</h3>
-                </header>
-                <div class="section__body">
-                    <ul class="menu">
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 1</a>
-                        </li>
-                        <li class="menu__item menu__item_active">
-                            <a href="#" class="menu__link">Menu link 2</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 3</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 4</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 5</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                <ul class="menu menu_vertical menu_dropdown">
+                    <li class="menu__item menu__item_dropdown">
+                        <a href="#" class="menu__link">Menu inner link 1</a>
 
-            <section class="page-main__content section">
-                <header class="section__header">
-                    <h3>Menu vertical</h3>
-                </header>
-                <div class="section__body">
-                    <ul class="menu menu_vertical">
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 1</a>
-                        </li>
-                        <li class="menu__item menu__item_active">
-                            <a href="#" class="menu__link">Menu link 2</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 3</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 4</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 5</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                        <ul class="menu menu_vertical menu_dropdown">
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Menu inner link 1</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Menu inner link 2</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Menu inner link 3</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Menu inner link 4</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Menu inner link 5</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 2</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 3</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 4</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 5</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Menu link 5</a>
+            </li>
+        </ul>
 
-            <section class="page-main__content section">
-                <header class="section__header">
-                    <h3>Menu dropdown</h3>
-                </header>
-                <div class="section__body">
-                    <ul class="menu">
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 1</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 2</a>
-                        </li>
-                        <li class="menu__item menu__item_active">
-                            <a href="#" class="menu__link">Menu link 3</a>
+        <h3>Vertical</h3>
+        <ul class="menu menu_vertical" style="width: 300px;">
+            <li class="menu__item">
+                <a href="#" class="menu__link">Menu link 1</a>
+            </li>
+            <li class="menu__item menu__item_active">
+                <a href="#" class="menu__link">Menu link 2</a>
+            </li>
+            <li class="menu__item menu__item_dropdown">
+                <a href="#" class="menu__link">Menu link 3</a>
 
-                            <ul class="menu menu_vertical menu_dropdown">
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 1</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 2</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 3</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 4</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 5</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 4</a>
+                <ul class="menu menu_vertical menu_dropdown">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 1</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 2</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 3</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 4</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 5</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__item menu__item_dropdown">
+                <a href="#" class="menu__link">Menu link 4</a>
 
-                            <ul class="menu menu_vertical menu_dropdown">
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 1</a>
+                <ul class="menu menu_vertical menu_dropdown">
+                    <li class="menu__item menu__item_dropdown">
+                        <a href="#" class="menu__link">Menu inner link 1</a>
 
-                                    <ul class="menu menu_vertical menu_dropdown">
-                                        <li class="menu__item">
-                                            <a href="#" class="menu__link">Menu inner link 1</a>
-                                        </li>
-                                        <li class="menu__item">
-                                            <a href="#" class="menu__link">Menu inner link 2</a>
-                                        </li>
-                                        <li class="menu__item">
-                                            <a href="#" class="menu__link">Menu inner link 3</a>
-                                        </li>
-                                        <li class="menu__item">
-                                            <a href="#" class="menu__link">Menu inner link 4</a>
-                                        </li>
-                                        <li class="menu__item">
-                                            <a href="#" class="menu__link">Menu inner link 5</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 2</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 3</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 4</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 5</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 5</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="page-main__content section">
-                <header class="section__header">
-                    <h3>Menu vertical dropdown</h3>
-                </header>
-                <div class="section__body">
-                    <ul class="menu menu_vertical" style="width: 300px;">
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 1</a>
-                        </li>
-                        <li class="menu__item menu__item_active">
-                            <a href="#" class="menu__link">Menu link 2</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 3</a>
-
-                            <ul class="menu menu_vertical menu_dropdown">
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 1</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 2</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 3</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 4</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 5</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 4</a>
-
-                            <ul class="menu menu_vertical menu_dropdown">
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 1</a>
-
-                                    <ul class="menu menu_vertical menu_dropdown">
-                                        <li class="menu__item">
-                                            <a href="#" class="menu__link">Menu inner link 1</a>
-                                        </li>
-                                        <li class="menu__item">
-                                            <a href="#" class="menu__link">Menu inner link 2</a>
-                                        </li>
-                                        <li class="menu__item">
-                                            <a href="#" class="menu__link">Menu inner link 3</a>
-                                        </li>
-                                        <li class="menu__item">
-                                            <a href="#" class="menu__link">Menu inner link 4</a>
-                                        </li>
-                                        <li class="menu__item">
-                                            <a href="#" class="menu__link">Menu inner link 5</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 2</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 3</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 4</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Menu inner link 5</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menu link 5</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </main>
+                        <ul class="menu menu_vertical menu_dropdown">
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Menu inner link 1</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Menu inner link 2</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Menu inner link 3</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Menu inner link 4</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Menu inner link 5</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 2</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 3</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 4</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Menu inner link 5</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Menu link 5</a>
+            </li>
+        </ul>
     </div>
 
     <script src="/js/app.js"></script>

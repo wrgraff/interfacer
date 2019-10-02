@@ -1,3 +1,5 @@
+$menu-breakpoints: $breakpoints;
+
 .menu {
     display: flex;
     flex-wrap: wrap;
@@ -5,9 +7,24 @@
     padding: 0;
     list-style: none;
 }
+
+// Menu directions
 .menu_vertical {
     flex-direction: column;
 }
+@each $breakpoint-name, $breakpoint-value in $menu-breakpoints {
+    @media screen and (min-width: $breakpoint-value) {
+        .menu_#{$breakpoint-name} {
+            &_horizontal {
+                flex-direction: row;
+            }
+            &_vertical {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
 .menu_dropdown {
     position: absolute;
     left: 0;
@@ -63,6 +80,7 @@
         color: color(primary);
     }
     &:focus {
+        outline-offset: -2px;
         outline-width: 2px;
         outline-style: solid;
         outline-color: rgba(color(primary), .2);
@@ -78,7 +96,7 @@
             background-color: smart-scale(color(primary));
         }
     }
-    .menu__item_has_dropdown > & {
+    .menu__item_dropdown > & {
         position: relative;
         padding-right: $bit * 4;
 
@@ -105,7 +123,7 @@
             border-color: color(primary);
         }
     }
-    .menu__item_has_dropdown.menu__item_active > & {
+    .menu__item_dropdown.menu__item_active > & {
         &::after {
             border-color: color(white);
         }
