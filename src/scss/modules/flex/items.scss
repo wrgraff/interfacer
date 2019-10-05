@@ -17,6 +17,19 @@ $flex-order-breakpoints: $breakpoints;
     align-self: stretch;
 }
 
+.flex__item_stick_right {
+    margin-left: auto;
+}
+.flex__item_stick_left {
+    margin-right: auto;
+}
+.flex__item_stick_bottom {
+    margin-top: auto;
+}
+.flex__item_stick_top {
+    margin-bottom: auto;
+}
+
 // Orders
 @for $i from 0 through $flex-orders {
     .flex__item_order_#{$i} {
