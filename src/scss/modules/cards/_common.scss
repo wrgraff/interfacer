@@ -1,31 +1,23 @@
-.section {
+.card {
     padding: $bit * 4;
     background-color: color(white);
     border-radius: $radius;
     box-shadow: shadow(1-lvl);
-
-    .section__header,
-    .section__body,
-    .section__footer {
-        &:not(:last-child) {
-            margin-bottom: $bit * 4;
-        }
-    }
 }
-.section__header {
+.card__header {
     padding-bottom: 0;
 
     > *:last-child {
         margin-bottom: 0;
     }
 }
-.section__body {
+.card__body {
 
     > *:last-child {
         margin-bottom: 0;
     }
 }
-.section__footer {
+.card__footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -35,9 +27,9 @@
         margin-bottom: $bit * 2;
     }
 }
-.section__footer_justify_start {
+.card__footer_justify_start {
     justify-content: flex-start;
 }
-.section__footer_justify_end {
+.card__footer_justify_end {
     justify-content: flex-end;
 }
