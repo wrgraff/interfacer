@@ -1,0 +1,75 @@
+.page {
+    display: grid;
+    grid-template-areas: 'nav header' 'nav main';
+    grid-template-rows: minmax(0, max-content) auto;
+    grid-template-columns: 0 auto;
+    @media screen and (min-width: map-get($breakpoints, large)) {
+        grid-template-columns: 250px auto;
+    }
+
+    height: 100vh;
+    background-color: color(light-gray);
+    overflow: hidden;
+}
+
+.page__nav {
+    padding: $bit 0;
+    background-color: color(white);
+    overflow-y: auto;
+
+    @media screen and (min-width: map-get($breakpoints, large)) {
+        grid-area: nav;
+        width: auto;
+        border-right: 1px solid color(light-gray);
+    }
+
+    @media screen and (max-width: map-get($breakpoints, large)) {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 15;
+        transform: translateX(-100%);
+        width: 80%;
+        max-width: 250px;
+        transition: transform 250ms;
+    }
+}
+.page__nav_opened {
+    @media screen and (max-width: map-get($breakpoints, large)) {
+        box-shadow: shadow(3-lvl);
+        transform: translateX(0);
+    }
+}
+
+.page__header {
+    grid-area: header;
+
+    padding: $bit * 2;
+    background-color: color(white);
+    border-bottom: 1px solid color(light-gray);
+}
+
+.page__main {
+    grid-area: main;
+    padding: $bit * 6;
+    overflow-y: auto;
+}
+
+.page__overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(color(black), .5);
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: background-color 250ms, opacity 250ms, visibility 1ms linear 250ms;
+}
+.page__overlay_active {
+    opacity: 1;
+    visibility: visible;
+    transition: background-color 250ms, opacity 250ms;
+}
