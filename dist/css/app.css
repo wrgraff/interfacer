@@ -380,7 +380,6 @@ p {
 
 .page__main {
   grid-area: main;
-  padding: 48px;
   overflow-y: auto; }
 
 .page__overlay {
@@ -400,10 +399,12 @@ p {
   visibility: visible;
   transition: background-color 250ms, opacity 250ms; }
 
+.content {
+  padding: 48px; }
+
 .content__section {
   max-width: 860px;
-  margin: 0 auto;
-  margin-bottom: 48px; }
+  margin: 0 auto 48px; }
 
 .flex {
   display: flex;

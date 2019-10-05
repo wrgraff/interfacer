@@ -1,5 +1,8 @@
+.content {
+    padding: $bit * 6;
+}
+
 .content__section {
     max-width: 860px;
-    margin: 0 auto;
-    margin-bottom: $bit * 6;
+    margin: 0 auto ($bit * 6);
 }
