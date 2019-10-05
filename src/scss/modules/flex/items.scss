@@ -17,16 +17,20 @@ $flex-order-breakpoints: $breakpoints;
     align-self: stretch;
 }
 
-.flex__item_stick_right {
+.flex__item_stick_right,
+.flex_gap_0 .flex__item_stick_right {
     margin-left: auto;
 }
-.flex__item_stick_left {
+.flex__item_stick_left,
+.flex_gap_0 .flex__item_stick_left {
     margin-right: auto;
 }
-.flex__item_stick_bottom {
+.flex__item_stick_bottom,
+.flex_gap_0 .flex__item_stick_bottom {
     margin-top: auto;
 }
-.flex__item_stick_top {
+.flex__item_stick_top,
+.flex_gap_0 .flex__item_stick_top {
     margin-bottom: auto;
 }
 

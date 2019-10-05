@@ -20,17 +20,19 @@ $flex-columns-breakpoints: $breakpoints;
         }
     }
 
-    &:not(.flex_gap_0) { // Zero gaps not need calculations
-        margin: 0 ($bit * -2); // Grid gap for old browsers (ok, for IE only)
-        margin: 0 calc(var(--flex-gap) / -2);
-    }
+    margin: 0 ($bit * -2); // Grid gap for old browsers (ok, for IE only)
+    margin: 0 calc(var(--flex-gap) / -2);
+}
+.flex_gap_0 { // Zero gaps not need calculations
+    margin: 0;
 }
 
 .flex__item {
-    .flex:not(.flex_gap_0) &:not([class*='_stick_']) { // Zero gaps not need calculations
-        margin: 0 ($bit * 2); // Grid gap for old browsers (ok, for IE only)
-        margin: 0 calc(var(--flex-gap) / 2);
-    }
+    margin: 0 ($bit * 2); // Grid gap for old browsers (ok, for IE only)
+    margin: 0 calc(var(--flex-gap) / 2);
+}
+.flex_gap_0 .flex__item { // Zero gaps not need calculations
+    margin: 0;
 }
 
 .flex__item_gap_half {
