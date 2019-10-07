@@ -1,0 +1,40 @@
+.table {
+    width: 100%;
+    margin-bottom: $bit * 2;
+    border: 1px solid color(medium-gray);
+    border-collapse: collapse;
+}
+
+.table tr {
+    transition: background-color 250ms;
+    &:nth-child(even) {
+        background-color: color(light-gray);
+    }
+
+    &:hover {
+        background-color: rgba(color(primary), .15);
+    }
+}
+
+.table td,
+.table th {
+    padding: ($bit * 2) ($bit * 1.5);
+
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table thead {
+    tr {
+        background-color: color(light-gray);
+
+        &:hover {
+            background-color: color(light-gray);
+        }
+    }
+    td,
+    th {
+        padding-top: $bit * 1.5;
+        padding-bottom: $bit * 1.5;
+    }
+}

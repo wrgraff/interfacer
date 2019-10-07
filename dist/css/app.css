@@ -265,22 +265,36 @@ template {
 
 @font-face {
   font-family: Roboto;
-  src: local("Roboto"), url("../fonts/roboto/roboto-regular.woff2") format("woff2"), url("../fonts/roboto/roboto-regular.woff") format("woff"), url("../fonts/roboto/roboto-regular.eot") format("eot"), url("../fonts/roboto/roboto-regular.ttf") format("ttf");
+  src: url("../fonts/roboto/roboto-regular.woff2") format("woff2"), url("../fonts/roboto/roboto-regular.woff") format("woff"), url("../fonts/roboto/roboto-regular.eot") format("eot"), url("../fonts/roboto/roboto-regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: Roboto;
-  src: local("Roboto"), url("../fonts/roboto/roboto-medium.woff2") format("woff2"), url("../fonts/roboto/roboto-medium.woff") format("woff"), url("../fonts/roboto/roboto-medium.eot") format("eot"), url("../fonts/roboto/roboto-medium.ttf") format("ttf");
+  src: url("../fonts/roboto/roboto-italic.woff2") format("woff2"), url("../fonts/roboto/roboto-italic.woff") format("woff"), url("../fonts/roboto/roboto-italic.eot") format("eot"), url("../fonts/roboto/roboto-italic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap; }
+
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/roboto/roboto-medium.woff2") format("woff2"), url("../fonts/roboto/roboto-medium.woff") format("woff"), url("../fonts/roboto/roboto-medium.eot") format("eot"), url("../fonts/roboto/roboto-medium.ttf") format("ttf");
   font-weight: 500;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: Roboto;
-  src: local("Roboto"), url("../fonts/roboto/roboto-bold.woff2") format("woff2"), url("../fonts/roboto/roboto-bold.woff") format("woff"), url("../fonts/roboto/roboto-bold.eot") format("eot"), url("../fonts/roboto/roboto-bold.ttf") format("ttf");
+  src: url("../fonts/roboto/roboto-bold.woff2") format("woff2"), url("../fonts/roboto/roboto-bold.woff") format("woff"), url("../fonts/roboto/roboto-bold.eot") format("eot"), url("../fonts/roboto/roboto-bold.ttf") format("ttf");
   font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Ubuntu Mono";
+  src: url("../fonts/ubuntu-mono/UbuntuMono-Regular.woff2") format("woff2"), url("../fonts/ubuntu-mono/UbuntuMono-Regular.woff") format("woff"), url("../fonts/ubuntu-mono/UbuntuMono-Regular.eot") format("eot"), url("../fonts/ubuntu-mono/UbuntuMono-Regular.ttf") format("ttf");
+  font-weight: 400;
   font-style: normal;
   font-display: swap; }
 
@@ -302,37 +316,206 @@ a:focus {
   outline-offset: 8px; }
 
 h1 {
-  margin: 0 0 16px;
-  font-weight: 500;
-  font-size: 32px; }
+  font-size: 36px; }
 
 h2 {
-  margin: 0 0 16px;
-  font-weight: 500;
-  font-size: 28px; }
+  font-size: 32px; }
 
 h3 {
-  margin: 0 0 16px;
-  font-weight: 500;
-  font-size: 24px; }
+  font-size: 28px; }
 
 h4 {
-  margin: 0 0 16px;
-  font-weight: 500;
-  font-size: 20px; }
+  font-size: 24px; }
 
 h5 {
-  margin: 0 0 16px;
-  font-weight: 500;
-  font-size: 16px; }
+  font-size: 20px; }
 
 h6 {
+  font-size: 16px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 0 16px;
-  font-weight: 500;
-  font-size: 12px; }
+  font-weight: 500; }
+  h1:not(:first-child),
+  h2:not(:first-child),
+  h3:not(:first-child),
+  h4:not(:first-child),
+  h5:not(:first-child),
+  h6:not(:first-child) {
+    margin-top: 32px; }
+    h1 + h1:not(:first-child),
+    h2 + h1:not(:first-child),
+    h3 + h1:not(:first-child),
+    h4 + h1:not(:first-child),
+    h5 + h1:not(:first-child),
+    h6 + h1:not(:first-child), h1 +
+    h2:not(:first-child),
+    h2 +
+    h2:not(:first-child),
+    h3 +
+    h2:not(:first-child),
+    h4 +
+    h2:not(:first-child),
+    h5 +
+    h2:not(:first-child),
+    h6 +
+    h2:not(:first-child), h1 +
+    h3:not(:first-child),
+    h2 +
+    h3:not(:first-child),
+    h3 +
+    h3:not(:first-child),
+    h4 +
+    h3:not(:first-child),
+    h5 +
+    h3:not(:first-child),
+    h6 +
+    h3:not(:first-child), h1 +
+    h4:not(:first-child),
+    h2 +
+    h4:not(:first-child),
+    h3 +
+    h4:not(:first-child),
+    h4 +
+    h4:not(:first-child),
+    h5 +
+    h4:not(:first-child),
+    h6 +
+    h4:not(:first-child), h1 +
+    h5:not(:first-child),
+    h2 +
+    h5:not(:first-child),
+    h3 +
+    h5:not(:first-child),
+    h4 +
+    h5:not(:first-child),
+    h5 +
+    h5:not(:first-child),
+    h6 +
+    h5:not(:first-child), h1 +
+    h6:not(:first-child),
+    h2 +
+    h6:not(:first-child),
+    h3 +
+    h6:not(:first-child),
+    h4 +
+    h6:not(:first-child),
+    h5 +
+    h6:not(:first-child),
+    h6 +
+    h6:not(:first-child) {
+      margin-top: 0; }
 
 p {
   margin: 0 0 16px; }
+
+.table {
+  width: 100%;
+  margin-bottom: 16px;
+  border: 1px solid #BDBDBD;
+  border-collapse: collapse; }
+
+.table tr {
+  transition: background-color 250ms; }
+  .table tr:nth-child(even) {
+    background-color: #f5f5f5; }
+  .table tr:hover {
+    background-color: rgba(11, 63, 209, 0.15); }
+
+.table td,
+.table th {
+  padding: 16px 12px;
+  text-align: left;
+  vertical-align: middle; }
+
+.table thead tr {
+  background-color: #f5f5f5; }
+  .table thead tr:hover {
+    background-color: #f5f5f5; }
+
+.table thead td,
+.table thead th {
+  padding-top: 12px;
+  padding-bottom: 12px; }
+
+.definitions {
+  border: 1px solid #BDBDBD;
+  border-radius: 2px; }
+
+.definitions dt {
+  margin-bottom: 8px; }
+
+.definitions dd {
+  margin-left: 0; }
+  .definitions dd:not(:last-child) {
+    margin-bottom: 8px; }
+
+.definitions__item {
+  padding: 16px; }
+  .definitions__item:not(:last-child) {
+    border-bottom: 1px solid #BDBDBD; }
+
+.quote {
+  position: relative;
+  font-style: italic;
+  border-bottom: 1px dotted #0B3FD1; }
+  .quote::after {
+    content: attr(cite);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 4px;
+    padding: 4px 8px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    text-transform: none;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: 0 20%;
+    transform: scale(0.3);
+    transition: opacity 250ms, transform 1ms linear 250ms, visibility 1ms linear 250ms;
+    z-index: 3; }
+  .quote:hover::after, .quote:focus::after {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: opacity 250ms ease 200ms, transform 250ms ease 200ms; }
+
+.blockquote {
+  position: relative;
+  margin: 0 0 16px;
+  padding: 32px;
+  background-color: #f5f5f5;
+  border-left: 4px solid #0B3FD1;
+  border-radius: 2px; }
+  .blockquote::before {
+    content: attr(cite);
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    color: #BDBDBD;
+    font-size: 14px; }
+
+code {
+  padding: 2px 4px;
+  border: 1px solid #BDBDBD;
+  border-radius: 2px;
+  color: #0B3FD1;
+  background-color: #fff;
+  font-family: 'Ubuntu Mono', monospace; }
+
+pre code {
+  display: block;
+  padding: 16px; }
 
 .page {
   display: grid;

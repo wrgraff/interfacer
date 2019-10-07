@@ -1,8 +1,7 @@
 @mixin font-face($font-family, $file-path, $font-weight, $font-style) {
     @font-face {
         font-family: $font-family;
-        src: local('#{$font-family}'),
-             url("#{$file-path}.woff2") format('woff2'),
+        src: url("#{$file-path}.woff2") format('woff2'),
              url("#{$file-path}.woff") format('woff'),
              url("#{$file-path}.eot") format('eot'),
              url("#{$file-path}.ttf") format('ttf');
@@ -13,8 +12,10 @@
 }
 
 @include font-face(Roboto, '../fonts/roboto/roboto-regular', 400, normal);
+@include font-face(Roboto, '../fonts/roboto/roboto-italic', 400, italic);
 @include font-face(Roboto, '../fonts/roboto/roboto-medium', 500, normal);
 @include font-face(Roboto, '../fonts/roboto/roboto-bold', 700, normal);
+@include font-face('Ubuntu Mono', '../fonts/ubuntu-mono/UbuntuMono-Regular', 400, normal);
 
 body {
     font-family: 'Roboto', sans-serif;

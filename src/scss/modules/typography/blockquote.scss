@@ -1,0 +1,17 @@
+.blockquote {
+    position: relative;
+    margin: 0 0 ($bit * 2);
+    padding: $bit * 4;
+    background-color: color(light-gray);
+    border-left: ($bit / 2) solid color(primary);
+    border-radius: $radius;
+
+    &::before {
+        content: attr(cite);
+        position: absolute;
+        bottom: $bit;
+        right: $bit;
+        color: color(medium-gray);
+        font-size: font-size(small);
+    }
+}

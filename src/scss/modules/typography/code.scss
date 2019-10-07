@@ -1,0 +1,13 @@
+code {
+    padding: 2px 4px;
+    border: 1px solid color(medium-gray);
+    border-radius: $radius;
+    color: color(primary);
+    background-color: color(white);
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+pre code {
+    display: block;
+    padding: $bit * 2;
+}

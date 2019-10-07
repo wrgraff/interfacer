@@ -1,0 +1,21 @@
+.definitions {
+    border: 1px solid color(medium-gray);
+    border-radius: $radius;
+}
+.definitions dt {
+    margin-bottom: $bit;
+}
+.definitions dd {
+    margin-left: 0;
+    &:not(:last-child) {
+        margin-bottom: $bit;
+    }
+}
+
+.definitions__item {
+    padding: $bit * 2;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid color(medium-gray);
+    }
+}
