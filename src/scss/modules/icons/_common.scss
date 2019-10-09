@@ -10,6 +10,7 @@ $ico-sizes: (
     justify-content: center;
     width: map-get($ico-sizes, default);
     height: map-get($ico-sizes, default);
+    vertical-align: middle;
 
     img {
         width: 100%;
