@@ -8,8 +8,8 @@
     transform: translate(-50%, $bit * 10) scale(.85);
     min-width: 400px;
     padding: $bit * 4;
-    color: color(white);
-    background-color: rgba(color(black), .85);
+    background-color: color(white);
+    border: 1px solid color(light-gray);
     border-radius: $radius;
     box-shadow: shadow(3-lvl);
     z-index: 100;

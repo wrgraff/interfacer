@@ -9,54 +9,41 @@
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-    <div class="page-layout">
-        <nav class="page-layout__nav global-nav">
-            <ul class="global-nav__menu menu menu_vertical" id="menu">
-                <script src="/js/menu.js" defer></script>
-            </ul>
-        </nav>
+    <div class="content">
+        <div class="content__section">
+            <h1>Alerts</h1>
 
-        <header class="page-layout__header page-header">
-            <nav class="page-header__item">
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
-                    <li class="breadcrumbs__item"><a href="/alerts/" class="breadcrumbs__link">Alerts</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main class="page-layout__main page-main">
-            <section class="page-main__content section">
-                <header class="section__header">
-                    <h3>Alerts for scripts</h3>
-                </header>
-                <div class="section__body">
-                    <label class="input">
-                        <input type="text" name="" value="Material is a design system – backed by open-source code&nbsp;– that helps teams build high-quality digital experiences" required class="input__field" id="alertText" />
-                        <span class="input__text">Alert text</span>
-                        <span class="input__helper">Required field</span>
-                    </label>
-                    <label class="input">
-                        <input type="text" name="" value="Ok" required class="input__field" id="alertButton" />
-                        <span class="input__text">Alert button text</span>
-                        <span class="input__helper">Required field</span>
-                    </label>
-
-                    <button type="button" class="button" onclick="showAlert(document.querySelector('#alertText').value, document.querySelector('#alertButton').value)">Show me error, baby! =)</button>
+            <div style="position: relative; height: 220px; width: 100%; border-radius: 2px; background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/herringbone.png); background-repeat: repeat-y;">
+                <div class="alert alert_faded" style="position: absolute;">
+                    <div class="alert__text">
+                        <p>This item already has the label "penis". You can add a new label.</p>
+                    </div>
+                    <div class="alert__actions">
+                        <button type="button" class="button">Close</button>
+                    </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </div>
+
+        <div class="content__section">
+            <h2>Test fading</h2>
+            <div class="section__body">
+                <label class="input">
+                    <input type="text" name="" value="Material is a design system – backed by open-source code&nbsp;– that helps teams build high-quality digital experiences" required class="input__field" id="alertText" />
+                    <span class="input__text">Alert text</span>
+                    <span class="input__helper">Required field</span>
+                </label>
+                <label class="input">
+                    <input type="text" name="" value="Ok" required class="input__field" id="alertButton" />
+                    <span class="input__text">Alert button text</span>
+                    <span class="input__helper">Required field</span>
+                </label>
+
+                <button type="button" class="button" onclick="showAlert(document.querySelector('#alertText').value, document.querySelector('#alertButton').value)">Show me error, baby! =)</button>
+            </div>
+        </div>
     </div>
 
     <script src="/js/app.js"></script>
-
-    <!-- <div class="alert">
-        <div class="alert__text">
-            <p>This item already has the label "penis". You can add a new label.</p>
-        </div>
-        <div class="alert__actions">
-            <button type="button" class="button">Close</button>
-        </div>
-    </div> -->
 </body>
 </html>
