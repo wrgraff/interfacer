@@ -9,51 +9,36 @@
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-    <div class="page-layout">
-        <nav class="page-layout__nav global-nav">
-            <ul class="global-nav__menu menu menu_vertical" id="menu">
-                <script src="/js/menu.js" defer></script>
-            </ul>
-        </nav>
-
-        <header class="page-layout__header page-header">
-            <nav class="page-header__item">
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
-                    <li class="breadcrumbs__item"><a href="/warnings/" class="breadcrumbs__link">Warnings</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main class="page-layout__main page-main">
-            <section class="page-main__content section">
-                <form action="/" data-validate>
-                    <header class="section__header">
-                        <h3>Warnings</h3>
-                    </header>
-                    <div class="section__body">
-                        <p>Important blocks what informed about some things.</p>
-
-                        <div class="warning">
-                            <div class="warning__ico" aria-hidden="true">
-                                <span class="ico ico_size_large">
-                                    <img src="/img/ico/baseline-warning-24px.svg" alt="" />
-                                </span>
-                            </div>
-                            <div class="warning__description">
-                                <div class="warning__title">
-                                    <h4>Attention!</h4>
-                                </div>
-                                <div class="warning__text">
-                                    <p>This section only for webmasters.</p>
-                                    <p>If you are not understand what you doing: keep out from this section. You can broke your site and lose some data.</p>
-                                </div>
-                            </div>
-                        </div>
+    <div class="content">
+        <div class="content__section">
+            <h1>Warnings</h1>
+            <div class="warning">
+                <div class="warning__ico" aria-hidden="true">
+                    <span class="ico ico_size_large">
+                        <img src="/img/ico/baseline-warning-24px.svg" alt="" />
+                    </span>
+                </div>
+                <div class="warning__description">
+                    <h4 class="warning__heading">Attention!</h4>
+                    <div class="warning__text">
+                        <p>This section only for webmasters.</p>
+                        <p>If you are not understand what you doing: keep out from this section. You can broke your site and lose some data.</p>
                     </div>
-                </form>
-            </section>
-        </main>
+                </div>
+            </div>
+        </div>
+        <div class="content__section">
+            <h2>Without icon</h2>
+            <div class="warning">
+                <div class="warning__description">
+                    <h4 class="warning__heading">Attention!</h4>
+                    <div class="warning__text">
+                        <p>This section only for webmasters.</p>
+                        <p>If you are not understand what you doing: keep out from this section. You can broke your site and lose some data.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="/js/app.js"></script>

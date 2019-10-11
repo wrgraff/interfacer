@@ -1,10 +1,11 @@
 .warning {
     display: flex;
-    margin: 0 0 ($bit * 2);
+    margin: 0;
     padding: $bit * 4;
-    background-color: rgba(color(warning), .1);
-    border: ($bit / 2) solid color(warning);
+    background-color: color(white);
+    border: 1px solid color(warning);
     border-radius: $radius;
+    box-shadow: shadow(1-lvl, color(warning));
 }
 
 .warning__ico {
@@ -12,6 +13,7 @@
     flex-shrink: 0;
     margin-right: $bit * 4;
 }
+
 .warning__text {
     > *:last-child {
         margin-bottom: 0;
