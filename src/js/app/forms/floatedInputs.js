@@ -2,7 +2,7 @@ findfloatedInputs(document);
 
 function findfloatedInputs(target) {
     // Find inputs
-    const floatedInputs = target.querySelectorAll('.input__field');
+    const floatedInputs = target.querySelectorAll('.input_floating');
     // Add classes
     addLabeledInputsClass(floatedInputs);
     // Listen to changes

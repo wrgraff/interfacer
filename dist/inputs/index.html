@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inputs — Interfacer</title>
+
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <div class="content">
+        <div class="content__section">
+            <h1>Inputs</h1>
+            <label class="field">
+                <input type="text" name="" value="" required class="field__input" placeholder="Input placeholder" />
+                <p class="field__title">Base input</p>
+                <p class="field__helper">Just simple text</p>
+            </label>
+
+			<label class="field">
+				<input type="text" name="" value="" required class="field__input" placeholder="Input placeholder" />
+				<p class="field__title">Input without helper</p>
+			</label>
+        </div>
+
+        <div class="content__section">
+            <h2>Validation states</h2>
+			<h3>Valid input</h3>
+			<label class="field field_valid">
+                <input type="text" name="" value="Valid content =)" required class="field__input" placeholder="Input placeholder" />
+                <p class="field__title">Valid input</p>
+                <p class="field__helper">Just simple text</p>
+            </label>
+
+			<h3>Invalid input with errors</h3>
+			<p>
+				Toggle state for testing error message fading:
+				<button type="button" class="button button_size_small" onclick="toggleError()">Toggle invalid</button>
+			</p>
+			<label class="field field_invalid">
+				<input type="text" name="" value="Avadakedavra!" required class="field__input" placeholder="Input placeholder" />
+				<p class="field__title">Invalid input</p>
+				<p class="field__helper">
+					Just simple text
+					<span class="field__error">Error helper text</span>
+				</p>
+			</label>
+
+			<script>
+				let errorInput = document.querySelector('.field_invalid');
+				function toggleError() {
+					errorInput.classList.toggle('field_invalid');
+				};
+			</script>
+        </div>
+    </div>
+
+</body>
+<script src="/js/app.js"></script>
+</html>

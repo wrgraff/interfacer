@@ -1,121 +1,168 @@
-$input-field-color: color(dark-gray);
-$input-field-color-focus: color(primary);
-$input-field-color-success: color(success);
-$input-field-color-error: color(secondary);
-$input-field-darken: 20%;
+$field-color: color(medium-gray);
+$field-color-active: color(primary);
+$field-color-valid: color(success);
+$field-color-invalid: color(secondary);
 
-.input {
+:root {
+	--field-border-color: #{getRGB($field-color)};
+}
+
+::placeholder {
+    color: color(medium-gray);
+}
+
+.field {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: $bit * 2;
 }
-.input__text {
-    order: 1;
-    display: block;
-    margin-left: $bit;
-    padding: $bit;
-    color: $input-field-color;
-    background-color: color(white);
-    line-height: 1;
-    transform-origin: left top;
-    transition: transform 250ms, color 250ms;
-    cursor: text;
-
-    .input__field:focus + & {
-        color: $input-field-color-focus;
-    }
-    .input__field_status_valid + &,
-    .input__field_status_valid:focus + & {
-        color: $input-field-color-success;
-    }
-    .input__field_status_invalid + &,
-    .input__field_status_invalid:focus + & {
-        color: $input-field-color-error;
-    }
-
-    .input_floating & {
-        position: absolute;
-        top: $bit * 1.5;
-        left: $bit;
-        margin-left: 0;
-    }
-    .input_floating .input__field:focus + & {
-        transform: translateY($bit * -3) scale(.8);
-    }
-    .input_floating .input__field_filled + & {
-        transform: translateY($bit * -3) scale(.8);
-    }
+.field:focus-within {
+	--field-border-color: #{getRGB($field-color-active)};
 }
-.input__field {
-    order: 2;
+.field_valid,
+.field_valid:focus-within {
+	--field-border-color: #{getRGB($field-color-valid)};
+}
+.field_invalid,
+.field_invalid:focus-within {
+	--field-border-color: #{getRGB($field-color-invalid)};
+}
+
+.field__title {
+    order: -1;
+    margin-bottom: $bit;
+    padding: 0 ($bit / 2);
+    color: color(black);
+    transition: color 250ms;
+}
+
+.field__input {
+	position: relative;
+	z-index: 2;
     width: 100%;
-    padding: ($bit * 2) - 2px;
-    border: 2px solid $input-field-color;
+    padding: ($bit * 2.5 - 2px) ($bit * 2 - 2px);
+    background-color: color(white);
+    border: 2px solid;
+	border-color: rgba($field-color, .5);
+	border-color: rgba(var(--field-border-color), .5);
     border-radius: $radius;
     font-size: font-size(medium);
+    line-height: 1;
     transition: border-color 250ms, box-shadow 250ms;
 
     &:hover {
-        border-color: darken($input-field-color, $input-field-darken);
+		border-color: rgba($field-color, 1);
+		border-color: rgba(var(--field-border-color), 1);
     }
     &:focus {
-        border-color: $input-field-color-focus;
-        box-shadow: shadow(1-lvl);
+		border-color: rgba($field-color, 1);
+		border-color: rgba(var(--field-border-color), 1);
+		box-shadow: shadow(1-lvl);
+		box-shadow: shadow(1-lvl, rgba(var(--field-border-color), .75));
 
         outline-width: 2px;
         outline-style: solid;
         outline-color: rgba(color(primary), .2);
         outline-offset: $bit;
     }
+    &:invalid:not(:focus) {
+        box-shadow: none;
+    }
 }
-.input__field_status_valid {
-    border-color: $input-field-color-success;
 
-    &:focus {
-        border-color: $input-field-color-success;
-    }
-    &:hover {
-        border-color: darken($input-field-color-success, $input-field-darken);
-    }
-}
-.input__field_status_invalid {
-    border-color: $input-field-color-error;
-
-    &:focus {
-        border-color: $input-field-color-error;
-    }
-    &:hover {
-        border-color: darken($input-field-color-error, $input-field-darken);
-    }
-}
-.input__helper,
-.input__error {
-    order: 3;
-    display: inline-block;
-    padding: $bit $bit $bit ($bit * 2);
+.field__helper {
+	position: relative;
+    margin: 0;
+    padding: $bit ($bit / 2);
     color: color(medium-gray);
     font-size: font-size(small);
     line-height: 1;
     transition: opacity 250ms, transform 250ms;
 }
-.input__helper {
-    .input__field_status_invalid ~ & {
-        opacity: 0;
-        transform: translateY(24px);
-    }
-}
-.input__error {
-    position: absolute;
-    top: 56px;
-    color: color(secondary);
-    background-color: color(white);
-    opacity: 0;
-    transform: translateY(24px);
-    z-index: 3;
 
-    .input__field_status_invalid ~ & {
+.field__error {
+	position: absolute;
+	left: 0;
+	top: 0;
+    padding: $bit ($bit / 2);
+    color: $field-color-invalid;
+    background-color: color(white);
+    font-size: font-size(small);
+    opacity: 0;
+	transform-origin: 0 100%;
+	transform: translateY($bit * -3) scale(.8);
+	transition: transform 250ms, opacity 250ms;
+
+    .field_invalid & {
         opacity: 1;
-        transform: translateY(0);
+		transform: translateY(0) scale(1);
     }
 }
+
+
+
+
+//
+// .field__text {
+//     .input__field:focus + & {
+//         color: $field-color-focus;
+//     }
+//     .input__field_status_valid + &,
+//     .input__field_status_valid:focus + & {
+//         color: $field-color-success;
+//     }
+//     .input__field_status_invalid + &,
+//     .input__field_status_invalid:focus + & {
+//         color: $field-color-error;
+//     }
+//
+//     .input_floating & {
+//         position: absolute;
+//         top: $bit * 1.5;
+//         left: $bit;
+//         margin-left: 0;
+//     cursor: text;
+//     line-height: 1;
+//     transform-origin: left top;
+//     background-color: color(white);
+//     transition: transform 250ms, color 250ms;
+//     }
+//     .input_floating .input__field:focus + & {
+//         transform: translateY($bit * -3) scale(.8);
+//     }
+//     .input_floating .input__field_filled + & {
+//         transform: translateY($bit * -3) scale(.8);
+//     }
+// }
+//
+// .input__field_status_invalid {
+//     border-color: $field-color-error;
+//
+//     &:focus {
+//         border-color: $field-color-error;
+//     }
+//     &:hover {
+//         border-color: darken($field-color-error, $field-darken);
+//     }
+// }
+//
+// .input__helper {
+//     .input__field_status_invalid ~ & {
+//         opacity: 0;
+//         transform: translateY(24px);
+//     }
+// }
+// .input__error {
+//     position: absolute;
+//     top: 56px;
+//     color: color(secondary);
+//     background-color: color(white);
+//     opacity: 0;
+//     transform: translateY(24px);
+//     z-index: 3;
+//
+//     .input__field_status_invalid ~ & {
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+// }
