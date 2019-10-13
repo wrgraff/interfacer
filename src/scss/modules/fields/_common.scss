@@ -1,4 +1,5 @@
-$field-color: color(medium-gray);
+$field-height: 56px;
+$field-color: color(dark-gray);
 $field-color-active: color(primary);
 $field-color-valid: color(success);
 $field-color-invalid: color(secondary);
@@ -36,40 +37,6 @@ $field-color-invalid: color(secondary);
     transition: color 250ms;
 }
 
-.field__input {
-	position: relative;
-	z-index: 2;
-    width: 100%;
-    padding: ($bit * 2.5 - 2px) ($bit * 2 - 2px);
-    background-color: color(white);
-    border: 2px solid;
-	border-color: rgba($field-color, .5);
-	border-color: rgba(var(--field-border-color), .5);
-    border-radius: $radius;
-    font-size: font-size(medium);
-    line-height: 1;
-    transition: border-color 250ms, box-shadow 250ms;
-
-    &:hover {
-		border-color: rgba($field-color, 1);
-		border-color: rgba(var(--field-border-color), 1);
-    }
-    &:focus {
-		border-color: rgba($field-color, 1);
-		border-color: rgba(var(--field-border-color), 1);
-		box-shadow: shadow(1-lvl);
-		box-shadow: shadow(1-lvl, rgba(var(--field-border-color), .75));
-
-        outline-width: 2px;
-        outline-style: solid;
-        outline-color: rgba(color(primary), .2);
-        outline-offset: $bit;
-    }
-    &:invalid:not(:focus) {
-        box-shadow: none;
-    }
-}
-
 .field__helper {
 	position: relative;
     margin: 0;
@@ -99,7 +66,9 @@ $field-color-invalid: color(secondary);
     }
 }
 
-
+@import "inputs";
+@import "selects";
+@import "types";
 
 
 //

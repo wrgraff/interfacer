@@ -11,7 +11,9 @@
 <body>
     <div class="content">
         <div class="content__section">
-            <h1>Inputs</h1>
+            <h1>Fields</h1>
+
+			<h2>inputs</h2>
             <label class="field">
                 <input type="text" name="" value="" required class="field__input" placeholder="Input placeholder" />
                 <p class="field__title">Base input</p>
@@ -22,6 +24,18 @@
 				<input type="text" name="" value="" required class="field__input" placeholder="Input placeholder" />
 				<p class="field__title">Input without helper</p>
 			</label>
+
+			<h2>Selects</h2>
+			<label class="field">
+				<select class="field__select" name="">
+					<option value="">Option 1</option>
+					<option value="">Option 2</option>
+					<option value="">Option 3</option>
+					<option value="">Option 4</option>
+				</select>
+                <p class="field__title">Base select</p>
+                <p class="field__helper">Just simple text</p>
+            </label>
         </div>
 
         <div class="content__section">
@@ -54,6 +68,30 @@
 				};
 			</script>
         </div>
+
+		<div class="content__section">
+			<h2>Fields types</h2>
+			<label class="field">
+				<input type="email" name="" value="" required class="field__input field__input_type_email" placeholder="Input placeholder" />
+				<p class="field__title">Email input</p>
+				<p class="field__helper">Just simple text</p>
+			</label>
+			<label class="field">
+				<input type="tel" name="" value="" required class="field__input field__input_type_tel" placeholder="Input placeholder" />
+				<p class="field__title">Phone input</p>
+				<p class="field__helper">Just simple text</p>
+			</label>
+			<label class="field">
+				<input type="url" name="" value="" required class="field__input field__input_type_url" placeholder="Input placeholder" />
+				<p class="field__title">URL input</p>
+				<p class="field__helper">Just simple text</p>
+			</label>
+			<label class="field">
+				<input type="date" name="" value="" required class="field__input field__input_type_date" placeholder="Input placeholder" />
+				<p class="field__title">Date input</p>
+				<p class="field__helper">Just simple text</p>
+			</label>
+		</div>
     </div>
 
 </body>
