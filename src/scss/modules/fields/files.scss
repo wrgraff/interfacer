@@ -1,0 +1,43 @@
+.field__file {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+    width: 100%;
+	height: $field-height;
+    padding: $bit ($bit * 2 - 2px);
+    background-color: color(white);
+    background-position: 100% 50%;
+    background-position: calc(100% - #{$bit * 2}) 50%;
+    background-repeat: no-repeat;
+    border: 2px solid;
+	border-color: rgba($field-color, .5);
+	border-color: rgba(var(--field-border-color), .5);
+    border-radius: $radius;
+    font-size: font-size(medium);
+    line-height: 1;
+    transition: border-color 250ms, box-shadow 250ms;
+
+    &:hover {
+		border-color: rgba($field-color, 1);
+		border-color: rgba(var(--field-border-color), 1);
+    }
+    &:focus-within {
+		border-color: rgba($field-color, 1);
+		border-color: rgba(var(--field-border-color), 1);
+		box-shadow: shadow(1-lvl);
+		box-shadow: shadow(1-lvl, rgba(var(--field-border-color), .75));
+
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: rgba(color(primary), .2);
+        outline-offset: $bit;
+    }
+    &:invalid:not(:focus) {
+        box-shadow: none;
+    }
+
+	input:focus {
+		outline: none;
+	}
+}
