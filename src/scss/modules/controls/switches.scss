@@ -9,25 +9,38 @@ $switch-inner-shift: ($switch-width / 2) - ($switch-inner-size / 2) - $switch-bo
 
 
 .switch {
-    position: relative;
-    display: inline-block;
-    width: $switch-width;
-    height: $switch-height;
-    border: $switch-border-size solid color(dark-gray);
-    border-radius: $switch-height;
-    background-color: transparent;
-    transition: border-color 250ms;
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	padding-left: $switch-width + $bit * 1.5;
+	background-color: transparent;
+	border: none;
 
-    &::after {
+    &::before,
+	&::after {
         content: '';
-        position: absolute;
-        left: calc(50% - #{$switch-inner-size / 2});
-        top: calc(50% - #{$switch-inner-size / 2});
-        display: block;
+	    position: absolute;
+		left: 0;
+		top: 50%;
+	    display: block;
+	}
+    &::before {
+	    width: $switch-width;
+	    height: $switch-height;
+	    border: $switch-border-size solid color(dark-gray);
+	    border-radius: $switch-height;
+	    background-color: color(white);
+		transform: translateY(-50%);
+	    transition: border-color 250ms;
+	}
+    &::after {
+		left: ($switch-height - $switch-inner-size) / 2;
         width: $switch-inner-size;
         height: $switch-inner-size;
         background-color: color(dark-gray);
         border-radius: 50%;
+		transform: translateY(-50%) translateX($switch-inner-shift);
         transition: background-color 250ms, transform 250ms;
     }
 
@@ -39,23 +52,28 @@ $switch-inner-shift: ($switch-width / 2) - ($switch-inner-size / 2) - $switch-bo
         }
     }
     &:focus {
-        outline-width: 2px;
-        outline-style: solid;
-        outline-color: rgba(color(primary), .2);
-        outline-offset: $bit;
+		outline: none;
+
+	    &::before {
+	        outline-width: 2px;
+	        outline-style: solid;
+	        outline-color: rgba(color(primary), .2);
+	        outline-offset: $bit;
+		}
     }
 
     &[aria-checked='true'] {
-        border-color: color(primary);
-
+	    &::before {
+	        border-color: color(primary);
+		}
         &::after {
             background-color: color(primary);
-            transform: translateX($switch-inner-shift);
+            transform: translateY(-50%) translateX($switch-inner-shift * 2);
         }
     }
     &[aria-checked='false'] {
         &::after {
-            transform: translateX(-$switch-inner-shift);
+            transform: translateY(-50%);
         }
     }
 }

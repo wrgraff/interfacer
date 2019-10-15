@@ -9,93 +9,73 @@
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-    <div class="page-layout">
-        <nav class="page-layout__nav global-nav">
-            <ul class="global-nav__menu menu menu_vertical" id="menu">
-                <script src="/js/menu.js" defer></script>
-            </ul>
-        </nav>
+	<div class="content">
+        <div class="content__section">
+            <h1>Controls</h1>
 
-        <header class="page-layout__header page-header">
-            <nav class="page-header__item">
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
-                    <li class="breadcrumbs__item"><a href="/controls/" class="breadcrumbs__link">Controls</a></li>
-                </ul>
-            </nav>
-        </header>
+			<h2>Checkboxes</h2>
+			<label class="checkbox">
+				<input type="checkbox" name="" class="checkbox__input" />
+				<span class="checkbox__text">Some checkbox</span>
+				<span class="checkbox__helper">Description of some fancy checkbox</span>
+			</label>
 
-        <main class="page-layout__main page-main">
-            <section class="page-main__content section">
-                <form action="/" data-validate>
-                    <header class="section__header">
-                        <h3>Checkboxes</h3>
-                    </header>
-                    <div class="section__body">
-                        <label class="checkbox">
-                            <input type="checkbox" name="" class="checkbox__input" />
-                            <span class="checkbox__text">Some checkbox</span>
-                            <span class="checkbox__helper">Description of some fancy checkbox</span>
-                            <span class="checkbox__error"></span>
-                        </label>
+			<label class="checkbox">
+				<input type="checkbox" name="" class="checkbox__input" />
+				<span class="checkbox__text">Some checkbox with very very very very very very very very very very so fucking very long name</span>
+				<span class="checkbox__helper">Description of some fancy checkbox</span>
+			</label>
 
-                        <label class="checkbox">
-                            <input type="checkbox" name="" class="checkbox__input" />
-                            <span class="checkbox__text">Some checkbox with very very very very very very very very very very so fucking very long name</span>
-                            <span class="checkbox__helper">Description of some fancy checkbox</span>
-                            <span class="checkbox__error"></span>
-                        </label>
-                    </div>
-                </form>
-            </section>
+			<label class="checkbox">
+				<input type="checkbox" name="" class="checkbox__input" checked />
+				<span class="checkbox__text">Checked checkbox</span>
+				<span class="checkbox__helper">Description of some fancy checkbox</span>
+			</label>
 
+			<label class="checkbox">
+				<input type="checkbox" name="" class="checkbox__input" disabled />
+				<span class="checkbox__text">Disabled checkbox</span>
+				<span class="checkbox__helper">Description of some fancy checkbox</span>
+			</label>
+		</div>
 
-            <section class="page-main__content section">
-                <form action="/" data-validate>
-                    <header class="section__header">
-                        <h3>Radios</h3>
-                    </header>
-                    <div class="section__body">
-                        <div class="radios">
-                            <label class="radio">
-                                <input type="radio" name="radio" class="radio__input" />
-                                <span class="radio__text">Some radio</span>
-                                <span class="radio__helper">Description of some fancy radio</span>
-                            </label>
+		<div class="content__section">
+			<h2>Radios</h2>
 
-                            <label class="radio">
-                                <input type="radio" name="radio" class="radio__input" />
-                                <span class="radio__text">Some radio with very very very very very very very very very very so fucking very long name</span>
-                                <span class="radio__helper">Description of some fancy radio</span>
-                            </label>
-                            <span class="radios__error"></span>
-                        </div>
-                    </div>
-                </form>
-            </section>
+			<div class="radios">
+				<label class="radio">
+					<input type="radio" name="radio" class="radio__input" />
+					<span class="radio__text">Some radio</span>
+					<span class="radio__helper">Description of some fancy radio</span>
+				</label>
 
-            <section class="page-main__content section">
-                <form action="/" data-validate>
-                    <header class="section__header">
-                        <h3>Switches</h3>
-                    </header>
-                    <div class="section__body">
-                        <p>
-                            Active switch<br />
-                            <button type="button" role="switch" aria-checked="true" class="switch"></button>
-                        </p>
-                        <p>
-                            Not active switch<br />
-                            <button type="button" role="switch" aria-checked="false" class="switch"></button>
-                        </p>
-                        <p>
-                            Undefined switch<br />
-                            <button type="button" role="switch" class="switch"></button>
-                        </p>
-                    </div>
-                </form>
-            </section>
-        </main>
+				<label class="radio">
+					<input type="radio" name="radio" class="radio__input" />
+					<span class="radio__text">Some radio with very very very very very very very very very very so fucking very long name</span>
+					<span class="radio__helper">Description of some fancy radio</span>
+				</label>
+
+				<label class="radio">
+					<input type="radio" name="radio" class="radio__input" disabled />
+					<span class="radio__text">Disabled radio</span>
+					<span class="radio__helper">Description of some fancy radio</span>
+				</label>
+			</div>
+        </div>
+
+		<div class="content__section">
+			<h2>Switches</h2>
+
+			<p>
+				<button type="button" role="switch" aria-checked="true" class="switch">Active switch</button>
+			</p>
+			<p>
+				<button type="button" role="switch" aria-checked="false" class="switch">Not active switch</button>
+			</p>
+			<p>
+				<button type="button" role="switch" class="switch">Undefined switch</button>
+			</p>
+		</div>
     </div>
 
     <script src="/js/app.js"></script>
