@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     include = require("gulp-include"),
     nunjucks = require('gulp-nunjucks-render'),
-    prettify = require('gulp-html-prettify');
+	prettier = require('gulp-prettier');
 
 gulp.task('scss', function () {
     return gulp.src('src/scss/app.scss')
@@ -31,7 +31,7 @@ gulp.task('docs', () =>
         .pipe(nunjucks({
             path: ['src/njk/layouts']
         }))
-        .pipe(prettify({indent_char: ' ', indent_size: 4}))
+        .pipe(prettier({ proseWrap: 'never', printWidth: 800, tabWidth: 4, useTabs: true }))
         .pipe(gulp.dest('docs'))
 );
 
