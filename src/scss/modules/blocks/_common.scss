@@ -1,0 +1,5 @@
+.blocks__item {
+	&:not(:last-child) {
+		margin-bottom: $bit * 3;
+	}
+}

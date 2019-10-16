@@ -5799,6 +5799,9 @@ pre code {
   .flex__item_xlarge_order_r4 {
     order: -4; } }
 
+.blocks__item:not(:last-child) {
+  margin-bottom: 24px; }
+
 .card {
   padding: 32px;
   background-color: #fff;
