@@ -67,11 +67,15 @@
 
 .modal__close {
     position: absolute;
-    right: $bit * -6;
-    top: 0;
+    right: $bit;
+    top: $bit;
 
-    @include breakpoint((800px + ($bit * 14)) down) {
-        right: $bit;
-        top: $bit;
-    }
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
 }

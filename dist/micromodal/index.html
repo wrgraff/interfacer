@@ -9,55 +9,29 @@
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-    <div class="page-layout">
-        <nav class="page-layout__nav global-nav">
-            <ul class="global-nav__menu menu menu_vertical" id="menu">
-                <script src="/js/menu.js" defer></script>
-            </ul>
-        </nav>
+	<div class="content">
+        <div class="content__section">
+            <h1>Modals <small>by <a href="https://github.com/ghosh/Micromodal/" target="_blank">Micromodal</a></small></h1>
 
-        <header class="page-layout__header page-header">
-            <nav class="page-header__item">
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
-                    <li class="breadcrumbs__item"><a href="/modals/" class="breadcrumbs__link">Modals</a></li>
-                </ul>
-            </nav>
-            <div class="page-header__item">
-                <button type="button" class="button button_color_primary" data-modal="testAsideContent">Add</button>
-            </div>
-        </header>
+			<p>
+				<button type="button" class="button" data-modal="testContent">Show inline content via button</button>
+			</p>
+			<p>
+				<a href="#testContent" data-modal>Show inline content via link</a>
+			</p>
+        </div>
 
-        <main class="page-layout__main page-main">
-            <section class="page-main__content section">
-                <header class="section__header">
-                    <h3>Modal</h3>
-                </header>
-                <div class="section__body">
-                    <p>
-                        <button type="button" class="button" data-modal="testContent">Show inline content via button</button>
-                    </p>
-                    <p>
-                        <a href="#testContent" data-modal>Show inline content via link</a>
-                    </p>
-                </div>
-            </section>
+		<div class="content__section">
+            <h2>Aside</h2>
 
-            <section class="page-main__content section">
-                <header class="section__header">
-                    <h3>Aside</h3>
-                </header>
-                <div class="section__body">
-                    <p>
-                        <button type="button" class="button" data-modal="testAsideContent">Show inline content via button to aside</button>
-                    </p>
-                    <p>
-                        <a href="#testAsideContent" data-modal>Show inline content via link to aside</a>
-                    </p>
-                </div>
-            </section>
-        </main>
-    </div>
+			<p>
+				<button type="button" class="button" data-modal="testAsideContent">Show inline content via button</button>
+			</p>
+			<p>
+				<a href="#testAsideContent" data-modal>Show inline content via link</a>
+			</p>
+        </div>
+	</div>
 
     <div class="modal" id="testContent" aria-hidden="true">
         <section class="modal__overlay" tabindex="-1" data-modal-close>
@@ -81,17 +55,15 @@
                 </div>
 
                 <footer class="modal__footer">
-                    <div class="buttons-group buttons-group_align_right">
-                        <button type="button" class="button" data-modal-close>Cancel</button>
-                        <button type="submit" class="button button_color_primary">Submit</button>
-                    </div>
+					<div class="flex flex_justify_end flex_gap_half">
+	                    <button type="button" class="flex__item button" data-modal-close>Cancel</button>
+	                    <button type="submit" class="flex__item button button_color_primary">Submit</button>
+					</div>
                 </footer>
 
-                <div class="modal__close">
-                    <button type="button" class="ico-button" data-modal-close>
-                        <span class="ico"><img src="/img/ico/baseline-close-24px.svg" alt="" /></span>
-                    </button>
-                </div>
+                <button type="button" class="modal__close ico-button ico-button_color_white" data-modal-close>
+                    <span class="ico"><img src="/img/ico/baseline-close-24px.svg" alt="" /></span>
+                </button>
             </form>
         </section>
     </div>
@@ -118,10 +90,10 @@
                 </div>
 
                 <footer class="page-modal__footer">
-                    <div class="buttons-group buttons-group_align_right">
-                        <button type="button" class="button" data-modal-close>Cancel</button>
-                        <button type="submit" class="button button_color_primary">Submit</button>
-                    </div>
+					<div class="flex flex_justify_end flex_gap_half">
+	                    <button type="button" class="flex__item button" data-modal-close>Cancel</button>
+	                    <button type="submit" class="flex__item button button_color_primary">Submit</button>
+					</div>
                 </footer>
             </form>
         </section>
