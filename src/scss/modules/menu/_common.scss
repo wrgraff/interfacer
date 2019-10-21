@@ -42,7 +42,8 @@ $menu-breakpoints: $breakpoints;
     transition: opacity 250ms, transform 1ms linear 250ms, visibility 1ms linear 250ms;
 
     .menu__item:hover > &,
-    .menu__item:focus-within > & {
+    .menu__item:focus-within > &,
+	.menu__item_opened > & {
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
@@ -62,7 +63,8 @@ $menu-breakpoints: $breakpoints;
         background-color: color(light-gray);
     }
 }
-.menu__item_active {
+.menu__item_opened {
+    background-color: color(light-gray);
 }
 
 .menu__link {

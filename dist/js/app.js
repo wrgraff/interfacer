@@ -1,4 +1,9 @@
 // Site utils
+window.addEventListener('mouseover', function onFirstHover() {
+	window.USER_CAN_HOVER = true;
+	window.removeEventListener('mouseover', onFirstHover, false);
+}, false);
+
 const addElement = function(elTag, elClass) {
     var element = document.createElement(elTag);
     element.className = elClass;
@@ -38,11 +43,82 @@ var showAlert = function(text, closeText) {
     });
 };
 
-// var menus = document.querySelectorAll('.menu');
-//
-// dropdownMenus.forEach(menu => {
-//     menu.parentElement.classList.add('menu__item_dropdown');
-// });
+addDropdowns(document.querySelectorAll('[data-dropdown]'));
+
+function addDropdowns(menus) {
+	menus.forEach(menu => {
+		let submenus = menu.querySelectorAll('.menu');
+
+		for (submenu of submenus) {
+			submenu.classList.add('menu_dropdown');
+			submenu.parentNode.classList.add('menu__item_dropdown');
+		};
+	});
+};
+
+listenTapDropdowns(document.querySelectorAll('.menu__item_dropdown a'));
+
+function listenTapDropdowns(items) {
+	items.forEach(item => {
+		item.addEventListener('click', onFirsTap);
+	});
+}
+
+function onFirsTap(evt) {
+	if (window.USER_CAN_HOVER !== true) {
+		console.log('prevent default');
+		evt.preventDefault();
+		this.removeEventListener('click', onFirsTap);
+		this.focus();
+
+		this.addEventListener('blur', () => {
+			this.addEventListener('click', onFirsTap);
+		});
+	};
+};
+
+addTitles(document.querySelectorAll('.menu__item_dropdown'));
+
+function addTitles(items) {
+	items.forEach(item => {
+		let titleItem = addElement('li', 'menu__item menu__item_title');
+		titleItem.append(item.querySelector('a').cloneNode(true));
+		item.querySelector('.menu').prepend(titleItem);
+	});
+};
+
+addReturns(document.querySelectorAll('.menu_dropdown'));
+
+function addReturns(menus) {
+	menus.forEach(menu => {
+		let returnItem = addElement('li', 'menu__item menu__item_return');
+		let returnButton = addElement('button', 'menu__return');
+		returnButton.textContent = '< Вернуться';
+
+		returnButton.addEventListener('click', () => {
+			// find parent link to focus it if button in more then 2 level of menu:
+			// Focus that link cause focus on it make submenu visible
+			let childrenOfParent = menu.parentNode.parentNode.parentNode.children;
+			let parentLink;
+			for (child of childrenOfParent) {
+				if (child.classList.contains('menu__link')) {
+					parentLink = child;
+					break;
+				}
+			}
+			if (parentLink) {
+				parentLink.focus();
+				parentLink.removeEventListener('click', onFirsTap);
+			} else {
+				menu.parentNode.querySelector('a').blur();
+			}
+		});
+
+		returnItem.append(returnButton);
+		menu.prepend(returnItem);
+	});
+};
+
 
 findfloatedInputs(document);
 
