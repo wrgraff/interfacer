@@ -1,6 +1,7 @@
 $menu-breakpoints: $breakpoints;
 
 .menu {
+	position: relative;
     display: flex;
     flex-wrap: wrap;
     margin: 0;
@@ -27,8 +28,8 @@ $menu-breakpoints: $breakpoints;
 
 .menu_dropdown {
     position: absolute;
-    left: 0;
     top: 100%;
+	left: 100%;
     min-width: 200px;
     padding: $bit 0;
     background-color: color(white);
@@ -37,34 +38,111 @@ $menu-breakpoints: $breakpoints;
     box-shadow: shadow(1-lvl);
     visibility: hidden;
     opacity: 0;
-    transform: translateY(-$bit);
+    transform: translateX(100%);
     z-index: 2;
-    transition: opacity 250ms, transform 1ms linear 250ms, visibility 1ms linear 250ms;
+    transition: opacity 250ms, transform 250ms, visibility 1ms linear 250ms;
 
-    .menu__item:hover > &,
-    .menu__item:focus-within > &,
 	.menu__item_opened > & {
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
         transition: opacity 250ms, transform 250ms;
     }
+
     .menu_vertical & {
-        left: 100%;
-        top: -$bit - 1px;
+        top: 0;
+		right: 0;
+        left: 0;
     }
+
+	@include breakpoint(medium) {
+    	left: 0;
+    	transform: translateY(-$bit);
+	    transition: opacity 250ms, transform 1ms linear 250ms, visibility 1ms linear 250ms;
+
+	    .menu__item:hover > &,
+	    .menu__item:focus-within > & {
+	        visibility: visible;
+	        opacity: 1;
+	        transform: translateY(0);
+	        transition: opacity 250ms, transform 250ms;
+	    }
+
+	    .menu_vertical & {
+	        top: -$bit - 1px;
+			right: auto;
+	        left: 100%;
+	    }
+	}
+}
+
+.menu .menu:not(.menu_dropdown) {
+	margin-left: $bit * 2;
 }
 
 .menu__item {
-    position: relative;
     transition: background-color 250ms;
 
     &:hover {
         background-color: color(light-gray);
     }
+
+	@include breakpoint(medium) {
+	    position: relative;
+	}
+}
+.menu__item_title {
+	font-weight: font-weight(bold);
+	border-bottom: 1px solid color(light-gray);
+}
+.menu__item_return {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	padding: 8px;
+
+	&:hover {
+		background-color: transparent;
+	}
+
+	@include breakpoint(medium) {
+		right: auto;
+		left: 100%;
+	}
 }
 .menu__item_opened {
     background-color: color(light-gray);
+}
+
+.menu__return {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background-color: color(light-gray);
+	border: none;
+	border-radius: 50%;
+
+	&::before,
+	&::after {
+		content: '';
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		display: block;
+		width: 20px;
+		height: 2px;
+		margin: -1px 0 0 -10px;
+
+		background-color: color(black);
+
+		transform: rotate(45deg);
+	}
+	&::after {
+		transform: rotate(-45deg);
+	}
 }
 
 .menu__link {

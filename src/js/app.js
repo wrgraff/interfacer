@@ -1,6 +1,6 @@
 // Site utils
-//=require app/util/user-can-hover.js
 //=require app/util/add-element.js
+//=require app/util/mobile-detect.js
 
 // Site apps
 //=require app/alerts/show.js

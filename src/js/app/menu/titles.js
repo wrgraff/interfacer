@@ -1,4 +1,6 @@
-addTitles(document.querySelectorAll('.menu__item_dropdown'));
+if ( md.mobile() ) {
+	addTitles(document.querySelectorAll('.menu__item_dropdown'));
+};
 
 function addTitles(items) {
 	items.forEach(item => {
