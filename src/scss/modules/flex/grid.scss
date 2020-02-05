@@ -1,6 +1,6 @@
 $flex-gaps: (
-    small: $bit * 3,
-    large: $bit * 4,
+    zero: 20px,
+    large: 28px,
 );
 $flex-columns: 12;
 $flex-columns-breakpoints: $breakpoints;
@@ -15,7 +15,7 @@ $flex-columns-breakpoints: $breakpoints;
             --flex-gap: #{$gap};
 
             &.flex_gap_half {
-                --flex-gap: #{$gap / 2};
+                --flex-gap: #{$gap * .714};
             }
         }
     }
@@ -48,7 +48,7 @@ $flex-columns-breakpoints: $breakpoints;
 
 // Columns width
 // Base columns width
-[class*="flex_columns"] .flex__item {
+[class*="flex_columns"] > .flex__item {
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
@@ -60,7 +60,7 @@ $flex-columns-breakpoints: $breakpoints;
 
 // Counted columns width
 @for $i from 1 through $flex-columns {
-    [class*="flex_columns"] .flex__item_#{$i} {
+    [class*="flex_columns"] > .flex__item_#{$i} {
         flex-basis: ((960px / $flex-columns * $i) - ($bit * 4)) * 100% / 960px;
         min-width: ((960px / $flex-columns * $i) - ($bit * 4)) * 100% / 960px;
         flex-basis: calc(#{100% / $flex-columns * $i} - var(--flex-gap));
@@ -73,7 +73,7 @@ $flex-columns-breakpoints: $breakpoints;
 // Container counter mode
 @for $i from 1 through $flex-columns {
     // Base columns width in counted container
-    .flex_columns_#{$i} .flex__item {
+    .flex_columns_#{$i} > .flex__item {
         flex-basis: ((960px / $i) - ($bit * 4)) * 100% / 960px;
         min-width: ((960px / $i) - ($bit * 4)) * 100% / 960px;
         flex-basis: calc(#{100% / $i} - var(--flex-gap));
@@ -82,7 +82,7 @@ $flex-columns-breakpoints: $breakpoints;
 
     // Counted columns width in counted container
     @for $j from 1 through $i {
-        .flex_columns_#{$i} .flex__item_#{$j} {
+        .flex_columns_#{$i} > .flex__item_#{$j} {
             flex-basis: ((960px / $i * $j) - ($bit * 4)) * 100% / 960px;
             min-width: ((960px / $i * $j) - ($bit * 4)) * 100% / 960px;
             flex-basis: calc(#{100% / $i * $j} - var(--flex-gap));
@@ -98,7 +98,7 @@ $flex-columns-breakpoints: $breakpoints;
     @media screen and (min-width: $breakpoint-value) {
         // Counted columns width
         @for $i from 1 through $flex-columns {
-            [class*="flex_columns"] .flex__item_#{$breakpoint-name}_#{$i} {
+            [class*="flex_columns"] > .flex__item_#{$breakpoint-name}_#{$i} {
                 flex-basis: (($breakpoint-value / $flex-columns * $i) - ($bit * 4)) * 100% / $breakpoint-value;
                 min-width: (($breakpoint-value / $flex-columns * $i) - ($bit * 4)) * 100% / $breakpoint-value;
                 flex-basis: calc(#{100% / $flex-columns * $i} - var(--flex-gap));
@@ -111,7 +111,7 @@ $flex-columns-breakpoints: $breakpoints;
         // Container counter mode
         @for $i from 1 through $flex-columns {
             // Base columns width in counted container
-            .flex_columns_#{$breakpoint-name}_#{$i} .flex__item {
+            .flex_columns_#{$breakpoint-name}_#{$i} > .flex__item {
                 flex-basis: (($breakpoint-value / $i) - ($bit * 4)) * 100% / $breakpoint-value;
                 min-width: (($breakpoint-value / $i) - ($bit * 4)) * 100% / $breakpoint-value;
                 flex-basis: calc(#{100% / $i} - var(--flex-gap));
@@ -120,7 +120,7 @@ $flex-columns-breakpoints: $breakpoints;
 
             // Counted columns width in counted container
             @for $j from 1 through $i {
-                .flex_columns_#{$breakpoint-name}_#{$i} .flex__item_#{$j} {
+                .flex_columns_#{$breakpoint-name}_#{$i} > .flex__item_#{$j} {
                     flex-basis: (($breakpoint-value / $i * $j) - ($bit * 4)) * 100% / $breakpoint-value;
                     min-width: (($breakpoint-value / $i * $j) - ($bit * 4)) * 100% / $breakpoint-value;
                     flex-basis: calc(#{100% / $i * $j} - var(--flex-gap));
