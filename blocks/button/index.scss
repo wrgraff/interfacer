@@ -1,0 +1,49 @@
+$button-color: #fff;
+$button-bg: #1a73e8;
+$button-bg-hover: lighten($button-bg, 10%);
+$button-bg-active: darken($button-bg, 5%);
+$button-shadow-focus: 0 0 0 4px rgba($button-bg, .3);
+
+.button {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 16px 24px;
+	border: none;
+	border-radius: 6px;
+
+	color: $button-color;
+	background-color: $button-bg;
+
+	font-family: inherit;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	transition: background-color 200ms;
+}
+
+.button:hover {
+	background-color: $button-bg-hover;
+}
+
+.button:active {
+	background-color: $button-bg-active;
+}
+
+.button:focus {
+	outline: none;
+	box-shadow: $button-shadow-focus;
+}
+
+.button[disabled] {
+	opacity: .5;
+	background-color: $button-bg;
+	box-shadow: none;
+}
+
+.button::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
