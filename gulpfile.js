@@ -18,6 +18,7 @@ const serve = () => {
     });
 
     gulp.watch('blocks/**/*.scss', gulp.series(scss));
+    gulp.watch('**/*.html').on('change', browserSync.reload);;
 };
 exports.serve = serve;
 exports.default = serve;

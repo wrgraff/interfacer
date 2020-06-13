@@ -19,8 +19,12 @@
 	font-weight: 400;
 }
 
-.page__heading {
+.page__body > * {
 	width: 100%;
+	max-width: 1000px;
+}
+
+.page__heading {
 	max-width: 1000px;
 	margin-bottom: 40px;
 	padding: 0 4px;
