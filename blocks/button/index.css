@@ -12,17 +12,17 @@
   line-height: 1;
   text-transform: uppercase;
   text-decoration: none;
-  transition: background-color 200ms; }
+  transition: background-color 200ms, box-shadow 200ms; }
 
 .button:hover {
-  background-color: #488fed; }
-
-.button:active {
-  background-color: #1567d3; }
+  background-color: #135cbc; }
 
 .button:focus {
   outline: none;
   box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.3); }
+
+.button:active {
+  box-shadow: 0 7px 10px -5px rgba(26, 115, 232, 0.4); }
 
 .button[disabled] {
   opacity: .5;
